@@ -427,6 +427,17 @@
         .project-cards {
             grid-template-columns: 1fr;
         }
+.header-content h1 {
+    color: white !important; /* Força cor branca */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Opcional: sombra para melhor legibilidade */
+}
+.header-content h1 {
+    background: linear-gradient(to right, #D4AF37, #F5D327);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+j
     }
 </style>
 </head>
@@ -434,8 +445,9 @@
     <header>
         <div class="container header-content">
             <img src="imagens/cau_perfil.jpeg" alt="" class="profile-img">
-		<h1>Claudia Rodrigues Pinto</h1>
-            <p>Scrum Master | Project Delivery Manager | Agile Squad Leder | Agilista</p>
+		<h1 style="color: #F8F8FF!important; ">Claudia Rodrigues Pinto</h1>
+        <!-- ... -->
+            <p>Scrum Master | PSM I™ | Agile Squad Leder | Gerente de Projetos de TI</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -443,7 +455,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>claudiafarias73@gmail.com</span>
+                    <span>claudiarodriguespinto@outlook.com</span>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
@@ -452,11 +464,157 @@
             </div>
         </div>
     </header>
-    <section class="projects-container">
+    
+        <section class="skills-container">
+        <div class="container">
+            <div class="skills-header">
+                <h2>Habilidades e Competências</h2>
+                <p>Conhecimentos adquiridos ao longo da minha trajetória.</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Gestão de Projetos | Ágil e Waterfall</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">Scrum Master</div>
+                        <div class="skill-description">Certificação PSM I. Mais de 30 cursos em agilidade, Transformação Ágil, Análise de dados e Gestão de Projetos.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">MBA em Gestão de Projetos e Metodologias Ágeis</div>
+                        <div class="skill-description">PMBOK, Escritório de Projetos, Metodologias Ágeis, Lean, Gestão de Riscos e Custos.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Product Owner</div>
+                        <div class="skill-description">Backlog Management, Definição de MVP, PBB, Definição de DoD/DoR.</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Liderança e Comunicação</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">Gestão de Equipes</div>
+                        <div class="skill-description">Liderança Servidora, Feedback 1:1, SCI e 360°.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Gestão de Stakeholders</div>
+                        <div class="skill-description">Alinhamento estratégico, Comunicação transparente, Gestão de conflitos de diferentes times e áreas de negócio.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Facilitação e Comunicação</div>
+                        <div class="skill-description">Design Thinking, Lean Inception, Cursos e Workshops de Comunicação e Liderança.</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tecnologia e Qualidade</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">Engenharia de Software e Gestão de TI</div>
+                        <div class="skill-description">Pós-graduada em Engenharia de Software e Graduada em Gestão de TI.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Garantia de Qualidade</div>
+                        <div class="skill-description">Certificação CTFL. Estratégias de testes. Automação e visão UX. Otimização de processos e fluxos de trabalho.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Ferramentas</div>
+                        <div class="skill-description">Azure, Jira Miro, MS Project, Power BI, Office, Bizagi, ServiceNow, entre outras.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Seção de Métricas e Resultados - Versão Corrigida -->
+<section class="metrics-container">
+    <div class="container">
+        <div class="section-header">
+            <h2>Métricas na Gestão Ágil</h2>
+            <p>Foco em Pessoas, Transparência, Inspeção e Adaptação.</p>
+        </div>
+        
+        <div class="metrics-grid">
+            <!-- Métrica 1 -->
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-stopwatch"></i>
+                </div>
+                <h2>Lead Time</h2>
+                <div class="metric-value">Transparência, Inspeção e Adaptação</div>
+                <p>Utilizada para acompanhamento das entregas e utilizadas nas Sprint Retrospective.</p>
+            </div>
+            
+            <!-- Métrica 2 -->
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h2>Throughput</h2>
+                <div class="metric-value">Transparência, Inspeção e Adaptação</div>
+                <p>Utilizada para acompanhamento das entregas e utilizadas nas Dailies e Sprint Retrospective.</p>
+            </div>
+            
+            <!-- Métrica 3 -->
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <h2>Niko-Niko Calendar</h2>
+                <div class="metric-value">Gestão de Pessoas</div>
+                <p>Avaliação diária do humor da equipe. Ajudou a identificar sinais de desmotivação ou problemas de clima.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção Escalando Scrum com Ícones -->
+<section class="scrum-container">
+    <div class="container">
+        <div class="section-header">
+            <h2>Scrum na Prática</h2>
+            <p>Exemplos da minha prática Scrum.</p>
+        </div>
+        
+        <div class="scrum-grid">
+            <!-- Item 1 -->
+            <div class="scrum-card">
+                <div class="scrum-icon">
+                    <i class="fas fa-users fa-3x"></i>
+                </div>
+                <div class="scrum-info">
+                    <h3>Gestão de Equipes Remotas</h3>
+                    <p>Check-ins diários, estabelecimento de metas claras nas Sprints e ferramentas colaborativas que fortalecem a conexão com o time.</p>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="scrum-card">
+                <div class="scrum-icon">
+                    <i class="fas fa-tasks fa-3x"></i>
+                </div>
+                <div class="scrum-info">
+                    <h3>Backlog Priorizado</h3>
+                    <p>User stories refinadas com critérios de aceite claros. Além de Definição de Pronto estabelecida.</p>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="scrum-card">
+                <div class="scrum-icon">
+                    <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                </div>
+                <div class="scrum-info">
+                    <h3>Condução de Cerimônias</h3>
+                    <p>Plannings eficazes, dailies objetivas, reviews com feedback e retrospectivas com ações reais e visuais.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects-container">
         <div class="container">
             <div class="projects-header">
                 <h2>Principais Projetos</h2>
-                <p>Implementações e conquistas ao longo da carreira</p>
+                <p>Principais implementações e conquistas ao longo da carreira.</p>
             </div>
             
             <div class="project-cards">
@@ -466,7 +624,7 @@
                         <h3 class="project-title">Sistema Annual Review</h3>
                         <div class="project-company">Voke</div>
                         <div class="project-description">
-                            <p>Implementação de sistema para análise de desempenho de colaboradores, com regras complexas e restrição de prazo. Implementado em 4 meses 			de desenvolvimento. Entregas incrementais com foco no valor, melhoria contínua e adaptação.</p>
+                            <p>Implementação de sistema para análise de desempenho, com regras complexas e restrição de prazo. Implementado em 4 meses, em parceria com a gestão da Tegra Soluções Digitais. Entregas incrementais com foco no valor, melhoria contínua e adaptação.</p>
                         </div>
                         <div class="project-impact">
                             <p><strong>Impacto:</strong> Permitiu análises de desempenho dentro do cronograma, com feedbacks contínuos, adaptando o desenvolvimento às 			necessidades identificadas devido ao cenário complexo da organização.</p>
@@ -513,35 +671,20 @@
                             <p><strong>Impacto:</strong> Redução significativa do risco de perda de dados e erros manuais, graças à menor intervenção humana. Melhoria 		na governança e na gestão das informações, com ganho de eficiência operacional e maior transparência nos processos de comissionamento.</p>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Projeto LG -->
+                </div>   
+  <!-- Projeto Bradesco -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Homologação de Celulares</h3>
-                        <div class="project-company">LG Electronics</div>
+                        <h3 class="project-title">Contribuição na implementação ágil</h3>
+                        <div class="project-company">Bradesco</div>
                         <div class="project-description">
-                            <p>Testes em campo e homologações com operadoras de telefonia no Brasil e América Latina, com foco em comunicação entre aparelho e rede 			celular, além da usabilidade com foco no usuário final.</p>
+                            <p>Diagnóstico do nível de adoção de metodologias ágeis, identificando gaps e oportunidades de melhoria, ministrando treinamentos para otimização de processos internos.</p>
                         </div>
                         <div class="project-impact">
-                            <p><strong>Impacto:</strong> Redução a zero de aparelhos recusados em homologação, garantindo as vendas dos modelos para operadoras de 			telefonia.</p>
+                            <p><strong>Impacto:</strong> Implementação da agilidade, ganhando maior eficiência e eficácia na implementação dos projetos de diversas squads e produtos.</p>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Projeto Financeiro -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Otimização de Processos Financeiros</h3>
-                        <div class="project-company">Accor Hotels (Sofitel, Mercure, Ibis - SSA)</div>
-                        <div class="project-description">
-                            <p>Implementação de rotinas semanais de análise contábil/financeira para reduzir horas extras no fechamento mensal. Readequação de lançamentos financeiros por parte do operacional, otimizando os resultados contábeis.</p>
-                        </div>
-                        <div class="project-impact">
-                            <p><strong>Impacto:</strong> Praticamente zerou a necessidade de horas extras para fechamento contábil. Redução de ajustes contábeis, com impacto direto na PLR dos colaboradores.</p>
-                        </div>
-                    </div>
-                </div>
+                </div>   
                 <!-- Projeto C&A -->
                 <div class="project-card">
                     <div class="project-content">
@@ -555,86 +698,270 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Projeto Bradesco -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Contribuição na implementação ágil</h3>
-                        <div class="project-company">Bradesco</div>
-                        <div class="project-description">
-                            <p>Diagnóstico do nível de adoção de metodologias ágeis, identificando gaps e oportunidades de melhoria, ministrando treinamentos para otimização de processos internos.</p>
-                        </div>
-                        <div class="project-impact">
-                            <p><strong>Impacto:</strong> Implementação da agilidade, ganhando maior eficiência e eficácia na implementação dos projetos de diversas squads e produtos.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
-        <section class="skills-container">
-        <div class="container">
-            <div class="skills-header">
-                <h2>Habilidades e Competências</h2>
-                <p>Conhecimentos adquiridos ao longo da minha trajetória</p>
+
+<!-- CSS para a seção de métricas -->
+<style>
+    .metrics-container {
+        padding: 4rem 0;
+        background-color: white;
+    }
+    
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .metric-card {
+        background: var(--light);
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .metric-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .metric-icon {
+        font-size: 2.5rem;
+        color: var(--secondary);
+        margin-bottom: 1rem;
+    }
+    
+    .metric-value {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin: 1rem 0;
+    }
+    
+    .metric-card p {
+        color: var(--text-light);
+    }
+    
+    @media (max-width: 768px) {
+        .metrics-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+
+<!-- CSS para a nova seção -->
+<style>
+    .scrum-container {
+        padding: 4rem 0;
+        background-color: #f8f9fa;
+    }
+    
+    .scrum-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .scrum-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .scrum-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .scrum-icon {
+        color: var(--secondary);
+        margin-bottom: 1.5rem;
+    }
+    
+    .scrum-info h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+    }
+    
+    .scrum-info p {
+        color: var(--text-light);
+    }
+    
+    @media (max-width: 768px) {
+        .scrum-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<!-- Seção de Formação Acadêmica -->
+<section class="education-container">
+    <div class="container">
+        <div class="section-header">
+            <h2>Formação Acadêmica e Certificações</h2>
+            <p>Minha trajetória Educacional e Especializações.</p>
+        </div>
+        
+        <div class="education-grid">
+            <!-- MBA -->
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap fa-3x"></i>
+                </div>
+                <div class="education-info">
+                    <h3>MBA em Gestão de Projetos e Metodologias Ágeis</h3>
+                    <div class="education-meta">
+                        <span><i class="fas fa-university"></i> PUC RS</span>
+                        <span><i class="fas fa-calendar-alt"></i> Abr/2025 - Mai/2026</span>
+                    </div>
+                    <p>Em andamento - Especialização em gestão de projetos tradicionais e ágeis com foco em Comunicação, Scrum, Lean e IA aplicada em Gestão de Projetos.</p>
+                </div>
             </div>
             
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Gestão de Projetos | Ágil e Waterfall</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">Scrum Master</div>
-                        <div class="skill-description">Certificação PSM I. Mais de 30 em cursos em agilidade, 		Transformação Ágil, Inovação e Análise de dados.</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">MBA em Gestão de Projetos e Metodologias Ágeis</div>
-                        <div class="skill-description">PMBOK, Metodologias Ágeis, Gestão de Riscos e Custos.</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Product Owner</div>
-                        <div class="skill-description">Backlog Management, User Stories, Definição de MVP, Definição de 			DoD/DoR.</div>
-                    </div>
+            <!-- Pós-graduação -->
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-laptop-code fa-3x"></i>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Liderança e Comunicação</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">Gestão de Equipes</div>
-                        <div class="skill-description">Liderança Servidora, Feedback 1:1, SCI e 360°.</div>
+                <div class="education-info">
+                    <h3>Pós-Graduação em Engenharia de Software</h3>
+                    <div class="education-meta">
+                        <span><i class="fas fa-university"></i> PUC MG</span>
+                        <span><i class="fas fa-calendar-alt"></i> Mai/2022</span>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Gestão de Stakeholders</div>
-                        <div class="skill-description">Alinhamento estratégico, Comunicação transparente, Gestão de 			conflitos de diferentes times e áreas de negócio.</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Facilitação e Comunicação</div>
-                        <div class="skill-description">Design Thinking, Lean Inception, Cursos e Workshops de Comunicação 		e Liderança.</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Tecnologia e Qualidade</h3>
-                    <div class="skill-item">
-                        <div class="skill-name">Engenharia de Software e Gestão de TI</div>
-                        <div class="skill-description">Pós-graduação em Engenharia de Software e Graduação em Gestão de 			TI.</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Garantia de Qualidade</div>
-                        <div class="skill-description">Certificação CTFL, Estratégias de teste e de Automação. Otimização de processos e fluxos de trabalho.</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Ferramentas</div>
-                        <div class="skill-description">Jira, Azure DevOps, Notion, Miro, Power BI, Office, ServiceNow.</div>
-                    </div>
+                    <p>Especialização em Arquitetura de Software, Qualidade de Código, DevOps e Gestão de Desenvolvimento de Software.</p>
                 </div>
             </div>
+            
+            <!-- Graduação -->
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-user-graduate fa-3x"></i>
+                </div>
+                <div class="education-info">
+                    <h3>Graduação em Gestão da Tecnologia da Informação</h3>
+                    <div class="education-meta">
+                        <span><i class="fas fa-university"></i> Centro Universitário SENAC</span>
+                        <span><i class="fas fa-calendar-alt"></i> Ago/2017</span>
+                    </div>
+                    <p>Formação em Gestão de Tecnologia da Informação com ênfase em Governança de TI, COBIT, CMMI e ITIL.</p>
+                </div>
+            </div>
+<div class="education-card">
+    <div class="education-icon">
+        <i class="fas fa-certificate fa-3x"></i>
+    </div>
+    <div class="education-info">
+        <h3>PSM I - Professional Scrum Master</h3>
+        <div class="education-meta">
+            <span><i class="fas fa-award"></i> Scrum.org</span>
+            <span><i class="fas fa-calendar-alt"></i> 2025</span>
         </div>
-    </section>
+    </div>
+</div>
+<div class="education-card">
+    <div class="education-icon">
+        <i class="fas fa-certificate fa-3x"></i>
+    </div>
+    <div class="education-info">
+        <h3>SFC - Scrum Fundamentals Certified</h3>
+        <div class="education-meta">
+            <span><i class="fas fa-award"></i> ScrumStudy</span>
+            <span><i class="fas fa-calendar-alt"></i> 2018</span>
+        </div>
+    </div>
+</div>
+<div class="education-card">
+    <div class="education-icon">
+        <i class="fas fa-certificate fa-3x"></i>
+    </div>
+    <div class="education-info">
+        <h3>CTFL - ISTQB Certified Tester - Foundation Level </h3>
+        <div class="education-meta">
+            <span><i class="fas fa-award"></i> BSTQB</span>
+            <span><i class="fas fa-calendar-alt"></i> 2013</span>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+
+</section>
+
+<!-- CSS para a seção de formação -->
+<style>
+    .education-container {
+        padding: 4rem 0;
+        background-color: var(--light);
+    }
+    
+    .education-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .education-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .education-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .education-icon {
+        color: var(--secondary);
+        margin-bottom: 1.5rem;
+    }
+    
+    .education-info h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+    }
+    
+    .education-meta {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .education-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+    
+    .education-info p {
+        color: var(--text);
+    }
+    
+    @media (max-width: 768px) {
+        .education-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
     <section class="timeline-container">
         <div class="container">
             <div class="timeline-header">
-                <h2>Minha Jornada Profissional</h2>
-                <p>Do financeiro à tecnologia e gestão ágil</p>
+                <h2>Minha Jornada Profissional.</h2>
+                <p>De Finanças à Tecnologia.</p>
             </div>
             
             <div class="timeline">
@@ -643,18 +970,18 @@
                     <div class="timeline-content">
                         <div class="timeline-date">Mai/2023 - Abr/2025</div>
                         <h3 class="timeline-role">Scrum Master | Project Delivery Manager</h3>
-                        <div class="timeline-company">Voke Tech</div>
+                        <div class="timeline-company">Voke</div>
                         <div class="timeline-description">
                             <ul>
-                                <li>Atuação como Scrum Master, Project Delivery Manager e PO em ambientes ágeis</li>
-                                <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de 								impedimentos e fomento à autogestão dos times</li>
-                                <li>Gestão de orçamento CAPEX e OPEX de projetos sob minha responsabilidade</li>
-                                <li>Liderança de times com abordagem servidora e participativa</li>
-                                <li>Condução de processos de discovery com Lean Inception e Design Thinking</li>
-				<li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto)</li>
-				<li>Análise e tomada de decisão baseada em dados e métricas ágeis, com foco na melhoria	contínua.</li>
-				<li>Gestão e priorização de demandas de projetos de implantação e evolução do ServiceNow</li>
-				<li>Gestão de stakeholders, alinhamento estratégico e comunicação estratégica</li>
+                                <li>Atuação como Scrum Master, Project Delivery Manager e PO em ambientes ágeis;</li>
+                                <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de impedimentos e fomento à autogestão dos times;</li>
+                                <li>Gestão de orçamento CAPEX e OPEX de projetos sob minha responsabilidade;</li>
+                                <li>Liderança de times com abordagem servidora e participativa;</li>
+                                <li>Condução de processos de discovery com Lean Inception e Design Thinking;</li>
+				<li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto);</li>
+				<li>Análise e tomada de decisão baseada em dados e métricas ágeis, com foco na melhoria	contínua;</li>
+				<li>Gestão e priorização de demandas de projetos de implantação e evolução do ServiceNow;</li>
+				<li>Gestão de stakeholders, alinhamento estratégico e comunicação estratégica.</li>
                             </ul>
                         </div>
                     </div>
@@ -668,12 +995,12 @@
                         <div class="timeline-company">Tegra Soluções Digitais</div>
                         <div class="timeline-description">
                             <ul>
-                                <li>Gerenciamento de múltiplos projetos com metodologias ágeis</li>
-                                <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de 								impedimentos e fomento à autogestão dos times</li>
-                                <li>Gerenciamento operacional de profissionais alocados</li>
-                                <li>Implementação de melhores práticas de gestão</li>
-				<li>Condução de processos de discovery com Lean Inception e Design Thinking</li>
-                                <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto)</li>
+                                <li>Gerenciamento de múltiplos projetos com metodologias ágeis;</li>
+                                <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de 								impedimentos e fomento à autogestão dos times;</li>
+                                <li>Gerenciamento operacional de profissionais alocados;</li>
+                                <li>Implementação de melhores práticas de gestão;</li>
+				<li>Condução de processos de discovery com Lean Inception e Design Thinking;</li>
+                                <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto).</li>
                             </ul>
                         </div>
                     </div>
@@ -687,13 +1014,13 @@
                         <div class="timeline-company">Banco Pan</div>
                         <div class="timeline-description">
                             <ul>
-                                <li>Liderança na garantia da qualidade de software</li>
-                                <li>Definição de estratégias de teste e automação</li>
-                                <li>Suporte na Gestão e priorização de backlog de produtos (comissionamento e chargeback)</li>
-                                <li>Mapeamento de processos, requisitos e homologações</li>
-                                <li>Facilitação de cerimônias ágeis</li>
-				<li>Apoio na definição DoD e DoR</li>
-				<li>Homologações junto aos stakeholders</li>
+                                <li>Liderança na garantia da qualidade de software;</li>
+                                <li>Definição de estratégias de teste e automação;</li>
+                                <li>Suporte na Gestão e priorização de backlog de produtos (comissionamento e chargeback);</li>
+                                <li>Mapeamento de processos, requisitos e homologações;</li>
+                                <li>Facilitação de cerimônias ágeis;</li>
+				<li>Apoio na definição DoD e DoR;</li>
+				<li>Homologações junto aos stakeholders.</li>
                             </ul>
                         </div>
                     </div>
@@ -707,11 +1034,11 @@
                         <div class="timeline-company">C&A Modas e Movida</div>
                         <div class="timeline-description">
                             <ul>
-                                <li>Garantia da qualidade de software</li>
-                                <li>Estratégias de teste e automação</li>
-                                <li>Suporte na gestão de backlog</li>
-                                <li>Mapeamento de processos e requisitos</li>
-                                <li>Suporte na gestão de backlog e priorização de funcionalidades</li>
+                                <li>Garantia da qualidade de software;</li>
+                                <li>Estratégias de teste e automação;</li>
+                                <li>Suporte na gestão de backlog;</li>
+                                <li>Mapeamento de processos e requisitos;</li>
+                                <li>Suporte na gestão de backlog e priorização de funcionalidades.</li>
                             </ul>
                         </div>
                     </div>
@@ -725,11 +1052,11 @@
                         <div class="timeline-company">LG Electronics (Celulares)</div>
                         <div class="timeline-description">
                             <ul>
-                                <li>Testes e homologações com operadoras de telefonia</li>
-                                <li>Reportes gerenciais para LG Brasil e Coreia</li>
-                                <li>Liderança de equipe de testes</li>
-                                <li>Condução de homologações com operadoras</li>
-                                <li>Viagens nacionais e internacionais para testes</li>
+                                <li>Testes e homologações com operadoras de telefonia;</li>
+                                <li>Reportes gerenciais para LG Brasil e Coreia do Sul;</li>
+                                <li>Liderança de equipe de testes;</li>
+                                <li>Condução de homologações com operadoras;</li>
+                                <li>Viagens nacionais e internacionais para testes.</li>
                             </ul>
                         </div>
                     </div>
@@ -740,18 +1067,18 @@
                     <div class="timeline-content">
                         <div class="timeline-date">1992 - 2007</div>
                         <h3 class="timeline-role">Carreira em Controladoria e Finanças</h3>
-                        <div class="timeline-company">Hotéis Sofitel, Mercure, Ibis</div>
+                        <div class="timeline-company">Hotéis Sofitel, Mercure, Ibis e Costa do Sauípe Resort</div>
                         <div class="timeline-description">
                             <ul>
-				<li>Do Estágio à Supervisão Financeira</li>                                
-				<li>Criação e acompanhamento de Budget Orçado x Realizado</li>
-				<li>Contas a Pagar, Faturamento e Tesouraria</li>
-                                <li>Otimização de processos de conciliação contábil e financeira</li>
-                                <li>Redução de inadimplência em 50%</li>
-                                <li>Treinamento de equipes operacionais</li>
-                                <li>Auditorias internas em setores operacionais</li>
-				<li>Reporte Gerencial dos Relatórios Financeiros</li>
-				<li>Reporte Gerencial do Fluxo de Caixa | Diário e Mensal</li>
+				<li>Do Estágio à Supervisão Financeira;</li>                                
+				<li>Criação e acompanhamento de Budget Orçado x Realizado;</li>
+				<li>Contas a Pagar, Faturamento e Tesouraria;</li>
+                                <li>Otimização de processos de conciliação contábil e financeira;</li>
+                                <li>Redução de inadimplência em 50%;</li>
+                                <li>Treinamento de equipes operacionais;</li>
+                                <li>Auditorias internas em setores operacionais;</li>
+				<li>Reporte Gerencial dos Relatórios Financeiros;</li>
+				<li>Reporte Gerencial do Fluxo de Caixa | Diário e Mensal.</li>
                             </ul>
                         </div>
                     </div>
@@ -764,7 +1091,7 @@
         <div class="container">
             <div class="footer-contact">
                 <h3>Entre em Contato</h3>
-                <p>Estou aberta a novas oportunidades e parcerias</p>
+                <p>Estou aberta a novas oportunidades e parcerias.</p>
             </div>
             <div class="contact-info">
                 <div class="contact-item">
@@ -773,18 +1100,16 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>claudiafarias73@gmail.com</span>
+                    <span>claudiarodriguespinto@outlook.com</span>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
                     <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn</a>
 </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/claudiarodriguespinto/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
+            
             <div class="copyright">
-                &copy; 2025 Claudia Rodrigues Pinto. Todos os direitos reservados.
+                &copy; 2025 Claudia Farias Rodrigues Pinto. Todos os direitos reservados.
             </div>
         </div>
     </footer>
