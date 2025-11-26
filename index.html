@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claudia Rodrigues Pinto | Portfolio</title>
+    <title>Claudia Rodrigues Pinto | Portfólio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
     :root {
-        --primary: #2c3e50;
-        --secondary: #3498db;
-        --accent: #e74c3c;
-        --light: #ecf0f1;
-        --dark: #2c3e50;
-        --text: #333;
-        --text-light: #7f8c8d;
+        --primary: #2C3E50; /* Charcoal (cinza-azulado escuro) - profundo e profissional */
+        --secondary: #3498DB; /* Peter River (azul suave) - para destaque e detalhes */
+        --accent: #95A5A6; /* Concrete (cinza médio) - para elementos secundários e subtítulos */
+        --light: #ECF0F1; /* Clouds (cinza muito claro) - para fundos de seções */
+        --dark: #2C3E50; /* Repete o primário para títulos fortes */
+        --text: #34495E; /* Wet Asphalt (cinza escuro) - para o corpo do texto */
+        --text-light: #7F8C8D; /* Asbestos (cinza médio-claro) - para texto secundário */
     }
     
     * {
@@ -108,7 +108,7 @@
         transform: translateX(-50%);
         width: 80px;
         height: 4px;
-        background-color: var(--secondary);
+        background-color: var(--secondary); /* Azul suave */
         border-radius: 2px;
     }
     
@@ -122,7 +122,7 @@
         content: '';
         position: absolute;
         width: 6px;
-        background-color: var(--secondary);
+        background-color: var(--secondary); /* Azul suave */
         top: 0;
         bottom: 0;
         left: 50%;
@@ -144,7 +144,7 @@
         height: 25px;
         right: -17px;
         background-color: white;
-        border: 4px solid var(--secondary);
+        border: 4px solid var(--secondary); /* Azul suave */
         top: 15px;
         border-radius: 50%;
         z-index: 1;
@@ -202,7 +202,7 @@
     }
     
     .timeline-date {
-        color: var(--secondary);
+        color: var(--secondary); /* Azul suave */
         font-weight: 600;
         margin-bottom: 0.5rem;
     }
@@ -210,13 +210,13 @@
     .timeline-role {
         font-weight: 700;
         margin-bottom: 0.5rem;
-        color: var(--primary);
+        color: var(--primary); /* Charcoal */
     }
     
     .timeline-company {
         font-weight: 600;
         margin-bottom: 1rem;
-        color: var(--accent);
+        color: var(--accent); /* Cinza médio */
     }
     
     .timeline-description ul {
@@ -229,7 +229,7 @@
     
     .skills-container {
         padding: 3rem 0;
-        background-color: var(--light);
+        background-color: var(--light); /* Cinza muito claro */
     }
     
     .skills-header {
@@ -251,7 +251,7 @@
         transform: translateX(-50%);
         width: 80px;
         height: 4px;
-        background-color: var(--secondary);
+        background-color: var(--secondary); /* Azul suave */
         border-radius: 2px;
     }
     
@@ -269,7 +269,7 @@
     }
     
     .skill-category h3 {
-        color: var(--primary);
+        color: var(--primary); /* Charcoal */
         margin-bottom: 1.5rem;
         position: relative;
         padding-bottom: 0.5rem;
@@ -282,7 +282,7 @@
         left: 0;
         width: 50px;
         height: 3px;
-        background-color: var(--secondary);
+        background-color: var(--secondary); /* Azul suave */
     }
     
     .skill-item {
@@ -317,7 +317,7 @@
         transform: translateX(-50%);
         width: 80px;
         height: 4px;
-        background-color: var(--secondary);
+        background-color: var(--secondary); /* Azul suave */
         border-radius: 2px;
     }
     
@@ -346,13 +346,13 @@
     .project-title {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
-        color: var(--primary);
+        color: var(--primary); /* Charcoal */
     }
     
     .project-company {
         font-weight: 600;
-        color: var(--accent);
         margin-bottom: 1rem;
+        color: var(--accent); /* Cinza médio */
     }
     
     .project-description {
@@ -361,11 +361,11 @@
     
     .project-impact {
         font-style: italic;
-        color: var(--text-light);
+        color: var(--text-light); /* Cinza médio-claro */
     }
     
     footer {
-        background-color: var(--dark);
+        background-color: var(--dark); /* Charcoal */
         color: white;
         text-align: center;
         padding: 2rem 0;
@@ -390,7 +390,7 @@
     }
     
     .social-link:hover {
-        color: var(--secondary);
+        color: var(--secondary); /* Azul suave */
     }
     
     .copyright {
@@ -427,27 +427,26 @@
         .project-cards {
             grid-template-columns: 1fr;
         }
-.header-content h1 {
-    color: white !important; /* Força cor branca */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Opcional: sombra para melhor legibilidade */
-}
-.header-content h1 {
-    background: linear-gradient(to right, #D4AF37, #F5D327);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-}
-j
+        .header-content h1 {
+            color: white !important; /* Força cor branca */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Opcional: sombra para melhor legibilidade */
+        }
+        .header-content h1 {
+            background: linear-gradient(to right, var(--secondary), var(--accent)); /* Gradiente com novas cores */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
     }
 </style>
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <img src="imagens/cau_perfil.jpeg" alt="" class="profile-img">
-		<h1 style="color: #F8F8FF!important; ">Claudia Rodrigues Pinto</h1>
-        <!-- ... -->
-            <p>Scrum Master | PSM I™ | Agile Squad Leder | Gerente de Projetos de TI</p>
+            <img src="imagens/cau_perfil.jpeg" alt="Foto de perfil de Claudia Rodrigues Pinto" class="profile-img">
+            <h1 style="color: #F8F8FF!important;">Claudia Rodrigues Pinto</h1>
+            <p>Gerente de Projetos de TI | Agile Squad Leader | Scrum Master</p>
+			<p>Certificada PSM I™ | MBA em Gestão de Projetos e Metodologias Ágeis | Pós em Engenharia de Software</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -465,7 +464,7 @@ j
         </div>
     </header>
     
-        <section class="skills-container">
+    <section class="skills-container">
         <div class="container">
             <div class="skills-header">
                 <h2>Habilidades e Competências</h2>
@@ -474,26 +473,26 @@ j
             
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Gestão de Projetos | Ágil e Waterfall</h3>
+                    <h3>Agilidade e Gestão</h3>
                     <div class="skill-item">
                         <div class="skill-name">Scrum Master</div>
-                        <div class="skill-description">Certificação PSM I. Mais de 30 cursos em agilidade, Transformação Ágil, Análise de dados e Gestão de Projetos.</div>
+                        <div class="skill-description">Certificação PSM I. Especializações em Agilidade, Transformação Ágil e Métricas Ágeis.</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">MBA em Gestão de Projetos e Metodologias Ágeis</div>
-                        <div class="skill-description">PMBOK, Escritório de Projetos, Metodologias Ágeis, Lean, Gestão de Riscos e Custos.</div>
+                        <div class="skill-name">Gestão de Projetos</div>
+                        <div class="skill-description">PMBOK, Escritório de Projetos, IA Aplicada em Gestão de Projetos, OKR´s, Comunicação, Gestão de Riscos, Custos e Prazos.</div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">Product Owner</div>
-                        <div class="skill-description">Backlog Management, Definição de MVP, PBB, Definição de DoD/DoR.</div>
+                        <div class="skill-description">Backlog Management, Definição de MVP, PBB, Definição de DoD/DoR, Técnicas de Priorização.</div>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Liderança e Comunicação</h3>
+                    <h3>Liderança</h3>
                     <div class="skill-item">
                         <div class="skill-name">Gestão de Equipes</div>
-                        <div class="skill-description">Liderança Servidora, Feedback 1:1, SCI e 360°.</div>
+                        <div class="skill-description">Liderança Ágil, Management 3.0, Feedback 1:1, SCI e 360°.</div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">Gestão de Stakeholders</div>
@@ -501,7 +500,7 @@ j
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">Facilitação e Comunicação</div>
-                        <div class="skill-description">Design Thinking, Lean Inception, Cursos e Workshops de Comunicação e Liderança.</div>
+                        <div class="skill-description">Design Thinking, Lean Inception, Gestão da Comunicação, Gestão de Conflitos e de Stakeholders.</div>
                     </div>
                 </div>
                 
@@ -517,601 +516,653 @@ j
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">Ferramentas</div>
-                        <div class="skill-description">Azure, Jira Miro, MS Project, Power BI, Office, Bizagi, ServiceNow, entre outras.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Seção de Métricas e Resultados - Versão Corrigida -->
-<section class="metrics-container">
-    <div class="container">
-        <div class="section-header">
-            <h2>Métricas na Gestão Ágil</h2>
-            <p>Foco em Pessoas, Transparência, Inspeção e Adaptação.</p>
-        </div>
-        
-        <div class="metrics-grid">
-            <!-- Métrica 1 -->
-            <div class="metric-card">
-                <div class="metric-icon">
-                    <i class="fas fa-stopwatch"></i>
-                </div>
-                <h2>Lead Time</h2>
-                <div class="metric-value">Transparência, Inspeção e Adaptação</div>
-                <p>Utilizada para acompanhamento das entregas e utilizadas nas Sprint Retrospective.</p>
-            </div>
-            
-            <!-- Métrica 2 -->
-            <div class="metric-card">
-                <div class="metric-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h2>Throughput</h2>
-                <div class="metric-value">Transparência, Inspeção e Adaptação</div>
-                <p>Utilizada para acompanhamento das entregas e utilizadas nas Dailies e Sprint Retrospective.</p>
-            </div>
-            
-            <!-- Métrica 3 -->
-            <div class="metric-card">
-                <div class="metric-icon">
-                    <i class="fas fa-smile"></i>
-                </div>
-                <h2>Niko-Niko Calendar</h2>
-                <div class="metric-value">Gestão de Pessoas</div>
-                <p>Avaliação diária do humor da equipe. Ajudou a identificar sinais de desmotivação ou problemas de clima.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Seção Escalando Scrum com Ícones -->
-<section class="scrum-container">
-    <div class="container">
-        <div class="section-header">
-            <h2>Scrum na Prática</h2>
-            <p>Exemplos da minha prática Scrum.</p>
-        </div>
-        
-        <div class="scrum-grid">
-            <!-- Item 1 -->
-            <div class="scrum-card">
-                <div class="scrum-icon">
-                    <i class="fas fa-users fa-3x"></i>
-                </div>
-                <div class="scrum-info">
-                    <h3>Gestão de Equipes Remotas</h3>
-                    <p>Check-ins diários, estabelecimento de metas claras nas Sprints e ferramentas colaborativas que fortalecem a conexão com o time.</p>
-                </div>
-            </div>
-            
-            <!-- Item 2 -->
-            <div class="scrum-card">
-                <div class="scrum-icon">
-                    <i class="fas fa-tasks fa-3x"></i>
-                </div>
-                <div class="scrum-info">
-                    <h3>Backlog Priorizado</h3>
-                    <p>User stories refinadas com critérios de aceite claros. Além de Definição de Pronto estabelecida.</p>
-                </div>
-            </div>
-            
-            <!-- Item 3 -->
-            <div class="scrum-card">
-                <div class="scrum-icon">
-                    <i class="fas fa-chalkboard-teacher fa-3x"></i>
-                </div>
-                <div class="scrum-info">
-                    <h3>Condução de Cerimônias</h3>
-                    <p>Plannings eficazes, dailies objetivas, reviews com feedback e retrospectivas com ações reais e visuais.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="projects-container">
-        <div class="container">
-            <div class="projects-header">
-                <h2>Principais Projetos</h2>
-                <p>Principais implementações e conquistas ao longo da carreira.</p>
-            </div>
-            
-            <div class="project-cards">
-                <!-- Projeto Voke -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Sistema Annual Review</h3>
-                        <div class="project-company">Voke</div>
-                        <div class="project-description">
-                            <p>Implementação de sistema para análise de desempenho, com regras complexas e restrição de prazo. Implementado em 4 meses, em parceria com a gestão da Tegra Soluções Digitais. Entregas incrementais com foco no valor, melhoria contínua e adaptação.</p>
-                        </div>
-                        <div class="project-impact">
-                            <p><strong>Impacto:</strong> Permitiu análises de desempenho dentro do cronograma, com feedbacks contínuos, adaptando o desenvolvimento às 			necessidades identificadas devido ao cenário complexo da organização.</p>
-                        </div>
-                    </div>
-                </div>
-		<!-- Projeto Voke 2 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Automação de processos</h3>
-                        <div class="project-company">Voke</div>
-                        <div class="project-description">
-                            <p>Implementação e evolução do ServiceNow com automações inteligentes de fluxos complexos de atendimento. Redefinição de arquitetura do 		catálogo interno de atendimento. Utilização de desenvolvimento ágil com APP ENGINE.</p>
-                        </div>
-                        <div class="project-impact">
-                            <p><strong>Impacto:</strong> Agilidade no desenvolvimento. Aumento da eficiência operacional, centralização de atendimentos, aumentando a 			transparência e gestão de dados de atendimento e SLA.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Projeto Tegra -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Sistema Peter Drucker</h3>
-                        <div class="project-company">Tegra Soluções Digitais</div>
-                        <div class="project-description">
-                            <p>Implementação do sistema de controle de ponto e cadastro de consultores em 5 meses de projeto, utilizando framework Scrum. 				Utilização de Design Thinking. Transparência, Inspeção e Adaptação contínuos evidenciaram o sucesso sistêmico.</p>
-                        </div>
-                        <div class="project-impact">
-                            <p><strong>Impacto:</strong> Otimização na gestão de cadastro de consultores e pagamentos, assim como a melhoria no processo de gestão de 			projetos.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Projeto Banco Pan -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Automatização de Comissionamentos</h3>
-                        <div class="project-company">Banco Pan</div>
-                        <div class="project-description">
-                            <p>Automatização de fluxos de trabalho para comissionamento e chargeback de agentes financeiros, substituindo planilhas manuais por sistema 			integrado.</p>
-                        </div>
-                        <div class="project-impact">
-                            <p><strong>Impacto:</strong> Redução significativa do risco de perda de dados e erros manuais, graças à menor intervenção humana. Melhoria 		na governança e na gestão das informações, com ganho de eficiência operacional e maior transparência nos processos de comissionamento.</p>
-                        </div>
-                    </div>
-                </div>   
-  <!-- Projeto Bradesco -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Contribuição na implementação ágil</h3>
-                        <div class="project-company">Bradesco</div>
-                        <div class="project-description">
-                            <p>Diagnóstico do nível de adoção de metodologias ágeis, identificando gaps e oportunidades de melhoria, ministrando treinamentos para otimização de processos internos.</p>
-                        </div>
-                        <div class="project-impact">
-                            <p><strong>Impacto:</strong> Implementação da agilidade, ganhando maior eficiência e eficácia na implementação dos projetos de diversas squads e produtos.</p>
-                        </div>
-                    </div>
-                </div>   
-                <!-- Projeto C&A -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Sistema de fluxo de compra e venda de vestuário</h3>
-                        <div class="project-company">C&A Modas</div>
-                        <div class="project-description">
-                            <p>Mapeamento e implementação de sistema para gestão de todo o fluxo de vendas de vestuário, 			abrangendo desde a compra de materiais, controle de estoque e processo de confecção, até a 				comercialização em lojas físicas e canais online.</p>
-                        </div>
-                        <div class="project-impact">
-                            <p><strong>Impacto:</strong> Aumento da eficiência operacional e redução de erros no processo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- CSS para a seção de métricas -->
-<style>
-    .metrics-container {
-        padding: 4rem 0;
-        background-color: white;
-    }
-    
-    .metrics-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-    
-    .metric-card {
-        background: var(--light);
-        padding: 2rem;
-        border-radius: 8px;
-        text-align: center;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
-    
-    .metric-card:hover {
-        transform: translateY(-5px);
-    }
-    
-    .metric-icon {
-        font-size: 2.5rem;
-        color: var(--secondary);
-        margin-bottom: 1rem;
-    }
-    
-    .metric-value {
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--primary);
-        margin: 1rem 0;
-    }
-    
-    .metric-card p {
-        color: var(--text-light);
-    }
-    
-    @media (max-width: 768px) {
-        .metrics-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-
-
-<!-- CSS para a nova seção -->
-<style>
-    .scrum-container {
-        padding: 4rem 0;
-        background-color: #f8f9fa;
-    }
-    
-    .scrum-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-    
-    .scrum-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        text-align: center;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
-    
-    .scrum-card:hover {
-        transform: translateY(-5px);
-    }
-    
-    .scrum-icon {
-        color: var(--secondary);
-        margin-bottom: 1.5rem;
-    }
-    
-    .scrum-info h3 {
-        color: var(--primary);
-        margin-bottom: 1rem;
-    }
-    
-    .scrum-info p {
-        color: var(--text-light);
-    }
-    
-    @media (max-width: 768px) {
-        .scrum-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-
-<!-- Seção de Formação Acadêmica -->
-<section class="education-container">
-    <div class="container">
-        <div class="section-header">
-            <h2>Formação Acadêmica e Certificações</h2>
-            <p>Minha trajetória Educacional e Especializações.</p>
-        </div>
-        
-        <div class="education-grid">
-            <!-- MBA -->
-            <div class="education-card">
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap fa-3x"></i>
-                </div>
-                <div class="education-info">
-                    <h3>MBA em Gestão de Projetos e Metodologias Ágeis</h3>
-                    <div class="education-meta">
-                        <span><i class="fas fa-university"></i> PUC RS</span>
-                        <span><i class="fas fa-calendar-alt"></i> Abr/2025 - Mai/2026</span>
-                    </div>
-                    <p>Em andamento - Especialização em gestão de projetos tradicionais e ágeis com foco em Comunicação, Scrum, Lean e frameworks escalados.</p>
-                </div>
-            </div>
-            
-            <!-- Pós-graduação -->
-            <div class="education-card">
-                <div class="education-icon">
-                    <i class="fas fa-laptop-code fa-3x"></i>
-                </div>
-                <div class="education-info">
-                    <h3>Pós-Graduação em Engenharia de Software</h3>
-                    <div class="education-meta">
-                        <span><i class="fas fa-university"></i> PUC MG</span>
-                        <span><i class="fas fa-calendar-alt"></i> Mai/2022</span>
-                    </div>
-                    <p>Especialização em Arquitetura de Software, Qualidade de Código, DevOps e Gestão de Desenvolvimento de Software.</p>
-                </div>
-            </div>
-            
-            <!-- Graduação -->
-            <div class="education-card">
-                <div class="education-icon">
-                    <i class="fas fa-user-graduate fa-3x"></i>
-                </div>
-                <div class="education-info">
-                    <h3>Graduação em Gestão da Tecnologia da Informação</h3>
-                    <div class="education-meta">
-                        <span><i class="fas fa-university"></i> Centro Universitário SENAC</span>
-                        <span><i class="fas fa-calendar-alt"></i> Ago/2017</span>
-                    </div>
-                    <p>Formação em Gestão de Tecnologia da Informação com ênfase em Governança de TI, COBIT, CMMI e ITIL.</p>
-                </div>
-            </div>
-<div class="education-card">
-    <div class="education-icon">
-        <i class="fas fa-certificate fa-3x"></i>
-    </div>
-    <div class="education-info">
-        <h3>PSM I - Professional Scrum Master</h3>
-        <div class="education-meta">
-            <span><i class="fas fa-award"></i> Scrum.org</span>
-            <span><i class="fas fa-calendar-alt"></i> 2025</span>
-        </div>
-    </div>
-</div>
-<div class="education-card">
-    <div class="education-icon">
-        <i class="fas fa-certificate fa-3x"></i>
-    </div>
-    <div class="education-info">
-        <h3>SFC - Scrum Fundamentals Certified</h3>
-        <div class="education-meta">
-            <span><i class="fas fa-award"></i> ScrumStudy</span>
-            <span><i class="fas fa-calendar-alt"></i> 2018</span>
-        </div>
-    </div>
-</div>
-<div class="education-card">
-    <div class="education-icon">
-        <i class="fas fa-certificate fa-3x"></i>
-    </div>
-    <div class="education-info">
-        <h3>CTFL - ISTQB Certified Tester - Foundation Level </h3>
-        <div class="education-meta">
-            <span><i class="fas fa-award"></i> BSTQB</span>
-            <span><i class="fas fa-calendar-alt"></i> 2013</span>
-        </div>
-    </div>
-</div>
-</div>
-    </div>
-
-</section>
-
-<!-- CSS para a seção de formação -->
-<style>
-    .education-container {
-        padding: 4rem 0;
-        background-color: var(--light);
-    }
-    
-    .education-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-    
-    .education-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
-    
-    .education-card:hover {
-        transform: translateY(-5px);
-    }
-    
-    .education-icon {
-        color: var(--secondary);
-        margin-bottom: 1.5rem;
-    }
-    
-    .education-info h3 {
-        color: var(--primary);
-        margin-bottom: 1rem;
-    }
-    
-    .education-meta {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-    }
-    
-    .education-meta span {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--text-light);
-        font-size: 0.9rem;
-    }
-    
-    .education-info p {
-        color: var(--text);
-    }
-    
-    @media (max-width: 768px) {
-        .education-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-    <section class="timeline-container">
-        <div class="container">
-            <div class="timeline-header">
-                <h2>Minha Jornada Profissional.</h2>
-                <p>De Finanças à Tecnologia.</p>
-            </div>
-            
-            <div class="timeline">
-                <!-- Voke -->
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Mai/2023 - Abr/2025</div>
-                        <h3 class="timeline-role">Scrum Master | Project Delivery Manager</h3>
-                        <div class="timeline-company">Voke</div>
-                        <div class="timeline-description">
-                            <ul>
-                                <li>Atuação como Scrum Master, Project Delivery Manager e PO em ambientes ágeis;</li>
-                                <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de impedimentos e fomento à autogestão dos times;</li>
-                                <li>Gestão de orçamento CAPEX e OPEX de projetos sob minha responsabilidade;</li>
-                                <li>Liderança de times com abordagem servidora e participativa;</li>
-                                <li>Condução de processos de discovery com Lean Inception e Design Thinking;</li>
-				<li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto);</li>
-				<li>Análise e tomada de decisão baseada em dados e métricas ágeis, com foco na melhoria	contínua;</li>
-				<li>Gestão e priorização de demandas de projetos de implantação e evolução do ServiceNow;</li>
-				<li>Gestão de stakeholders, alinhamento estratégico e comunicação estratégica.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Tegra -->
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Mai/2021 - Mai/2023</div>
-                        <h3 class="timeline-role">Project Delivery Manager, Scrum Master e PO</h3>
-                        <div class="timeline-company">Tegra Soluções Digitais</div>
-                        <div class="timeline-description">
-                            <ul>
-                                <li>Gerenciamento de múltiplos projetos com metodologias ágeis;</li>
-                                <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de 								impedimentos e fomento à autogestão dos times;</li>
-                                <li>Gerenciamento operacional de profissionais alocados;</li>
-                                <li>Implementação de melhores práticas de gestão;</li>
-				<li>Condução de processos de discovery com Lean Inception e Design Thinking;</li>
-                                <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto).</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Banco Pan -->
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Mai/2019 - Mai/2021</div>
-                        <h3 class="timeline-role">Engenheira de Garantia de Qualidade e Apoio a PO</h3>
-                        <div class="timeline-company">Banco Pan</div>
-                        <div class="timeline-description">
-                            <ul>
-                                <li>Liderança na garantia da qualidade de software;</li>
-                                <li>Definição de estratégias de teste e automação;</li>
-                                <li>Suporte na Gestão e priorização de backlog de produtos (comissionamento e chargeback);</li>
-                                <li>Mapeamento de processos, requisitos e homologações;</li>
-                                <li>Facilitação de cerimônias ágeis;</li>
-				<li>Apoio na definição DoD e DoR;</li>
-				<li>Homologações junto aos stakeholders.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- C&A e Movida -->
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Ago/2018 - Mai/2019</div>
-                        <h3 class="timeline-role">Engenheira de Garantia de Qualidade</h3>
-                        <div class="timeline-company">C&A Modas e Movida</div>
-                        <div class="timeline-description">
-                            <ul>
-                                <li>Garantia da qualidade de software;</li>
-                                <li>Estratégias de teste e automação;</li>
-                                <li>Suporte na gestão de backlog;</li>
-                                <li>Mapeamento de processos e requisitos;</li>
-                                <li>Suporte na gestão de backlog e priorização de funcionalidades.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- LG Electronics -->
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jul/2011 - Jul/2018</div>
-                        <h3 class="timeline-role">Engenheira de Qualidade de Software</h3>
-                        <div class="timeline-company">LG Electronics (Celulares)</div>
-                        <div class="timeline-description">
-                            <ul>
-                                <li>Testes e homologações com operadoras de telefonia;</li>
-                                <li>Reportes gerenciais para LG Brasil e Coreia do Sul;</li>
-                                <li>Liderança de equipe de testes;</li>
-                                <li>Condução de homologações com operadoras;</li>
-                                <li>Viagens nacionais e internacionais para testes.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Carreira Financeira -->
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">1992 - 2007</div>
-                        <h3 class="timeline-role">Carreira em Controladoria e Finanças</h3>
-                        <div class="timeline-company">Hotéis Sofitel, Mercure, Ibis e Costa do Sauípe Resort</div>
-                        <div class="timeline-description">
-                            <ul>
-				<li>Do Estágio à Supervisão Financeira;</li>                                
-				<li>Criação e acompanhamento de Budget Orçado x Realizado;</li>
-				<li>Contas a Pagar, Faturamento e Tesouraria;</li>
-                                <li>Otimização de processos de conciliação contábil e financeira;</li>
-                                <li>Redução de inadimplência em 50%;</li>
-                                <li>Treinamento de equipes operacionais;</li>
-                                <li>Auditorias internas em setores operacionais;</li>
-				<li>Reporte Gerencial dos Relatórios Financeiros;</li>
-				<li>Reporte Gerencial do Fluxo de Caixa | Diário e Mensal.</li>
-                            </ul>
-                        </div>
+                        <div class="skill-description">Azure, Jira, Miro, MS Project, Power BI, Office, Asana, Monday, ServiceNow, entre outras.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <footer>
+           
+            <section class="projects-container">
+                <div class="container">
+                    <div class="projects-header">
+                        <h2>Principais Projetos</h2>
+                        <p>Principais implementações e conquistas ao longo da carreira.</p>
+                    </div>
+                    
+                    <div class="project-cards">
+					<!-- Projeto GurIA - Governo do RS -->
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">GurIA (Assistente Virtual)</h3>
+                                <div class="project-company">Governo do Estado do RS</div>
+                                <div class="project-description">
+                                    <p>Gestão do projeto guarda-chuva (GurIA) que contempla a integração de mais de 30 projetos com a IA.</p>
+                                </div>
+                                <div class="project-impact">
+                                    <p><strong>Impacto:</strong> Simplificou o acesso do cidadão a serviços públicos, respostas rápidas à necessidades urgentes e coleta de dados para priorizar a implementação de novos serviços.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Projeto Voke -->
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Sistema Annual Review</h3>
+                                <div class="project-company">Voke</div>
+                                <div class="project-description">
+                                    <p>Implementação de sistema para análise de desempenho, com regras complexas e restrição de prazo. Implementado em 4 meses, em parceria com a gestão da Tegra Soluções Digitais. Entregas incrementais com foco no valor, melhoria contínua e adaptação.</p>
+                                </div>
+                                <div class="project-impact">
+                                    <p><strong>Impacto:</strong> Permitiu análises de desempenho dentro do cronograma, com feedbacks contínuos, adaptando o desenvolvimento às necessidades identificadas devido ao cenário complexo da organização.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Projeto Voke 2 -->
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Automação de processos</h3>
+                                <div class="project-company">Voke</div>
+                                <div class="project-description">
+                                    <p>Implementação e evolução do ServiceNow com automações inteligentes de fluxos complexos de atendimento. Redefinição de arquitetura do catálogo interno de atendimento. Utilização de desenvolvimento ágil com APP ENGINE.</p>
+                                </div>
+                                <div class="project-impact">
+                                    <p><strong>Impacto:</strong> Agilidade no desenvolvimento. Aumento da eficiência operacional, centralização de atendimentos, aumentando a transparência e gestão de dados de atendimento e SLA.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Projeto Tegra -->
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Sistema Peter Drucker</h3>
+                                <div class="project-company">Tegra Soluções Digitais</div>
+                                <div class="project-description">
+                                    <p>Implementação do sistema de controle de ponto e cadastro de consultores em 5 meses de projeto, utilizando framework Scrum. Utilização de Design Thinking. Transparência, Inspeção e Adaptação contínuos evidenciaram o sucesso sistêmico.</p>
+                                </div>
+                                <div class="project-impact">
+                                    <p><strong>Impacto:</strong> Otimização na gestão de cadastro de consultores e pagamentos, assim como a melhoria no processo de gestão de projetos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Projeto Banco Pan -->
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Automatização de Comissionamentos</h3>
+                                <div class="project-company">Banco Pan</div>
+                                <div class="project-description">
+                                    <p>Automatização de fluxos de trabalho para comissionamento e chargeback de agentes financeiros, substituindo planilhas manuais por sistema integrado.</p>
+                                </div>
+                                <div class="project-impact">
+                                    <p><strong>Impacto:</strong> Redução significativa do risco de perda de dados e erros manuais, graças à menor intervenção humana. Melhoria na governança e na gestão das informações, com ganho de eficiência operacional e maior transparência nos processos de comissionamento.</p>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Projeto Bradesco -->
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Contribuição na Transformação Ágil na Gestão de Projetos de TI</h3>
+                                <div class="project-company">Bradesco</div>
+                                <div class="project-description">
+                                    <p>Diagnóstico do nível de adoção do framework ágil, identificando gaps e oportunidades de melhoria, ministrando treinamentos para otimização de processos internos.</p>
+                                </div>
+                                <div class="project-impact">
+                                    <p><strong>Impacto:</strong> Implementação da agilidade, ganhando maior eficiência e eficácia na implementação dos projetos de diversas squads e produtos.</p>
+                                </div>
+                            </div>
+                        </div>   
+                       </div>
+                </div>
+            </section>
+			
+			<section class="skills-container">
         <div class="container">
-            <div class="footer-contact">
-                <h3>Entre em Contato</h3>
-                <p>Estou aberta a novas oportunidades e parcerias.</p>
-            </div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+55 11 99258-7976</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>claudiarodriguespinto@outlook.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn</a>
-</div>
+            <div class="skills-header">
+                <h2>Gestão por Métricas Ágeis</h2>
+                <p>Medição inteligente para times de alta performance.</p>
             </div>
             
-            <div class="copyright">
-                &copy; 2025 Claudia Farias Rodrigues Pinto. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+            <!-- Seção de Métricas e Resultados - Versão Corrigida -->
+            <section class="metrics-container">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Métricas na Gestão Ágil</h2>
+                        <p>Foco em Pessoas, Transparência, Inspeção e Adaptação.</p>
+                    </div>
+                    
+                    <div class="metrics-grid">
+                        <!-- Métrica 1 -->
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-stopwatch"></i>
+                            </div>
+                            <h2>Lead Time</h2>
+                            <div class="metric-value">Transparência, Inspeção e Adaptação</div>
+                            <p>Utilizada para acompanhamento das entregas e utilizadas nas Sprint Retrospective.</p>
+                        </div>
+                        
+                        <!-- Métrica 2 -->
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h2>Throughput</h2>
+                            <div class="metric-value">Transparência, Inspeção e Adaptação</div>
+                            <p>Utilizada para acompanhamento das entregas e utilizadas nas Dailies e Sprint Retrospective.</p>
+                        </div>
+                        
+                        <!-- Métrica 3 -->
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <h2>Niko-Niko Calendar</h2>
+                            <div class="metric-value">Gestão de Pessoas</div>
+                            <p>Avaliação diária do humor da equipe. Ajudou a identificar sinais de desmotivação ou problemas de clima.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="skills-container">
+                <div class="container">
+                    <div class="skills-header">
+                        <img src="imagens/psm.png" alt="PSM I Badge" class="badge-img">
+                        <h2>Scrum na Prática</h2>
+                        <p>Melhoria contínua das práticas Scrum.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção Escalando Scrum com Ícones -->
+            <section class="scrum-container">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Liderança e Coach Ágil</h2>
+                        <p>Foco em Comprometimento, Coragem, Foco, Abertura e Respeito.</p>
+                    </div>
+                    
+                    <div class="scrum-grid">
+                        <!-- Item 1 -->
+                        <div class="scrum-card">
+                            <div class="scrum-icon">
+                                <i class="fas fa-users fa-3x"></i>
+                            </div>
+                            <div class="scrum-info">
+                                <h3>Gestão de Equipes Remotas</h3>
+                                <p>Definição de metas claras, fortalecimento da autogestão e ferramentas colaborativas fortalecendo a conexão com o time. Apoio ao time na remoção de impedimentos.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="scrum-card">
+                            <div class="scrum-icon">
+                                <i class="fas fa-tasks fa-3x"></i>
+                            </div>
+                            <div class="scrum-info">
+                                <h3>Backlog Priorizado</h3>
+                                <p>Apoio ao PO na definição de metas, técnicas de priorização do backlog refinado com metas claras e concisas, planejamento empírico e colaboração com stakeholders em ambientes complexos.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="scrum-card">
+                            <div class="scrum-icon">
+                                <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                            </div>
+                            <div class="scrum-info">
+                                <h3>Eventos Scrum</h3>
+                                <p>Plannings eficazes, dailies objetivas, reviews com feedbacks evolutivos e retrospectivas com ações reais e visuais com foco na melhoria contínua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CSS para a seção de métricas -->
+            <style>
+            .skills-header {
+              text-align: center;
+              padding: 40px 0;
+            }
+            
+            .skills-header img.badge-img {
+              width: 120px;        /* controla o tamanho da imagem */
+              height: auto;
+              display: block;
+              margin: 0 auto 20px; /* centraliza e dá espaço abaixo */
+            }
+            
+                .metrics-container {
+                    padding: 4rem 0;
+                    background-color: white;
+                }
+                
+                .metrics-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                    margin-top: 2rem;
+                }
+                
+                .metric-card {
+                    background: var(--light); /* Cinza muito claro */
+                    padding: 2rem;
+                    border-radius: 8px;
+                    text-align: center;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease;
+                }
+                
+                .metric-card:hover {
+                    transform: translateY(-5px);
+                }
+                
+                .metric-icon {
+                    font-size: 2.5rem;
+                    color: var(--secondary); /* Azul suave */
+                    margin-bottom: 1rem;
+                }
+                
+                .metric-value {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: var(--primary); /* Charcoal */
+                    margin: 1rem 0;
+                }
+                
+                .metric-card p {
+                    color: var(--text-light); /* Cinza médio-claro */
+                }
+                
+                @media (max-width: 768px) {
+                    .metrics-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+            
+            
+            <!-- CSS para a nova seção -->
+            <style>
+                .scrum-container {
+                    padding: 4rem 0;
+                    background-color: #f8f9fa;
+                }
+                
+                .scrum-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                    margin-top: 2rem;
+                }
+                
+                .scrum-card {
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 8px;
+                    text-align: center;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease;
+                }
+                
+                .scrum-card:hover {
+                    transform: translateY(-5px);
+                }
+                
+                .scrum-icon {
+                    color: var(--secondary); /* Azul suave */
+                    margin-bottom: 1.5rem;
+                }
+                
+                .scrum-info h3 {
+                    color: var(--primary); /* Charcoal */
+                    margin-bottom: 1rem;
+                }
+                
+                .scrum-info p {
+                    color: var(--text-light); /* Cinza médio-claro */
+                }
+                
+                @media (max-width: 768px) {
+                    .scrum-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+            
+            <!-- Seção de Formação Acadêmica -->
+            <section class="education-container">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Formação Acadêmica e Certificações</h2>
+                        <p>Minha trajetória Educacional e Especializações.</p>
+                    </div>
+                    
+                    <div class="education-grid">
+                        <!-- MBA -->
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap fa-3x"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>MBA em Gestão de Projetos e Metodologias Ágeis</h3>
+                                <div class="education-meta">
+                                    <span><i class="fas fa-university"></i> PUC RS</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Abr/2025 - Mai/2026</span>
+                                </div>
+                                <p>Em andamento - Especialização em gestão de projetos tradicionais e ágeis com foco em Comunicação, Scrum, Lean e IA aplicada em Gestão de Projetos.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pós-graduação -->
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-laptop-code fa-3x"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>Pós-Graduação em Engenharia de Software</h3>
+                                <div class="education-meta">
+                                    <span><i class="fas fa-university"></i> PUC MG</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Mai/2022</span>
+                                </div>
+                                <p>Especialização em Arquitetura de Software, Qualidade de Código, DevOps e Gestão de Desenvolvimento de Software.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Graduação -->
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-user-graduate fa-3x"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>Graduação em Gestão da Tecnologia da Informação</h3>
+                                <div class="education-meta">
+                                    <span><i class="fas fa-university"></i> Centro Universitário SENAC</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Ago/2017</span>
+                                </div>
+                                <p>Formação em Gestão de Tecnologia da Informação com ênfase em Governança de TI, COBIT, CMMI e ITIL.</p>
+                            </div>
+                        </div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-certificate fa-3x"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>PSM I - Professional Scrum Master</h3>
+                                <div class="education-meta">
+                                    <span><i class="fas fa-award"></i> Scrum.org</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-certificate fa-3x"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>SFC - Scrum Fundamentals Certified</h3>
+                                <div class="education-meta">
+                                    <span><i class="fas fa-award"></i> ScrumStudy</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-certificate fa-3x"></i>
+                            </div>
+                            <div class="education-info">
+                                <h3>CTFL - ISTQB Certified Tester - Foundation Level </h3>
+                                <div class="education-meta">
+                                    <span><i class="fas fa-award"></i> BSTQB</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2013</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CSS para a seção de formação -->
+            <style>
+                .education-container {
+                    padding: 4rem 0;
+                    background-color: var(--light); /* Cinza muito claro */
+                }
+                
+                .education-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                    margin-top: 2rem;
+                }
+                
+                .education-card {
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 8px;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease;
+                }
+                
+                .education-card:hover {
+                    transform: translateY(-5px);
+                }
+                
+                .education-icon {
+                    color: var(--secondary); /* Azul suave */
+                    margin-bottom: 1.5rem;
+                }
+                
+                .education-info h3 {
+                    color: var(--primary); /* Charcoal */
+                    margin-bottom: 1rem;
+                }
+                
+                .education-meta {
+                    display: flex;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+                    flex-wrap: wrap;
+                }
+                
+                .education-meta span {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: var(--text-light); /* Cinza médio-claro */
+                    font-size: 0.9rem;
+                }
+                
+                .education-info p {
+                    color: var(--text); /* Cinza escuro */
+                }
+                
+                @media (max-width: 768px) {
+                    .education-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+            <section class="timeline-container">
+                <div class="container">
+                    <div class="timeline-header">
+                        <h2>Minha Jornada Profissional.</h2>
+                        <p>De Finanças à Tecnologia.</p>
+                    </div>
+                    <div class="timeline">
+                        <!-- DB Server-->
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Mai/2025 - Atual</div>
+                                <h3 class="timeline-role">Gerente de Projetos de TI</h3>
+                                <div class="timeline-company">DB - Randoncorp</div>
+                                <div class="timeline-description">
+                                    <ul>
+                                        <li>Gerente do Projeto Guarda-Chuva - GurIA - com mais de 30 projetos integados à IA.</li>
+                                        <li>Liderança de times com abordagem servidora e participativa;</li>
+                                        <li>Elaboração de cronogramas de projetos e gerenciamento de múltiplos projetos em paralelo;</li>
+                                        <li>Gestão de stakeholders, alinhamento estratégico e comunicação estratégica.</li>
+										<li>Liderança de times com abordagem servidora e participativa;</li>
+                                        <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto);</li>
+										<li>Apoio ao PO na criação do roadmap, priorização de projetos de acordo com os dados coletados de serviços solicitados;</li>
+                                        <li>Análise e tomada de decisão baseada em dados e métricas ágeis, com foco na melhoria contínua;</li>
+										<li>Gestão da comunicação, alinhamento estratégico e comunicação estratégica.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline">
+                            <!-- Voke -->
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">Mai/2023 - Abr/2025</div>
+                                    <h3 class="timeline-role">Project Delivery Manager, Scrum Master e PO</h3>
+                                    <div class="timeline-company">Voke</div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li>Atuação como Scrum Master, Project Delivery Manager e PO em ambientes ágeis;</li>
+                                            <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de impedimentos e fomento à autogestão dos times;</li>
+                                            <li>Gestão de orçamento CAPEX e OPEX de projetos sob minha responsabilidade;</li>
+                                            <li>Liderança de times com abordagem servidora e participativa;</li>
+                                            <li>Condução de processos de discovery com Lean Inception e Design Thinking;</li>
+                                            <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto);</li>
+                                            <li>Análise e tomada de decisão baseada em dados e métricas ágeis, com foco na melhoria contínua;</li>
+                                            <li>Gestão e priorização de demandas de implantação e evolução do ServiceNow;</li>
+                                            <li>Gestão de stakeholders, alinhamento estratégico e comunicação estratégica.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Tegra -->
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">Mai/2021 - Mai/2023</div>
+                                    <h3 class="timeline-role">Project Delivery Manager, Scrum Master e PO</h3>
+                                    <div class="timeline-company">Tegra Soluções Digitais</div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li>Gerenciamento de múltiplos projetos com metodologias ágeis;</li>
+                                            <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de impedimentos e fomento à autogestão dos times;</li>
+                                            <li>Gerenciamento operacional de profissionais alocados;</li>
+                                            <li>Implementação de melhores práticas de gestão;</li>
+                                            <li>Condução de processos de discovery com Lean Inception e Design Thinking;</li>
+                                            <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Banco Pan -->
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">Mai/2019 - Mai/2021</div>
+                                    <h3 class="timeline-role">Engenheira de Garantia de Qualidade e Apoio a PO</h3>
+                                    <div class="timeline-company">Banco Pan</div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li>Liderança na garantia da qualidade de software;</li>
+                                            <li>Definição de estratégias de teste e automação;</li>
+                                            <li>Suporte na Gestão e priorização de backlog de produtos (comissionamento e chargeback);</li>
+                                            <li>Mapeamento de processos, requisitos e homologações;</li>
+                                            <li>Facilitação de cerimônias ágeis;</li>
+                                            <li>Apoio na definição DoD e DoR;</li>
+                                            <li>Homologações junto aos stakeholders.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- C&A e Movida -->
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">Ago/2018 - Mai/2019</div>
+                                    <h3 class="timeline-role">Engenheira de Garantia de Qualidade</h3>
+                                    <div class="timeline-company">C&A Modas e Movida</div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li>Garantia da qualidade de software;</li>
+                                            <li>Estratégias de teste e automação;</li>
+                                            <li>Suporte na gestão de backlog;</li>
+                                            <li>Mapeamento de processos e requisitos;</li>
+                                            <li>Suporte na gestão de backlog e priorização de funcionalidades.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- LG Electronics -->
+                            <div class="timeline-item right">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">Jul/2011 - Jul/2018</div>
+                                    <h3 class="timeline-role">Engenheira de Qualidade de Software</h3>
+                                    <div class="timeline-company">LG Electronics (Celulares)</div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li>Testes e homologações com operadoras de telefonia;</li>
+                                            <li>Reportes gerenciais para LG Brasil e Coreia do Sul;</li>
+                                            <li>Liderança de equipe de testes;</li>
+                                            <li>Condução de homologações com operadoras;</li>
+                                            <li>Viagens nacionais e internacionais para testes.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Carreira Financeira -->
+                            <div class="timeline-item left">
+                                <div class="timeline-content">
+                                    <div class="timeline-date">1992 - 2007</div>
+                                    <h3 class="timeline-role">Carreira em Controladoria e Finanças</h3>
+                                    <div class="timeline-company">Hotéis Sofitel, Mercure, Ibis e Costa do Sauípe Resort</div>
+                                    <div class="timeline-description">
+                                        <ul>
+                                            <li>Do Estágio à Supervisão Financeira;</li>                                
+                                            <li>Criação e acompanhamento de Budget Orçado x Realizado;</li>
+                                            <li>Contas a Pagar, Faturamento e Tesouraria;</li>
+                                            <li>Otimização de processos de conciliação contábil e financeira;</li>
+                                            <li>Redução de inadimplência em 50%;</li>
+                                            <li>Treinamento de equipes operacionais;</li>
+                                            <li>Auditorias internas em setores operacionais;</li>
+                                            <li>Reporte Gerencial dos Relatórios Financeiros;</li>
+                                            <li>Reporte Gerencial do Fluxo de Caixa | Diário e Mensal.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <footer>
+                    <div class="container">
+                        <div class="footer-contact">
+                            <h3>Entre em Contato</h3>
+                            <p>Estou aberta a novas oportunidades e parcerias.</p>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+55 11 99258-7976</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>claudiarodriguespinto@outlook.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
+                            </div>
+                        </div>
+                        
+                        <div class="copyright">
+                            &copy; 2025 Claudia Farias Rodrigues Pinto. Todos os direitos reservados.
+                        </div>
+                    </div>
+                </footer>
+            </body>
+            </html>
