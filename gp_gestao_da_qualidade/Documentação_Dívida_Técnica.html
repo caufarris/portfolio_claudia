@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Gestão da Qualidade & Documentação de Software</title> <script src="https://cdn.tailwindcss.com"></script> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <style> /* Base Palette */ :root { --bg-color: #fcfcfc; --text-primary: #334155; --accent-color: #0ea5e9; } body { background-color: var(--bg-color); color: var(--text-primary); font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+    }
+
+    /* Chart Container Strict Styling */
+    .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%; /* Responsive max width handled by parent */
+        margin-left: auto;
+        margin-right: auto;
+        height: 350px; /* Default height */
+        max-height: 400px;
+    }
+    @media (min-width: 768px) {
+        .chart-container {
+            height: 400px;
+        }
+    }
+
+    /* Interactive Element Transitions */
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav-item.active {
+        border-bottom: 2px solid #0ea5e9;
+        color: #0f172a;
+        font-weight: 600;
+    }
+
+    /* Process Flow Styling */
+    .process-step {
+        position: relative;
+    }
+    .process-step::after {
+        content: '→';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: #cbd5e1;
+        display: none;
+    }
+    @media (min-width: 1024px) {
+        .process-step:not(:last-child)::after {
+            display: block;
+        }
+    }
+</style>
+</head> <body class="min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center">
+                <div class="bg-sky-600 text-white p-2 rounded-lg font-bold text-xl mr-3">GQ</div>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-800">Gestão da Qualidade</h1>
+                    <p class="text-xs text-slate-500">Foco em Documentação de Desenvolvimento</p>
+                </div>
+            </div>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <button onclick="navigateTo('overview')" class="nav-item active px-3 py-2 text-sm font-medium text-slate-500 hover:text-slate-700 transition-colors" data-target="overview">Visão Geral</button>
+                <button onclick="navigateTo('challenges')" class="nav-item px-3 py-2 text-sm font-medium text-slate-500 hover:text-slate-700 transition-colors" data-target="challenges">Desafios</button>
+                <button onclick="navigateTo('strategies')" class="nav-item px-3 py-2 text-sm font-medium text-slate-500 hover:text-slate-700 transition-colors" data-target="strategies">Estratégias</button>
+                <button onclick="navigateTo('metrics')" class="nav-item px-3 py-2 text-sm font-medium text-slate-500 hover:text-slate-700 transition-colors" data-target="metrics">Métricas & ROI</button>
+            </nav>
+        </div>
+    </div>
+    <!-- Mobile Nav Menu (Simple) -->
+    <div class="md:hidden border-t border-slate-100 flex justify-around py-2 bg-slate-50">
+        <button onclick="navigateTo('overview')" class="text-xs font-bold text-slate-600">Visão</button>
+        <button onclick="navigateTo('challenges')" class="text-xs font-bold text-slate-600">Desafios</button>
+        <button onclick="navigateTo('strategies')" class="text-xs font-bold text-slate-600">Estratégias</button>
+        <button onclick="navigateTo('metrics')" class="text-xs font-bold text-slate-600">Métricas</button>
+    </div>
+</header>
+
+<!-- Main Content Area -->
+<main class="flex-grow bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- SECTION 1: OVERVIEW -->
+        <section id="overview" class="section-view opacity-100 transition-opacity duration-300">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">O Papel da Documentação na Qualidade de Software</h2>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-4xl">
+                    A documentação de desenvolvimento não é apenas um artefato burocrático; é um componente vital da <strong>Gestão da Qualidade</strong>. 
+                    Ela garante a rastreabilidade, facilita a manutenção e reduz drasticamente a "Dívida Técnica". 
+                    Nesta seção, exploramos como a qualidade da documentação impacta diretamente a saúde do projeto.
+                </p>
+            </div>
+
+            <!-- Key Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <div class="text-sky-600 text-4xl font-bold mb-2">50%</div>
+                    <h3 class="font-semibold text-slate-800 mb-2">Redução no Tempo de Onboarding</h3>
+                    <p class="text-sm text-slate-500">Desenvolvedores novos tornam-se produtivos na metade do tempo com documentação técnica atualizada.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <div class="text-rose-500 text-4xl font-bold mb-2">3x</div>
+                    <h3 class="font-semibold text-slate-800 mb-2">Custo de Correção</h3>
+                    <p class="text-sm text-slate-500">Corrigir bugs em código não documentado custa até 3 vezes mais devido à análise de impacto complexa.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 card-hover">
+                    <div class="text-emerald-500 text-4xl font-bold mb-2">ISO</div>
+                    <h3 class="font-semibold text-slate-800 mb-2">Conformidade 25010</h3>
+                    <p class="text-sm text-slate-500">A manutenibilidade, um pilar da ISO/IEC 25010, depende diretamente da qualidade da documentação.</p>
+                </div>
+            </div>
+
+            <!-- Chart: Impact Comparison -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800">Impacto Financeiro da Documentação</h3>
+                        <p class="text-sm text-slate-500 mt-1">Comparativo de horas gastas em manutenção (Simulação de Cenário)</p>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <select id="scenarioSelect" class="bg-slate-50 border border-slate-300 text-slate-700 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5" onchange="updateCostChart()">
+                            <option value="legacy">Sistema Legado (Complexo)</option>
+                            <option value="modern">Micros serviços (Distribuído)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="costChart"></canvas>
+                </div>
+                <p class="mt-4 text-sm text-slate-500 italic bg-slate-50 p-3 rounded">
+                    <strong>Insight:</strong> A "Documentação Mínima Viável" reduz o tempo de entendimento do código (Code Comprehension), que representa cerca de 60% do tempo total de manutenção.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CHALLENGES -->
+        <section id="challenges" class="hidden section-view opacity-0 transition-opacity duration-300">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Desafios na Documentação de Qualidade</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    A gestão da qualidade enfrenta barreiras culturais e técnicas. O principal inimigo é a <strong>obsolescência</strong>. 
+                    Abaixo, detalhamos os principais "anti-patterns" documentais que afetam projetos de software.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Interactive Pain Points List -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Principais Anti-Patterns</h3>
+                    <div class="space-y-3">
+                        <div class="p-4 border border-slate-200 rounded-lg hover:bg-rose-50 cursor-pointer transition-colors" onclick="showDetail('obsolescence')">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-700">1. Obsolescência Rápida</span>
+                                <span class="text-rose-500">⚠ Crítico</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mt-2">Documentação que diverge do código gera desconfiança e erros.</p>
+                        </div>
+                        <div class="p-4 border border-slate-200 rounded-lg hover:bg-orange-50 cursor-pointer transition-colors" onclick="showDetail('silo')">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-700">2. Conhecimento em Silos</span>
+                                <span class="text-orange-500">⚠ Alto</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mt-2">Informação apenas na cabeça de desenvolvedores seniores.</p>
+                        </div>
+                        <div class="p-4 border border-slate-200 rounded-lg hover:bg-yellow-50 cursor-pointer transition-colors" onclick="showDetail('bloat')">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-slate-700">3. Documentação Excessiva (Bloat)</span>
+                                <span class="text-yellow-500">⚠ Médio</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mt-2">Excesso de detalhes triviais dificulta encontrar o que importa.</p>
+                        </div>
+                    </div>
+                    <div id="challengeDetail" class="mt-4 p-4 bg-slate-50 rounded border border-slate-200 text-sm text-slate-600 hidden">
+                        <!-- Dynamic Content populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Chart: Types of Quality Issues -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Distribuição de Problemas de Qualidade</h3>
+                    <p class="text-sm text-slate-500 mb-4">Baseado em auditorias de qualidade de código.</p>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="issuesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: STRATEGIES -->
+        <section id="strategies" class="hidden section-view opacity-0 transition-opacity duration-300">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Estratégias para Documentação de Alta Qualidade</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Para superar os desafios, adotamos práticas modernas como <strong>Docs as Code</strong> e documentação viva. 
+                    O objetivo é integrar a documentação ao fluxo de desenvolvimento (CI/CD).
+                </p>
+            </div>
+
+            <!-- Interactive Strategy Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Strategy Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-sky-300 transition-colors">
+                    <div class="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 font-bold mb-4">1</div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Docs as Code</h3>
+                    <p class="text-slate-600 text-sm mb-4">Tratar documentação como código: controle de versão (Git), Code Review e testes automatizados.</p>
+                    <ul class="text-xs text-slate-500 list-disc list-inside">
+                        <li>Markdown/AsciiDoc</li>
+                        <li>Repositório unificado</li>
+                        <li>Pull Requests para docs</li>
+                    </ul>
+                </div>
+                <!-- Strategy Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-emerald-300 transition-colors">
+                    <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold mb-4">2</div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Documentação Viva</h3>
+                    <p class="text-slate-600 text-sm mb-4">Gerar documentação automaticamente a partir de anotações no código e testes (ex: Swagger/OpenAPI).</p>
+                    <ul class="text-xs text-slate-500 list-disc list-inside">
+                        <li>Swagger/OpenAPI</li>
+                        <li>TypeDoc/JavaDoc</li>
+                        <li>Testes BDD como especificação</li>
+                    </ul>
+                </div>
+                <!-- Strategy Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:border-purple-300 transition-colors">
+                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold mb-4">3</div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Definição de Pronto (DoD)</h3>
+                    <p class="text-slate-600 text-sm mb-4">Incluir critérios de documentação na DoD. A funcionalidade não está pronta se não estiver documentada.</p>
+                    <ul class="text-xs text-slate-500 list-disc list-inside">
+                        <li>Checklist de revisão</li>
+                        <li>Atualização de diagramas</li>
+                        <li>Release Notes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Process Visualization (HTML/Tailwind) -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-8 text-center">Fluxo de Qualidade Contínua (Pipeline)</h3>
+                <div class="flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0 lg:space-x-4">
+                    <div class="process-step bg-slate-50 p-4 rounded-lg border border-slate-200 w-full lg:w-1/4 text-center">
+                        <div class="font-bold text-slate-700">1. Escrita</div>
+                        <div class="text-xs text-slate-500">Desenvolvedor escreve código + doc (Markdown)</div>
+                    </div>
+                    <div class="process-step bg-slate-50 p-4 rounded-lg border border-slate-200 w-full lg:w-1/4 text-center">
+                        <div class="font-bold text-slate-700">2. Linting (Auto)</div>
+                        <div class="text-xs text-slate-500">CI verifica links quebrados e ortografia</div>
+                    </div>
+                    <div class="process-step bg-slate-50 p-4 rounded-lg border border-slate-200 w-full lg:w-1/4 text-center">
+                        <div class="font-bold text-slate-700">3. Revisão (Human)</div>
+                        <div class="text-xs text-slate-500">Tech Writer ou Peer Review no PR</div>
+                    </div>
+                    <div class="bg-sky-50 p-4 rounded-lg border border-sky-200 w-full lg:w-1/4 text-center">
+                        <div class="font-bold text-sky-800">4. Publicação</div>
+                        <div class="text-xs text-sky-600">Deploy automático para Portal do Desenvolvedor</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: METRICS -->
+        <section id="metrics" class="hidden section-view opacity-0 transition-opacity duration-300">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Métricas de Qualidade</h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Não se gerencia o que não se mede. Para garantir a qualidade da documentação, utilizamos métricas de <strong>cobertura, frescor e utilidade</strong>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Line Chart: Freshness vs Bugs -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Correlação: Frescor da Doc vs. Taxa de Defeitos</h3>
+                    <p class="text-sm text-slate-500 mb-4">Como a documentação desatualizada impacta a introdução de novos bugs.</p>
+                    <div class="chart-container">
+                        <canvas id="correlationChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Doughnut Chart: Ideal Composition -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Composição Ideal da Base de Conhecimento</h3>
+                    <p class="text-sm text-slate-500 mb-4">Distribuição recomendada para fácil manutenção.</p>
+                    <div class="chart-container" style="max-width: 400px;">
+                        <canvas id="compositionChart"></canvas>
+                    </div>
+                    <div class="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-600">
+                        <div class="flex items-center"><span class="w-3 h-3 bg-sky-500 rounded-full mr-2"></span>Referência API (Auto)</div>
+                        <div class="flex items-center"><span class="w-3 h-3 bg-emerald-500 rounded-full mr-2"></span>Guias/Tutoriais</div>
+                        <div class="flex items-center"><span class="w-3 h-3 bg-orange-500 rounded-full mr-2"></span>Arquitetura/Decisões</div>
+                        <div class="flex items-center"><span class="w-3 h-3 bg-slate-400 rounded-full mr-2"></span>Processos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KPI Table -->
+            <div class="mt-8 bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="p-6 border-b border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800">KPIs de Documentação</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-slate-600">
+                        <thead class="text-xs text-slate-700 uppercase bg-slate-50">
+                            <tr>
+                                <th class="px-6 py-3">Métrica</th>
+                                <th class="px-6 py-3">Descrição</th>
+                                <th class="px-6 py-3">Meta Sugerida</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">Cobertura de Código</td>
+                                <td class="px-6 py-4">Percentual de métodos públicos documentados</td>
+                                <td class="px-6 py-4 text-emerald-600">100% (APIs Públicas)</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">Tempo Médio de Atualização</td>
+                                <td class="px-6 py-4">Tempo entre mudança no código e update da doc</td>
+                                <td class="px-6 py-4 text-emerald-600">&lt; 24 horas</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">Feedback do Usuário</td>
+                                <td class="px-6 py-4">Avaliação de utilidade ("Essa página ajudou?")</td>
+                                <td class="px-6 py-4 text-emerald-600">&gt; 90% Positivo</td>
+                            </tr>
+                            <tr class="bg-white hover:bg-slate-50">
+                                <td class="px-6 py-4 font-medium text-slate-900">Links Quebrados</td>
+                                <td class="px-6 py-4">Integridade referencial interna e externa</td>
+                                <td class="px-6 py-4 text-emerald-600">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-200 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-slate-500 text-sm mb-4 md:mb-0">
+                &copy; 2024 Qualidade de Software. Focado na experiência do desenvolvedor.
+            </p>
+            <div class="flex space-x-4">
+                <button class="text-slate-400 hover:text-sky-600 text-sm font-medium">Política de Qualidade</button>
+                <button class="text-slate-400 hover:text-sky-600 text-sm font-medium">Guia de Estilo</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript Logic -->
+<script>
+    // --- Navigation Logic ---
+    function navigateTo(sectionId) {
+        // Update Tab Styles
+        document.querySelectorAll('.nav-item').forEach(btn => {
+            if (btn.dataset.target === sectionId) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        // Handle Section Transition
+        document.querySelectorAll('.section-view').forEach(section => {
+            section.classList.add('opacity-0');
+            setTimeout(() => {
+                section.classList.add('hidden');
+                if (section.id === sectionId) {
+                    section.classList.remove('hidden');
+                    // Small delay to allow display:block to apply before opacity transition
+                    setTimeout(() => {
+                        section.classList.remove('opacity-0');
+                    }, 50);
+                }
+            }, 300);
+        });
+    }
+
+    // --- Data & State ---
+    const appState = {
+        currentScenario: 'legacy'
+    };
+
+    const chartInstances = {};
+
+    // --- Content for Detailed Views ---
+    const details = {
+        obsolescence: "<strong>Impacto:</strong> Desenvolvedores perdem confiança na documentação. <br><strong>Solução:</strong> Implementar verificadores de links automáticos e expirar docs não revisadas a cada 6 meses.",
+        silo: "<strong>Impacto:</strong> 'Bus Factor' alto. Se o especialista sai, o conhecimento se perde. <br><strong>Solução:</strong> Rotação de tarefas de documentação e sessões de 'Knowledge Transfer' gravadas.",
+        bloat: "<strong>Impacto:</strong> Carga cognitiva alta. Dificuldade de encontrar informações críticas. <br><strong>Solução:</strong> Arquitetura da Informação clara e princípio de 'Progressive Disclosure'."
+    };
+
+    function showDetail(key) {
+        const container = document.getElementById('challengeDetail');
+        container.innerHTML = details[key];
+        container.classList.remove('hidden');
+        container.classList.add('block', 'animate-pulse');
+        setTimeout(() => container.classList.remove('animate-pulse'), 500);
+    }
+
+    // --- Chart Configurations ---
+
+    // 1. Cost Chart (Bar)
+    const initCostChart = () => {
+        const ctx = document.getElementById('costChart').getContext('2d');
+        chartInstances.cost = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Entendimento do Contexto', 'Investigação do Bug', 'Correção/Codificação', 'Testes'],
+                datasets: [
+                    {
+                        label: 'Com Documentação Atualizada',
+                        data: [2, 3, 4, 3], // Hours
+                        backgroundColor: '#0ea5e9',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Sem Documentação/Desatualizada',
+                        data: [8, 10, 5, 6], // Hours - significantly higher context/investigation time
+                        backgroundColor: '#f43f5e',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.raw + ' horas';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Horas Gastas' }
+                    }
+                }
+            }
+        });
+    };
+
+    function updateCostChart() {
+        const select = document.getElementById('scenarioSelect');
+        const scenario = select.value;
+        
+        // Simulate data change based on scenario
+        if (scenario === 'legacy') {
+            chartInstances.cost.data.datasets[0].data = [2, 3, 4, 3];
+            chartInstances.cost.data.datasets[1].data = [8, 10, 5, 6];
+        } else {
+            // Modern/Microservices: Investigation is harder without map, but coding is faster
+            chartInstances.cost.data.datasets[0].data = [1, 2, 2, 2];
+            chartInstances.cost.data.datasets[1].data = [6, 12, 3, 4];
+        }
+        chartInstances.cost.update();
+    }
+
+    // 2. Issues Distribution (Pie/Doughnut) - Visual only for challenges
+    const initIssuesChart = () => {
+        const ctx = document.getElementById('issuesChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Desatualizada', 'Incompleta', 'Difícil de Achar', 'Confusa/Técnica demais'],
+                datasets: [{
+                    data: [40, 25, 20, 15],
+                    backgroundColor: ['#f43f5e', '#fb923c', '#facc15', '#94a3b8']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right' }
+                }
+            }
+        });
+    };
+
+    // 3. Correlation Chart (Line)
+    const initCorrelationChart = () => {
+        const ctx = document.getElementById('correlationChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                datasets: [
+                    {
+                        label: 'Atualizações na Doc',
+                        data: [10, 12, 5, 2, 8, 15],
+                        borderColor: '#0ea5e9',
+                        yAxisID: 'y',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Taxa de Bugs Reportados',
+                        data: [5, 4, 8, 12, 10, 6], // Inverse correlation roughly
+                        borderColor: '#f43f5e',
+                        yAxisID: 'y1',
+                        borderDash: [5, 5],
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: { display: true, text: 'Updates' }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        grid: { drawOnChartArea: false },
+                        title: { display: true, text: 'Bugs' }
+                    }
+                }
+            }
+        });
+    };
+
+    // 4. Composition Chart (Doughnut)
+    const initCompositionChart = () => {
+        const ctx = document.getElementById('compositionChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Ref. API (Auto)', 'Guias/Tutoriais', 'Arquitetura', 'Processos'],
+                datasets: [{
+                    data: [45, 30, 15, 10],
+                    backgroundColor: ['#0ea5e9', '#10b981', '#f97316', '#94a3b8'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw + '%';
+                            }
+                        }
+                    }
+                },
+                cutout: '70%'
+            }
+        });
+    };
+
+    // --- Initialization ---
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize all charts
+        initCostChart();
+        initIssuesChart();
+        initCorrelationChart();
+        initCompositionChart();
+
+        // Setup default view logic (ensure transitions work)
+        setTimeout(() => {
+            document.getElementById('overview').classList.remove('opacity-0');
+        }, 100);
+    });
+
+</script>
+</body> </html>
