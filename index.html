@@ -619,105 +619,192 @@
                        </div>
                 </div>
             </section>
-			
+			  <section class="resources-container" style="background-color: var(--primary); padding: 4rem 0; color: white;">
+                <div class="container">
+                    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                        <h2 style="color: white;">Guias e Ferramentas Interativas</h2>
+                        <p style="color: var(--accent);">Materiais de apoio sobre Gestão da Qualidade e Tecnologias.</p>
+                    </div>
+                    
+                    <div class="resources-grid">
+                        <a href="https://gp-gestao-da-qualidade.vercel.app/" target="_blank" class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="resource-content">
+                                <h3>Gestão da Qualidade</h3>
+                                <p>Guia interativo sobre documentação de software e processos de garantia da qualidade.</p>
+                                <span class="resource-link-text">Acessar Material <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://gp-gestor-e-projetos-de-ia.vercel.app/" target="_blank" class="resource-card">
+                            <div class="resource-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="resource-content">
+                                <h3>Gestor de Projetos & IA</h3>
+                                <p>Habilidades e tecnologias essenciais para o gerente de projetos na era da Inteligência Artificial.</p>
+                                <span class="resource-link-text">Acessar Material <i class="fas fa-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <style>
+                .resources-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2rem;
+                    max-width: 900px;
+                    margin: 0 auto;
+                }
+                
+                .resource-card {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    border-radius: 8px;
+                    padding: 2rem;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 1.5rem;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.3s ease;
+                }
+                
+                .resource-card:hover {
+                    background-color: white;
+                    color: var(--primary);
+                    transform: translateY(-5px);
+                }
+                
+                /* Ajuste para mudar a cor do título e texto ao passar o mouse */
+                .resource-card:hover h3, 
+                .resource-card:hover p,
+                .resource-card:hover .resource-link-text {
+                    color: var(--primary);
+                }
+                
+                .resource-card:hover .resource-icon {
+                    color: var(--secondary);
+                }
+                
+                .resource-icon {
+                    font-size: 2rem;
+                    color: var(--secondary);
+                    transition: color 0.3s ease;
+                }
+                
+                .resource-content h3 {
+                    margin: 0 0 0.5rem 0;
+                    font-size: 1.2rem;
+                    color: white;
+                }
+                
+                .resource-content p {
+                    font-size: 0.9rem;
+                    margin-bottom: 1rem;
+                    opacity: 0.9;
+                    color: var(--light);
+                }
+                
+                .resource-link-text {
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: var(--secondary);
+                }
+
+                @media (max-width: 768px) {
+                    .resource-card {
+                        flex-direction: column;
+                        text-align: center;
+                        align-items: center;
+                    }
+                }
+            </style>
+			  
+			  <!-- Seção Melhoria Contínua - Versão Corrigida -->
 			<section class="skills-container">
         <div class="container">
             <div class="skills-header">
-                <h2>Gestão por Métricas Ágeis</h2>
+                <h2>Agile Thinking & Melhoria Contínua</h2>
                 <p>Medição inteligente para times de alta performance.</p>
             </div>
-            
-            <!-- Seção de Métricas e Resultados - Versão Corrigida -->
             <section class="metrics-container">
                 <div class="container">
-                    <div class="section-header">
-                        <h2>Métricas na Gestão Ágil</h2>
-                        <p>Foco em Pessoas, Transparência, Inspeção e Adaptação.</p>
+                    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                        <h2>Cultura de Melhoria Contínua</h2>
+                        <p>Evolução constante baseada em dados, inspeção e adaptação.</p>
                     </div>
                     
                     <div class="metrics-grid">
-                        <!-- Métrica 1 -->
                         <div class="metric-card">
                             <div class="metric-icon">
-                                <i class="fas fa-stopwatch"></i>
-                            </div>
-                            <h2>Lead Time</h2>
-                            <div class="metric-value">Transparência, Inspeção e Adaptação</div>
-                            <p>Utilizada para acompanhamento das entregas e utilizadas nas Sprint Retrospective.</p>
+                                <i class="fas fa-sync-alt"></i> </div>
+                            <h2>Ciclo PDCA</h2>
+                            <div class="metric-value">Plan • Do • Check • Act</div>
+                            <p>Aplicação do método iterativo para validar hipóteses, controlar processos e garantir que o aprendizado se transforme em ação prática.</p>
                         </div>
                         
-                        <!-- Métrica 2 -->
                         <div class="metric-card">
                             <div class="metric-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h2>Throughput</h2>
-                            <div class="metric-value">Transparência, Inspeção e Adaptação</div>
-                            <p>Utilizada para acompanhamento das entregas e utilizadas nas Dailies e Sprint Retrospective.</p>
+                                <i class="fas fa-arrow-up-right-dots"></i> </div>
+                            <h2>Filosofia Kaizen</h2>
+                            <div class="metric-value">Evolução Incremental</div>
+                            <p>Foco na eliminação de desperdícios e na implementação de pequenas mudanças diárias que geram grandes impactos a longo prazo.</p>
                         </div>
                         
-                        <!-- Métrica 3 -->
                         <div class="metric-card">
                             <div class="metric-icon">
-                                <i class="fas fa-smile"></i>
-                            </div>
-                            <h2>Niko-Niko Calendar</h2>
-                            <div class="metric-value">Gestão de Pessoas</div>
-                            <p>Avaliação diária do humor da equipe. Ajudou a identificar sinais de desmotivação ou problemas de clima.</p>
+                                <i class="fas fa-comments"></i> </div>
+                            <h2>Feedback Loops</h2>
+                            <div class="metric-value">Retrospectivas Eficazes</div>
+                            <p>Ciclos curtos de feedback para inspeção frequente, transformando lições aprendidas em planos de ação para as próximas Sprints.</p>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            <section class="skills-container">
-                <div class="container">
-                    <div class="skills-header">
-                        <img src="imagens/psm.png" alt="PSM I Badge" class="badge-img">
-                        <h2>Scrum na Prática</h2>
-                        <p>Melhoria contínua das práticas Scrum.</p>
-                    </div>
-                </div>
-            </section>
-            
             <!-- Seção Escalando Scrum com Ícones -->
-            <section class="scrum-container">
+             <section class="scrum-container">
                 <div class="container">
-                    <div class="section-header">
-                        <h2>Liderança e Coach Ágil</h2>
-                        <p>Foco em Comprometimento, Coragem, Foco, Abertura e Respeito.</p>
+                    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                        <h2>Gestão Híbrida e Adaptativa</h2>
+                        <p>A metodologia certa para cada desafio: do Preditivo ao Ágil.</p>
                     </div>
                     
                     <div class="scrum-grid">
-                        <!-- Item 1 -->
                         <div class="scrum-card">
                             <div class="scrum-icon">
-                                <i class="fas fa-users fa-3x"></i>
+                                <i class="fas fa-network-wired fa-3x"></i>
                             </div>
                             <div class="scrum-info">
-                                <h3>Gestão de Equipes Remotas</h3>
-                                <p>Definição de metas claras, fortalecimento da autogestão e ferramentas colaborativas fortalecendo a conexão com o time. Apoio ao time na remoção de impedimentos.</p>
+                                <h3>Alta Performance em Projetos Complexos</h3>
+                                <p>Liderança de times remotos e distribuídos em ambientes de alta complexidade. Foco na autogestão, confiança e clareza de objetivos para garantir entregas consistentes, independente da metodologia ou localização física.</p>
                             </div>
                         </div>
                         
-                        <!-- Item 2 -->
                         <div class="scrum-card">
                             <div class="scrum-icon">
-                                <i class="fas fa-tasks fa-3x"></i>
+                                <i class="fas fa-search-location fa-3x"></i>
                             </div>
                             <div class="scrum-info">
-                                <h3>Backlog Priorizado</h3>
-                                <p>Apoio ao PO na definição de metas, técnicas de priorização do backlog refinado com metas claras e concisas, planejamento empírico e colaboração com stakeholders em ambientes complexos.</p>
+                                <h3>Análise de Cenário (Cynefin)</h3>
+                                <p>Diagnóstico preciso do ambiente e da maturidade do time antes da definição do processo. Avaliação de riscos, incertezas e requisitos para entender se o projeto demanda uma abordagem linear ou empírica.</p>
                             </div>
                         </div>
                         
-                        <!-- Item 3 -->
                         <div class="scrum-card">
                             <div class="scrum-icon">
-                                <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                                <i class="fas fa-sliders-h fa-3x"></i>
                             </div>
                             <div class="scrum-info">
-                                <h3>Eventos Scrum</h3>
-                                <p>Plannings eficazes, dailies objetivas, reviews com feedbacks evolutivos e retrospectivas com ações reais e visuais com foco na melhoria contínua.</p>
+                                <h3>Abordagem Fit-for-Purpose</h3>
+                                <p>Flexibilidade para alternar entre modelos. Utilização de <strong>Waterfall</strong> para escopos fechados e previsíveis, ou <strong>Scrum/Kanban</strong> para inovação e incerteza. O foco é a entrega de valor, não a ferramenta.</p>
                             </div>
                         </div>
                     </div>
@@ -854,7 +941,7 @@
                                 <h3>MBA em Gestão de Projetos e Metodologias Ágeis</h3>
                                 <div class="education-meta">
                                     <span><i class="fas fa-university"></i> PUC RS</span>
-                                    <span><i class="fas fa-calendar-alt"></i> Abr/2025 - Mai/2026</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Abr/2025 - Abr/2026</span>
                                 </div>
                                 <p>Em andamento - Especialização em gestão de projetos tradicionais e ágeis com foco em Comunicação, Scrum, Lean e IA aplicada em Gestão de Projetos.</p>
                             </div>
