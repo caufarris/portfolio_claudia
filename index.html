@@ -664,16 +664,17 @@
                 
                 .resource-card {
                     background-color: rgba(255, 255, 255, 0.1);
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    border-radius: 8px;
-                    padding: 2rem;
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 1.5rem;
-                    text-decoration: none;
-                    color: white;
-                    transition: all 0.3s ease;
-                }
+					border: 1px solid rgba(255, 255, 255, 0.2);
+					border-radius: 8px;
+					padding: 2.5rem; /* Aumentei de 2rem para 2.5rem para dar mais margem interna */
+					display: flex;
+					align-items: center; /* Centraliza verticalmente o ícone e o texto */
+					gap: 1.5rem;
+					text-decoration: none;
+					color: white;
+					transition: all 0.3s ease;
+					overflow: visible; /* Garante que o texto que sair um pouco do limite não seja cortado */
+}
                 
                 .resource-card:hover {
                     background-color: white;
@@ -721,12 +722,20 @@
                 }
 
                 @media (max-width: 768px) {
-                    .resource-card {
-                        flex-direction: column;
-                        text-align: center;
-                        align-items: center;
-                    }
-                }
+					.resource-card {
+					flex-direction: column;
+					text-align: center;
+					align-items: center;
+					padding: 1.5rem; /* Ajuste o preenchimento para telas pequenas */
+				}
+
+			/* Se o gráfico for uma imagem dentro do card, force-o a não estourar a largura */
+					.resource-card img {
+					max-width: 90% !important; 
+				height: auto;
+				margin: 0 auto;
+				}
+			}
             </style>
 			  
 			  <!-- Seção Melhoria Contínua - Versão Corrigida -->
@@ -942,9 +951,9 @@
                                 <h3>MBA em Gestão de Projetos e Metodologias Ágeis</h3>
                                 <div class="education-meta">
                                     <span><i class="fas fa-university"></i> PUC RS</span>
-                                    <span><i class="fas fa-calendar-alt"></i> Abr/2025 - Abr/2026</span>
+                                    <span><i class="fas fa-calendar-alt"></i> Abr/2026</span>
                                 </div>
-                                <p>Em andamento - Especialização em gestão de projetos tradicionais e ágeis com foco em Comunicação, Scrum, Lean e IA aplicada em Gestão de Projetos.</p>
+                                <p>Especialização em gestão de projetos tradicionais e ágeis com foco em Comunicação, Scrum, Lean e IA aplicada em Gestão de Projetos.</p>
                             </div>
                         </div>
                         
