@@ -135,7 +135,7 @@
                 <div class="metric-card">
                     <div class="metric-icon"><i class="fas fa-users"></i></div>
                     <h3>Liderança & Engajamento</h3>
-                    <p>Gestão humana e servidora de equipas distribuídas. Promoção da autogestão através de dinâmicas de Management 3.0 e consolidação de uma forte cultura de feedback contínuo (1:1, 360°, SCI).</p>
+                    <p>Gestão humana e servidora de equipes distribuídas. Promoção da autogestão através de dinâmicas de Management 3.0 e consolidação de uma forte cultura de feedback contínuo (1:1, 360°, SCI).</p>
                 </div>
                 <div class="metric-card">
                     <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
@@ -156,128 +156,163 @@
         </div>
     </section>
 
-    <!-- 2. SEÇÃO: Menu de Jornada Profissional -->
-    <section class="journey-container">
-        <div class="container">
-            <div class="timeline-header">
-                <h2>Jornada Profissional</h2>
-                <p>Selecione o período para explorar as minhas entregas de valor e evolução contínua.</p>
+<!-- 2. SEÇÃO: Menu de Jornada Profissional -->
+<section class="journey-container">
+    <div class="container">
+        <div class="timeline-header">
+            <h2>Jornada Profissional</h2>
+            <p>Selecione o período para explorar as minhas entregas de valor e evolução contínua.</p>
+        </div>
+        <div class="journey-layout" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+            
+            <!-- Menu Lateral -->
+            <div class="journey-menu" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 0.5rem;">
+                <button class="tab-link active" onclick="openJourney(event, 'job-db')" style="padding: 1rem; text-align: left; background: var(--secondary); border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: white; transition: 0.3s;">
+                    Mai/2025 - Atual <br><span style="font-size: 0.85em; opacity: 0.9;">DB - Randoncorp</span>
+                </button>
+                <button class="tab-link" onclick="openJourney(event, 'job-voke')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                    Mai/2023 - Abr/2025 <br><span style="font-size: 0.85em; color: var(--text-light);">Voke</span>
+                </button>
+                <button class="tab-link" onclick="openJourney(event, 'job-tegra')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                    Mai/2021 - Mai/2023 <br><span style="font-size: 0.85em; color: var(--text-light);">Tegra Soluções Digitais</span>
+                </button>
+                <button class="tab-link" onclick="openJourney(event, 'job-capgemini')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                    Out/2022 - Dez/2022 <br><span style="font-size: 0.85em; color: var(--text-light);">Capgemini / Bradesco</span>
+                </button>
+                <button class="tab-link" onclick="openJourney(event, 'job-pan')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                    Mai/2019 - Mai/2021 <br><span style="font-size: 0.85em; color: var(--text-light);">Banco Pan</span>
+                </button>
+                <button class="tab-link" onclick="openJourney(event, 'job-cea')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                    Ago/2018 - Mai/2019 <br><span style="font-size: 0.85em; color: var(--text-light);">C&A Modas e Movida</span>
+                </button>
+                <button class="tab-link" onclick="openJourney(event, 'job-lg')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                    Jul/2011 - Jul/2018 <br><span style="font-size: 0.85em; color: var(--text-light);">LG Electronics</span>
+                </button>
+                <button class="tab-link" onclick="openJourney(event, 'job-finance')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                    1992 - 2007 <br><span style="font-size: 0.85em; color: var(--text-light);">Carreira Financeira</span>
+                </button>
             </div>
-            <div class="journey-layout" style="display: flex; gap: 2rem; flex-wrap: wrap;">
-                <div class="journey-menu" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 0.5rem;">
-                    <button class="tab-link active" onclick="openJourney(event, 'job-db')" style="padding: 1rem; text-align: left; background: var(--secondary); border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: white; transition: 0.3s;">
-                        Mai/2025 - Atual <br><span style="font-size: 0.85em; opacity: 0.9;">DB - Randoncorp</span>
-                    </button>
-                    <button class="tab-link" onclick="openJourney(event, 'job-voke')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
-                        Mai/2023 - Abr/2025 <br><span style="font-size: 0.85em; color: var(--text-light);">Voke</span>
-                    </button>
-                    <button class="tab-link" onclick="openJourney(event, 'job-tegra')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
-                        Mai/2021 - Mai/2023 <br><span style="font-size: 0.85em; color: var(--text-light);">Tegra Soluções Digitais</span>
-                    </button>
-                    <button class="tab-link" onclick="openJourney(event, 'job-pan')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
-                        Mai/2019 - Mai/2021 <br><span style="font-size: 0.85em; color: var(--text-light);">Banco Pan</span>
-                    </button>
-                    <button class="tab-link" onclick="openJourney(event, 'job-cea')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
-                        Ago/2018 - Mai/2019 <br><span style="font-size: 0.85em; color: var(--text-light);">C&A Modas e Movida</span>
-                    </button>
-                    <button class="tab-link" onclick="openJourney(event, 'job-lg')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
-                        Jul/2011 - Jul/2018 <br><span style="font-size: 0.85em; color: var(--text-light);">LG Electronics</span>
-                    </button>
-                    <button class="tab-link" onclick="openJourney(event, 'job-finance')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
-                        1992 - 2007 <br><span style="font-size: 0.85em; color: var(--text-light);">Carreira Financeira</span>
-                    </button>
+            
+            <!-- Painel de Conteúdo -->
+            <div class="journey-content" style="flex: 2; min-width: 300px; background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 3px 15px rgba(0,0,0,0.05);">
+                
+                <!-- DB -->
+                <div id="job-db" class="tab-content" style="display: block; animation: fadeIn 0.5s;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Gerente de Projetos de TI</h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Governança</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#LeanThinking</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#EstratégiaDados</span>
+                    </div>
+                    <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                        <li><strong>O Desafio:</strong> Gerir a otimização de dados e a arquitetura de integrações de mais de 700 serviços distribuídos, num ambiente de alta complexidade e impacto estrutural.</li>
+                        <li><strong>A Ação:</strong> Aplicação de Lean Thinking para substituir desperdícios e documentações manuais por fluxos de valor centralizados no Azure DevOps, aliados a uma liderança participativa e métricas ágeis.</li>
+                        <li><strong>O Impacto:</strong> Criação de painéis de indicadores que se tornaram referência de governança e transparência corporativa, garantindo a entrega de valor e o engajamento das partes interessadas.</li>
+                    </ul>
                 </div>
                 
-                <div class="journey-content" style="flex: 2; min-width: 300px; background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 3px 15px rgba(0,0,0,0.05);">
-                    <div id="job-db" class="tab-content" style="display: block; animation: fadeIn 0.5s;">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Gerente de Projetos de TI</h3>
-                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Governança</span>
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#LeanThinking</span>
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#EstratégiaDados</span>
-                        </div>
-                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
-                            <li><strong>O Desafio:</strong> Gerir a otimização de dados e a arquitetura de integrações de mais de 700 serviços distribuídos, num ambiente de alta complexidade e impacto estrutural.</li>
-                            <li><strong>A Ação:</strong> Aplicação de Lean Thinking para substituir desperdícios e documentações manuais por fluxos de valor centralizados no Azure DevOps, aliados a uma liderança participativa e métricas ágeis.</li>
-                            <li><strong>O Impacto:</strong> Criação de painéis de indicadores que se tornaram referência de governança e transparência corporativa, garantindo a entrega de valor e o engajamento das partes interessadas.</li>
-                        </ul>
+                <!-- Voke -->
+                <div id="job-voke" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Gerente de Projetos de TI / Scrum Master e PO</h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#LiderançaServidora</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Discovery</span>
                     </div>
-                    <div id="job-voke" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Gerente de Projetos de TI / Scrum Master e PO</h3>
-                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#LiderançaServidora</span>
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Discovery</span>
-                        </div>
-                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
-                            <li><strong>O Desafio:</strong> Conduzir a implantação e evolução do ServiceNow e gerir orçamentos (CAPEX/OPEX) e conflitos de diversas áreas de negócio.</li>
-                            <li><strong>A Ação:</strong> Fomento à autogestão dos times e implementação de processos de discovery (Lean Inception/Design Thinking), aliada à comunicação estratégica e priorização de backlog.</li>
-                            <li><strong>O Impacto:</strong> Alinhamento estratégico transparente e consolidação de uma cultura de feedback (1:1, SCI, 360°), garantindo entregas ágeis e orientadas a dados.</li>
-                        </ul>
+                    <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                        <li><strong>O Desafio:</strong> Conduzir a implantação e evolução do ServiceNow e gerir orçamentos (CAPEX/OPEX) e conflitos de diversas áreas de negócio.</li>
+                        <li><strong>A Ação:</strong> Fomento à autogestão dos times e implementação de processos de discovery (Lean Inception/Design Thinking), aliada à comunicação estratégica e priorização de backlog.</li>
+                        <li><strong>O Impacto:</strong> Alinhamento estratégico transparente e consolidação de uma cultura de feedback (1:1, SCI, 360°), garantindo entregas ágeis e orientadas a dados.</li>
+                    </ul>
+                </div>
+
+                <!-- Tegra -->
+                <div id="job-tegra" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Project Delivery Manager / Scrum Master e PO</h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Agilidade</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#GestãoOperacional</span>
                     </div>
-                    <div id="job-tegra" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Project Delivery Manager / Scrum Master e PO</h3>
-                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Agilidade</span>
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#GestãoOperacional</span>
-                        </div>
-                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
-                            <li><strong>O Desafio:</strong> Gerir múltiplos projetos em simultâneo e a alocação de profissionais, com a necessidade de escalar práticas ágeis.</li>
-                            <li><strong>A Ação:</strong> Facilitação de cerimónias Scrum, remoção de impedimentos, processos de discovery e gestão operacional dos profissionais alocados.</li>
-                            <li><strong>O Impacto:</strong> Elevação da maturidade ágil das equipas, garantindo previsibilidade, cultura de feedback e qualidade nas entregas sistémicas.</li>
-                        </ul>
+                    <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                        <li><strong>O Desafio:</strong> Gerir múltiplos projetos em simultâneo e a alocação de profissionais, com a necessidade de escalar práticas ágeis.</li>
+                        <li><strong>A Ação:</strong> Facilitação de cerimónias Scrum, remoção de impedimentos, processos de discovery e gestão operacional dos profissionais alocados.</li>
+                        <li><strong>O Impacto:</strong> Elevação da maturidade ágil das equipas, garantindo previsibilidade, cultura de feedback e qualidade nas entregas sistémicas.</li>
+                    </ul>
+                </div>
+
+                <!-- Capgemini / Bradesco -->
+                <div id="job-capgemini" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Agile Consultant (Agile Coach)</h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#TransformaçãoCultural</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#GestãoDeConflitos</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#MétricasÁgeis</span>
                     </div>
-                    <div id="job-pan" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de QA e Apoio a PO</h3>
-                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Qualidade</span>
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Homologação</span>
-                        </div>
-                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
-                            <li><strong>O Desafio:</strong> Garantir a qualidade de software e auxiliar na transição e priorização de fluxos financeiros críticos (comissionamento).</li>
-                            <li><strong>A Ação:</strong> Mapeamento de processos, definição de estratégias de teste, apoio na definição de DoD/DoR e facilitação de cerimónias ágeis.</li>
-                            <li><strong>O Impacto:</strong> Homologações bem-sucedidas junto aos stakeholders, garantindo a integridade dos dados e o alinhamento das entregas com os requisitos de negócio.</li>
-                        </ul>
+                    <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                        <li><strong>O Desafio:</strong> Superar barreiras culturais e "egos" departamentais entre equipes de consultorias distintas, além de diagnosticar e mapear gaps na adoção ágil a pedido da gestão executiva do Banco Bradesco.</li>
+                        <li><strong>A Ação:</strong> Condução de treinamentos direcionados aos valores ágeis, facilitação de cerimônias (Scrum of Scrums) e adequação de ferramentas (Jira, Azure DevOps). Foco total na remoção de impedimentos e no engajamento colaborativo.</li>
+                        <li><strong>O Impacto:</strong> Quebra de silos, melhoria drástica no fluxo de trabalho e otimização de processos internos. A implementação de métricas (lead time, cycle time, throughput) garantiu alinhamento estratégico, previsibilidade e entrega de valor contínua.</li>
+                    </ul>
+                </div>
+
+                <!-- Banco Pan -->
+                <div id="job-pan" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de QA e Apoio a PO</h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Qualidade</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Homologação</span>
                     </div>
-                    <div id="job-cea" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de Garantia de Qualidade</h3>
-                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#QA</span>
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Mapeamento</span>
-                        </div>
-                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
-                            <li><strong>O Desafio:</strong> Assegurar a estabilidade e qualidade das entregas de software para operações de grande escala.</li>
-                            <li><strong>A Ação:</strong> Execução de estratégias de teste, mapeamento de processos e suporte direto na gestão e priorização do backlog.</li>
-                            <li><strong>O Impacto:</strong> Validação de requisitos eficientes, garantindo a redução de bugs em produção e o alinhamento das funcionalidades com o utilizador final.</li>
-                        </ul>
+                    <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                        <li><strong>O Desafio:</strong> Garantir a qualidade de software e auxiliar na transição e priorização de fluxos financeiros críticos (comissionamento).</li>
+                        <li><strong>A Ação:</strong> Mapeamento de processos, definição de estratégias de teste, apoio na definição de DoD/DoR e facilitação de cerimónias ágeis.</li>
+                        <li><strong>O Impacto:</strong> Homologações bem-sucedidas junto aos stakeholders, garantindo a integridade dos dados e o alinhamento das entregas com os requisitos de negócio.</li>
+                    </ul>
+                </div>
+
+                <!-- C&A e Movida -->
+                <div id="job-cea" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de Garantia de Qualidade</h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#QA</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Mapeamento</span>
                     </div>
-                    <div id="job-lg" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de Qualidade de Software</h3>
-                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Telecom</span>
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#TestesEmCampo</span>
-                        </div>
-                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
-                            <li><strong>O Desafio:</strong> Gerir testes complexos de interação entre dispositivos móveis e redes de telefonia (2G a 4G, VoLTE).</li>
-                            <li><strong>A Ação:</strong> Condução de homologações em campo no Brasil e no exterior, analisando usabilidade e gerando reportes para o Brasil e Coreia do Sul.</li>
-                            <li><strong>O Impacto:</strong> Certificação de excelência para os serviços das operadoras, garantindo que os critérios de aceite internacionais eram cumpridos com rigor.</li>
-                        </ul>
+                    <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                        <li><strong>O Desafio:</strong> Assegurar a estabilidade e qualidade das entregas de software para operações de grande escala.</li>
+                        <li><strong>A Ação:</strong> Execução de estratégias de teste, mapeamento de processos e suporte direto na gestão e priorização do backlog.</li>
+                        <li><strong>O Impacto:</strong> Validação de requisitos eficientes, garantindo a redução de bugs em produção e o alinhamento das funcionalidades com o utilizador final.</li>
+                    </ul>
+                </div>
+
+                <!-- LG Electronics -->
+                <div id="job-lg" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de Qualidade de Software</h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#Telecom</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#TestesEmCampo</span>
                     </div>
-                    <div id="job-finance" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
-                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Carreira em Controladoria e Finanças</h3>
-                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#GestãoFinanceira</span>
-                            <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#ReduçãoDeCustos</span>
-                        </div>
-                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
-                            <li><strong>O Desafio:</strong> Otimizar o fluxo de caixa, conciliação contábil e reduzir falhas em faturamentos numa rede hoteleira de grande porte.</li>
-                            <li><strong>A Ação:</strong> Criação de acompanhamentos de Budget (Orçado x Realizado), auditorias internas e treino de equipas operacionais (do Estágio à Supervisão).</li>
-                            <li><strong>O Impacto:</strong> Redução drástica da inadimplência em 50% e criação de um reporte gerencial diário que otimizou as decisões de tesouraria.</li>
-                        </ul>
+                    <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                        <li><strong>O Desafio:</strong> Gerir testes complexos de interação entre dispositivos móveis e redes de telefonia (2G a 4G, VoLTE).</li>
+                        <li><strong>A Ação:</strong> Condução de homologações em campo no Brasil e no exterior, analisando usabilidade e gerando reportes para o Brasil e Coreia do Sul.</li>
+                        <li><strong>O Impacto:</strong> Certificação de excelência para os serviços das operadoras, garantindo que os critérios de aceite internacionais eram cumpridos com rigor.</li>
+                    </ul>
+                </div>
+
+                <!-- Finanças -->
+                <div id="job-finance" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Carreira em Controladoria e Finanças</h3>
+                    <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#GestãoFinanceira</span>
+                        <span style="background: var(--light); padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary);">#ReduçãoDeCustos</span>
                     </div>
+                    <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                        <li><strong>O Desafio:</strong> Otimizar o fluxo de caixa, conciliação contábil e reduzir falhas em faturamentos numa rede hoteleira de grande porte.</li>
+                        <li><strong>A Ação:</strong> Criação de acompanhamentos de Budget (Orçado x Realizado), auditorias internas e treino de equipas operacionais (do Estágio à Supervisão).</li>
+                        <li><strong>O Impacto:</strong> Redução drástica da inadimplência em 50% e criação de um reporte gerencial diário que otimizou as decisões de tesouraria.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- 3. SEÇÃO: Principais Projetos -->
     <section class="projects-container">
