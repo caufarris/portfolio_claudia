@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
     :root {
-        --primary: #2C3E50; /* Charcoal (cinza-azulado escuro) - profundo e profissional */
-        --secondary: #3498DB; /* Peter River (azul suave) - para destaque e detalhes */
-        --accent: #95A5A6; /* Concrete (cinza médio) - para elementos secundários e subtítulos */
-        --light: #ECF0F1; /* Clouds (cinza muito claro) - para fundos de seções */
-        --dark: #2C3E50; /* Repete o primário para títulos fortes */
-        --text: #34495E; /* Wet Asphalt (cinza escuro) - para o corpo do texto */
-        --text-light: #7F8C8D; /* Asbestos (cinza médio-claro) - para texto secundário */
+        --primary: #2C3E50; 
+        --secondary: #3498DB; 
+        --accent: #95A5A6; 
+        --light: #ECF0F1; 
+        --dark: #2C3E50; 
+        --text: #34495E; 
+        --text-light: #7F8C8D; 
     }
     
     * {
@@ -81,169 +81,23 @@
         gap: 0.5rem;
     }
     
-    .contact-item i {
-        font-size: 1.2rem;
-    }
-    
-    .timeline-container {
-        padding: 3rem 0;
-    }
-    
-    .timeline-header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    
-    .timeline-header h2 {
-        font-size: 2.5rem;
-        position: relative;
-        display: inline-block;
-    }
-    
-    .timeline-header h2::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background-color: var(--secondary); /* Azul suave */
-        border-radius: 2px;
-    }
-    
-    .timeline {
-        position: relative;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .timeline::after {
-        content: '';
-        position: absolute;
-        width: 6px;
-        background-color: var(--secondary); /* Azul suave */
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        margin-left: -3px;
-        border-radius: 3px;
-    }
-    
-    .timeline-item {
-        padding: 10px 40px;
-        position: relative;
-        width: 50%;
-        box-sizing: border-box;
-    }
-    
-    .timeline-item::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 25px;
-        right: -17px;
-        background-color: white;
-        border: 4px solid var(--secondary); /* Azul suave */
-        top: 15px;
-        border-radius: 50%;
-        z-index: 1;
-    }
-    
-    .left {
-        left: 0;
-    }
-    
-    .right {
-        left: 50%;
-    }
-    
-    .left::before {
-        content: " ";
-        height: 0;
-        position: absolute;
-        top: 22px;
-        width: 0;
-        z-index: 1;
-        right: 30px;
-        border: medium solid var(--light);
-        border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent white;
-    }
-    
-    .right::before {
-        content: " ";
-        height: 0;
-        position: absolute;
-        top: 22px;
-        width: 0;
-        z-index: 1;
-        left: 30px;
-        border: medium solid var(--light);
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-    
-    .right::after {
-        left: -16px;
-    }
-    
-    .timeline-content {
-        padding: 20px 30px;
-        background-color: white;
-        position: relative;
-        border-radius: 6px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
-    
-    .timeline-content:hover {
-        transform: translateY(-5px);
-    }
-    
-    .timeline-date {
-        color: var(--secondary); /* Azul suave */
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
-    
-    .timeline-role {
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        color: var(--primary); /* Charcoal */
-    }
-    
-    .timeline-company {
-        font-weight: 600;
-        margin-bottom: 1rem;
-        color: var(--accent); /* Cinza médio */
-    }
-    
-    .timeline-description ul {
-        padding-left: 20px;
-    }
-    
-    .timeline-description li {
-        margin-bottom: 0.5rem;
-    }
-    
     .skills-container {
         padding: 3rem 0;
-        background-color: var(--light); /* Cinza muito claro */
+        background-color: var(--light);
     }
     
-    .skills-header {
+    .skills-header, .section-header, .projects-header, .timeline-header {
         text-align: center;
         margin-bottom: 3rem;
     }
     
-    .skills-header h2 {
+    .skills-header h2, .section-header h2, .projects-header h2, .timeline-header h2 {
         font-size: 2.5rem;
         position: relative;
         display: inline-block;
     }
     
-    .skills-header h2::after {
+    .skills-header h2::after, .section-header h2::after, .projects-header h2::after, .timeline-header h2::after {
         content: '';
         position: absolute;
         bottom: -10px;
@@ -251,25 +105,30 @@
         transform: translateX(-50%);
         width: 80px;
         height: 4px;
-        background-color: var(--secondary); /* Azul suave */
+        background-color: var(--secondary);
         border-radius: 2px;
     }
     
-    .skills-grid {
+    .skills-grid, .project-cards, .education-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 2rem;
     }
     
-    .skill-category {
+    .skill-category, .project-card, .education-card {
         background-color: white;
         padding: 2rem;
         border-radius: 8px;
         box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project-card:hover, .education-card:hover {
+        transform: translateY(-5px);
     }
     
     .skill-category h3 {
-        color: var(--primary); /* Charcoal */
+        color: var(--primary);
         margin-bottom: 1.5rem;
         position: relative;
         padding-bottom: 0.5rem;
@@ -282,170 +141,114 @@
         left: 0;
         width: 50px;
         height: 3px;
-        background-color: var(--secondary); /* Azul suave */
+        background-color: var(--secondary);
     }
     
-    .skill-item {
-        margin-bottom: 1rem;
-    }
+    .skill-item { margin-bottom: 1rem; }
+    .skill-name { font-weight: 600; margin-bottom: 0.3rem; }
     
-    .skill-name {
-        font-weight: 600;
-        margin-bottom: 0.3rem;
-    }
+    .projects-container { padding: 3rem 0; }
+    .project-content { padding: 1.5rem; }
+    .project-title { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); }
+    .project-company { font-weight: 600; margin-bottom: 1rem; color: var(--accent); }
+    .project-impact { font-style: italic; color: var(--text-light); }
     
-    .projects-container {
-        padding: 3rem 0;
-    }
-    
-    .projects-header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-    
-    .projects-header h2 {
-        font-size: 2.5rem;
-        position: relative;
-        display: inline-block;
-    }
-    
-    .projects-header h2::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background-color: var(--secondary); /* Azul suave */
-        border-radius: 2px;
-    }
-    
-    .project-cards {
+    .resources-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
     }
     
-    .project-card {
-        background-color: white;
+    .resource-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s ease;
     }
     
-    .project-card:hover {
+    .resource-card:hover {
+        background-color: white;
+        color: var(--primary);
         transform: translateY(-5px);
     }
     
-    .project-content {
-        padding: 1.5rem;
+    .resource-card:hover h3, .resource-card:hover p, .resource-card:hover .resource-link-text { color: var(--primary); }
+    .resource-card:hover .resource-icon { color: var(--secondary); }
+    .resource-icon { font-size: 2rem; color: var(--secondary); transition: color 0.3s ease; }
+    .resource-content h3 { margin: 0 0 0.5rem 0; font-size: 1.2rem; color: white; }
+    .resource-content p { font-size: 0.9rem; margin-bottom: 1rem; opacity: 0.9; color: var(--light); }
+    .resource-link-text { font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; color: var(--secondary); }
+
+    /* Estilos Pilares */
+    .metrics-container { padding: 4rem 0; background-color: white; }
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
     }
+    .metric-card {
+        background: var(--light);
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid transparent;
+    }
+    .metric-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--secondary);
+        box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
+    }
+    .metric-icon { font-size: 2.5rem; color: var(--secondary); margin-bottom: 1rem; }
+    .metric-card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; }
     
-    .project-title {
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
-        color: var(--primary); /* Charcoal */
+    /* Estilos Formação Acadêmica */
+    .education-container { padding: 4rem 0; background-color: var(--light); }
+    .education-icon { color: var(--secondary); margin-bottom: 1.5rem; }
+    .education-info h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.1rem; }
+    .education-meta { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .education-meta span { display: flex; align-items: center; gap: 0.5rem; color: var(--text-light); font-size: 0.9rem; }
+
+    /* Estilos Jornada Menu */
+    .journey-container { padding: 4rem 0; background-color: white; }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
-    
-    .project-company {
-        font-weight: 600;
-        margin-bottom: 1rem;
-        color: var(--accent); /* Cinza médio */
-    }
-    
-    .project-description {
-        margin-bottom: 1rem;
-    }
-    
-    .project-impact {
-        font-style: italic;
-        color: var(--text-light); /* Cinza médio-claro */
-    }
+    .journey-menu button:hover { transform: translateX(5px); }
+    .journey-menu { max-height: 500px; overflow-y: auto; padding-right: 10px;}
     
     footer {
-        background-color: var(--dark); /* Charcoal */
+        background-color: var(--dark);
         color: white;
         text-align: center;
         padding: 2rem 0;
-        margin-top: 3rem;
     }
-	footer h3 {
-        color: white;
-    }
-    
-    .footer-contact {
-        margin-bottom: 1.5rem;
-    }
-    
-    .footer-contact {
-        margin-bottom: 1.5rem;
-    }
-    
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .social-link {
-        color: white;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-    }
-    
-    .social-link:hover {
-        color: var(--secondary); /* Azul suave */
-    }
-    
-    .copyright {
-        font-size: 0.9rem;
-        opacity: 0.8;
-    }
+    footer h3 { color: white; margin-bottom: 1rem; }
+    .social-link { color: white; font-size: 1.5rem; transition: color 0.3s ease; text-decoration: none;}
+    .social-link:hover { color: var(--secondary); }
     
     @media screen and (max-width: 768px) {
-        .timeline::after {
-            left: 31px;
-        }
-        
-        .timeline-item {
-            width: 100%;
-            padding-left: 70px;
-            padding-right: 25px;
-        }
-        
-        .timeline-item::before {
-            left: 60px;
-            border: medium solid white;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
-        }
-        
-        .left::after, .right::after {
-            left: 15px;
-        }
-        
-        .right {
-            left: 0%;
-        }
-        
-        .project-cards {
-            grid-template-columns: 1fr;
-        }
+        .resource-card { flex-direction: column; text-align: center; }
+        .journey-layout { flex-direction: column; }
+        .journey-menu button:hover { transform: translateY(-2px); }
         .header-content h1 {
-            color: white !important; /* Força cor branca */
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Opcional: sombra para melhor legibilidade */
-        }
-        .header-content h1 {
-            background: linear-gradient(to right, var(--secondary), var(--accent)); /* Gradiente com novas cores */
+            background: linear-gradient(to right, var(--secondary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: none;
         }
     }
-</style>
+    </style>
 </head>
 <body>
     <header>
@@ -453,17 +256,18 @@
             <img src="imagens/claudia_perfil.jpeg" alt="Foto de perfil de Claudia Rodrigues Pinto" class="profile-img">
             <h1 style="color: #F8F8FF!important;">Claudia Farias Rodrigues Pinto</h1>
             <p>Gerente de Projetos de TI focada em liderança ágil com times de alta performance.</p>
-			<p>Orientada à dados com foco em entregas de valor e melhoria contínua.</p>
+            <p>Orientada à dados com foco em entregas de valor e melhoria contínua.</p>
+        </div>
     </header>
     
+    <!-- SEÇÃO HABILIDADES -->
     <section class="skills-container">
         <div class="container">
             <div class="skills-header">
                 <h2>Habilidades e Competências</h2>
                 <p>Conhecimentos adquiridos e aplicados ao longo da minha trajetória.</p>
             </div>
-            
-           <div class="skills-grid">
+            <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Agilidade e Gestão</h3>
                     <div class="skill-item">
@@ -476,11 +280,9 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">Melhoria Contínua</div>
-                        <div class="skill-description">  Lean Thinking. Filosofia Kaizen. Foco no engajamento das partes interessadas, com entrega de valor e melhoria contínua.</div>
+                        <div class="skill-description">Lean Thinking. Filosofia Kaizen. Foco no engajamento das partes interessadas, com entrega de valor e melhoria contínua.</div>
                     </div>
-                </diviv>
                 </div>
-                
                 <div class="skill-category">
                     <h3>Liderança</h3>
                     <div class="skill-item">
@@ -496,12 +298,11 @@
                         <div class="skill-description">Design Thinking. Lean Inception. Gestão da comunicação. Gestão de conflitos e de stakeholders.</div>
                     </div>
                 </div>
-                
                 <div class="skill-category">
                     <h3>Tecnologia</h3>
                     <div class="skill-item">
                         <div class="skill-name">Engenharia de Software e Gestão de TI</div>
-                        <div class="skill-description"> Arquitetura de sistemas web/mobile. ITIL, COBIT, CMMI.</div>
+                        <div class="skill-description">Arquitetura de sistemas web/mobile. ITIL, COBIT, CMMI.</div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">Habilidades Técnicas</div>
@@ -516,760 +317,423 @@
         </div>
     </section>
     
-           
-            <section class="projects-container">
-                <div class="container">
-                    <div class="projects-header">
-                        <h2>Principais Projetos</h2>
-                        <p>Principais implementações e conquistas ao longo da carreira.</p>
-                    </div>
-                    
-                    <div class="project-cards">
-					<!-- Projeto GurIA - Governo do RS -->
-                        <div class="project-card">
-                            <div class="project-content">
-                                <h3 class="project-title">Assistente Virtual (Serviços, docs e informações)</h3>
-                                <div class="project-company">Projeto de IA Generativa</div>
-                                <div class="project-description">
-                                    <p>Gestão do projeto de otimização e reestruturação da arquitetura e base de dados da assistente virtual.</p>
-                                </div>
-                                <div class="project-impact">
-                                    <p><strong>Impacto:</strong> Implementação de métricas, dashboards e indicadores ágeis, com foco em entrega de valor, que se tornaram referência de governança para o cliente.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Projeto Voke 2 -->
-                        <div class="project-card">
-                            <div class="project-content">
-                                <h3 class="project-title">Automação de processos</h3>
-                                <div class="project-company">Sistemas de serviços de TI e RPA´s</div>
-                                <div class="project-description">
-                                    <p>Implementação e evolução do ServiceNow com automações inteligentes de fluxos complexos de atendimento. Automações de rotinas repetitivas e de alto volume com Automation Anywhere.</p>
-                                </div>
-                                <div class="project-impact">
-                                    <p><strong>Impacto:</strong> Execução automatizada de tarefas repetitivas. Aumento da eficiência operacional, centralização de atendimentos, aumentando a transparência e gestão de dados de atendimento e SLA.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Projeto Tegra -->
-                        <div class="project-card">
-                            <div class="project-content">
-                                <h3 class="project-title">Sistema de Gestão de Consultores</h3>
-                                <div class="project-company">Gestão Adm e RH</div>
-                                <div class="project-description">
-                                    <p>Implementação do sistema de controle de ponto e cadastro de consultores em 5 meses de projeto, utilizando framework Scrum. Utilização de Design Thinking. Transparência, Inspeção e Adaptação contínuos evidenciaram o sucesso sistêmico.</p>
-                                </div>
-                                <div class="project-impact">
-                                    <p><strong>Impacto:</strong> Otimização na gestão de cadastro de consultores e pagamentos, assim como a melhoria no processo de gestão de projetos.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Projeto Banco Pan -->
-                        <div class="project-card">
-                            <div class="project-content">
-                                <h3 class="project-title">Automatização de Comissionamentos</h3>
-                                <div class="project-company">Sistemas Financeiros</div>
-                                <div class="project-description">
-                                    <p>Automatização de fluxos de trabalho para comissionamento e chargeback de agentes financeiros, substituindo planilhas manuais por sistema integrado.</p>
-                                </div>
-                                <div class="project-impact">
-                                    <p><strong>Impacto:</strong> Redução significativa do risco de perda de dados e erros manuais, graças à menor intervenção humana. Melhoria na governança e na gestão das informações, com ganho de eficiência operacional e maior transparência nos processos de comissionamento.</p>
-                                </div>
-                            </div>
-                        </div>   
-                        <!-- Projeto Bradesco -->
-                        <div class="project-card">
-                            <div class="project-content">
-                                <h3 class="project-title">Contribuição na Transformação Ágil na Gestão de Projetos de TI</h3>
-                                <div class="project-company">Análise de Cenários, Treinamentos e Implementação Ágil</div>
-                                <div class="project-description">
-                                    <p>Diagnóstico do nível de adoção do framework ágil, identificando gaps e oportunidades de melhoria, ministrando treinamentos para otimização de processos internos.</p>
-                                </div>
-                                <div class="project-impact">
-                                    <p><strong>Impacto:</strong> Implementação da agilidade, ganhando maior eficiência e eficácia na implementação dos projetos de diversas squads e produtos.</p>
-                                </div>
-                            </div>
-                        </div>
-						<!-- Projeto Voke -->
-                        <div class="project-card">
-                            <div class="project-content">
-                                <h3 class="project-title">Sistema Análise de Desempenho</h3>
-                                <div class="project-company">Gestão DHO/RH</div>
-                                <div class="project-description">
-                                    <p>Implementação de sistema para análise de desempenho, com regras complexas e restrição de prazo. Implementado em 4 meses. Entregas incrementais com foco no valor, melhoria contínua e adaptação.</p>
-                                </div>
-                                <div class="project-impact">
-                                    <p><strong>Impacto:</strong> Permitiu análises de desempenho dentro do cronograma, com feedbacks contínuos, adaptando o desenvolvimento às necessidades identificadas devido ao cenário complexo da organização.</p>
-                                </div>
-                            </div>
-                        </div>
-                       </div>
-                </div>
-            </section>
-			  <section class="resources-container" style="background-color: var(--primary); padding: 4rem 0; color: white;">
-                <div class="container">
-                    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-                        <h2 style="color: white;">Guias e Ferramentas Interativas</h2>
-                        <p style="color: var(--accent);">Materiais de apoio sobre Gestão, Liderança e Tecnologias.</p>
-                    </div>
-                    
-                    <div class="resources-grid">
-					<a href="https://lideranca-servidora-dupla-lealdade.vercel.app/" target="_blank" class="resource-card">
-    <div class="resource-icon">
-        <i class="fas fa-hands-helping"></i>
-    </div>
-			<div class="resource-content">
-								<h3>Liderança Servidora</h3>
-								<p>Estratégias para mitigar a dualidade cultural em times ágeis terceirizados e promover alta performance.</p>
-									<span class="resource-link-text">Acessar Material <i class="fas fa-arrow-right"></i></span>
-							</div>
-							</a>
-                         <a href="https://gp-gestor-e-projetos-de-ia.vercel.app/" target="_blank" class="resource-card">
-                            <div class="resource-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="resource-content">
-                                <h3>Gestor de Projetos & IA</h3>
-                                <p>Habilidades e tecnologias essenciais para o gerente de projetos na era da Inteligência Artificial.</p>
-                                <span class="resource-link-text">Acessar Material <i class="fas fa-arrow-right"></i></span>
-                            </div>
-                        </a>
-						<a href="https://gp-gestao-da-qualidade.vercel.app/" target="_blank" class="resource-card">
-                            <div class="resource-icon">
-                                <i class="fas fa-file-contract"></i>
-                            </div>
-                            <div class="resource-content">
-                                <h3>Gestão da Qualidade</h3>
-                                <p>Guia interativo sobre documentação de software e processos de garantia da qualidade.</p>
-                                <span class="resource-link-text">Acessar Material <i class="fas fa-arrow-right"></i></span>
-                            </div>
-                        </a>
-
-                       
-                    </div>
-                </div>
-            </section>
-
-            <style>
-                .resources-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                    gap: 2rem;
-                    max-width: 900px;
-                    margin: 0 auto;
-                }
-                
-                .resource-card {
-                    background-color: rgba(255, 255, 255, 0.1);
-					border: 1px solid rgba(255, 255, 255, 0.2);
-					border-radius: 8px;
-					padding: 2.5rem; /* Aumentei de 2rem para 2.5rem para dar mais margem interna */
-					display: flex;
-					align-items: center; /* Centraliza verticalmente o ícone e o texto */
-					gap: 1.5rem;
-					text-decoration: none;
-					color: white;
-					transition: all 0.3s ease;
-					overflow: visible; /* Garante que o texto que sair um pouco do limite não seja cortado */
-}
-                
-                .resource-card:hover {
-                    background-color: white;
-                    color: var(--primary);
-                    transform: translateY(-5px);
-                }
-                
-                /* Ajuste para mudar a cor do título e texto ao passar o mouse */
-                .resource-card:hover h3, 
-                .resource-card:hover p,
-                .resource-card:hover .resource-link-text {
-                    color: var(--primary);
-                }
-                
-                .resource-card:hover .resource-icon {
-                    color: var(--secondary);
-                }
-                
-                .resource-icon {
-                    font-size: 2rem;
-                    color: var(--secondary);
-                    transition: color 0.3s ease;
-                }
-                
-                .resource-content h3 {
-                    margin: 0 0 0.5rem 0;
-                    font-size: 1.2rem;
-                    color: white;
-                }
-                
-                .resource-content p {
-                    font-size: 0.9rem;
-                    margin-bottom: 1rem;
-                    opacity: 0.9;
-                    color: var(--light);
-                }
-                
-                .resource-link-text {
-                    font-weight: 600;
-                    font-size: 0.9rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    color: var(--secondary);
-                }
-
-                @media (max-width: 768px) {
-					.resource-card {
-					flex-direction: column;
-					text-align: center;
-					align-items: center;
-					padding: 1.5rem; /* Ajuste o preenchimento para telas pequenas */
-				}
-
-			/* Se o gráfico for uma imagem dentro do card, force-o a não estourar a largura */
-					.resource-card img {
-					max-width: 90% !important; 
-				height: auto;
-				margin: 0 auto;
-				}
-			}
-            </style>
-			  
-			  <!-- Seção Melhoria Contínua - Versão Corrigida -->
-			<section class="skills-container">
+    <!-- SEÇÃO PRINCIPAIS PROJETOS -->
+    <section class="projects-container">
         <div class="container">
-            <div class="skills-header">
-                <h2>Agile Thinking & Melhoria Contínua</h2>
-                <p>Medição inteligente para times de alta performance.</p>
+            <div class="projects-header">
+                <h2>Principais Projetos</h2>
+                <p>Principais implementações e conquistas ao longo da carreira.</p>
             </div>
-            <section class="metrics-container">
-                <div class="container">
-                    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-                        <h2>Cultura de Melhoria Contínua</h2>
-                        <p>Evolução constante baseada em dados, inspeção e adaptação.</p>
-                    </div>
-                    
-                    <div class="metrics-grid">
-                        <div class="metric-card">
-                            <div class="metric-icon">
-                                <i class="fas fa-sync-alt"></i> </div>
-                            <h2>Ciclo PDCA</h2>
-                            <div class="metric-value">Plan • Do • Check • Act</div>
-                            <p>Aplicação do método iterativo para validar hipóteses, controlar processos e garantir que o aprendizado se transforme em ação prática.</p>
+            <div class="project-cards">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Assistente Virtual (Serviços, docs e informações)</h3>
+                        <div class="project-company">Projeto de IA Generativa</div>
+                        <div class="project-description">
+                            <p>Gestão do projeto de otimização e reestruturação da arquitetura e base de dados da assistente virtual.</p>
                         </div>
-                        
-                        <div class="metric-card">
-                            <div class="metric-icon">
-                                <i class="fas fa-arrow-up-right-dots"></i> </div>
-                            <h2>Filosofia Kaizen</h2>
-                            <div class="metric-value">Evolução Incremental</div>
-                            <p>Foco na eliminação de desperdícios e na implementação de pequenas mudanças diárias que geram grandes impactos a longo prazo.</p>
-                        </div>
-                        
-                        <div class="metric-card">
-                            <div class="metric-icon">
-                                <i class="fas fa-comments"></i> </div>
-                            <h2>Feedback Loops</h2>
-                            <div class="metric-value">Retrospectivas Eficazes</div>
-                            <p>Ciclos curtos de feedback para inspeção frequente, transformando lições aprendidas em planos de ação para as próximas Sprints.</p>
+                        <div class="project-impact">
+                            <p><strong>Impacto:</strong> Implementação de métricas, dashboards e indicadores ágeis, com foco em entrega de valor, que se tornaram referência de governança para o cliente.</p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Seção Escalando Scrum com Ícones -->
-             <section class="scrum-container">
-                <div class="container">
-                    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-                        <h2>Gestão Híbrida e Adaptativa</h2>
-                        <p>A metodologia certa para cada desafio: do Preditivo ao Ágil.</p>
-                    </div>
-                    
-                    <div class="scrum-grid">
-                        <div class="scrum-card">
-                            <div class="scrum-icon">
-                                <i class="fas fa-network-wired fa-3x"></i>
-                            </div>
-                            <div class="scrum-info">
-                                <h3>Alta Performance em Projetos Complexos</h3>
-                                <p>Liderança de times remotos e distribuídos em ambientes de alta complexidade. Foco na autogestão, confiança e clareza de objetivos para garantir entregas consistentes, independente da metodologia ou localização física.</p>
-                            </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Automação de processos</h3>
+                        <div class="project-company">Sistemas de serviços de TI e RPA´s</div>
+                        <div class="project-description">
+                            <p>Implementação e evolução do ServiceNow com automações inteligentes de fluxos complexos de atendimento. Automações de rotinas repetitivas e de alto volume com Automation Anywhere.</p>
                         </div>
-                        
-                        <div class="scrum-card">
-                            <div class="scrum-icon">
-                                <i class="fas fa-search-location fa-3x"></i>
-                            </div>
-                            <div class="scrum-info">
-                                <h3>Análise de Cenário (Cynefin)</h3>
-                                <p>Diagnóstico preciso do ambiente e da maturidade do time antes da definição do processo. Avaliação de riscos, incertezas e requisitos para entender se o projeto demanda uma abordagem linear ou empírica.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="scrum-card">
-                            <div class="scrum-icon">
-                                <i class="fas fa-sliders-h fa-3x"></i>
-                            </div>
-                            <div class="scrum-info">
-                                <h3>Abordagem Fit-for-Purpose</h3>
-                                <p>Flexibilidade para alternar entre modelos. Utilização de <strong>Waterfall</strong> para escopos fechados e previsíveis, ou <strong>Scrum/Kanban</strong> para inovação e incerteza. O foco é a entrega de valor, não a ferramenta.</p>
-                            </div>
+                        <div class="project-impact">
+                            <p><strong>Impacto:</strong> Execução automatizada de tarefas repetitivas. Aumento da eficiência operacional, centralização de atendimentos, aumentando a transparência e gestão de dados de atendimento e SLA.</p>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema de Gestão de Consultores</h3>
+                        <div class="project-company">Gestão Adm e RH</div>
+                        <div class="project-description">
+                            <p>Implementação do sistema de controle de ponto e cadastro de consultores em 5 meses de projeto, utilizando framework Scrum. Utilização de Design Thinking. Transparência, Inspeção e Adaptação contínuos evidenciaram o sucesso sistêmico.</p>
+                        </div>
+                        <div class="project-impact">
+                            <p><strong>Impacto:</strong> Otimização na gestão de cadastro de consultores e pagamentos, assim como a melhoria no processo de gestão de projetos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Automatização de Comissionamentos</h3>
+                        <div class="project-company">Sistemas Financeiros</div>
+                        <div class="project-description">
+                            <p>Automatização de fluxos de trabalho para comissionamento e chargeback de agentes financeiros, substituindo planilhas manuais por sistema integrado.</p>
+                        </div>
+                        <div class="project-impact">
+                            <p><strong>Impacto:</strong> Redução significativa do risco de perda de dados e erros manuais, graças à menor intervenção humana. Melhoria na governança e na gestão das informações, com ganho de eficiência operacional e maior transparência nos processos de comissionamento.</p>
+                        </div>
+                    </div>
+                </div>   
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Contribuição na Transformação Ágil</h3>
+                        <div class="project-company">Análise de Cenários, Treinamentos e Implementação Ágil</div>
+                        <div class="project-description">
+                            <p>Diagnóstico do nível de adoção do framework ágil, identificando gaps e oportunidades de melhoria, ministrando treinamentos para otimização de processos internos.</p>
+                        </div>
+                        <div class="project-impact">
+                            <p><strong>Impacto:</strong> Implementação da agilidade, ganhando maior eficiência e eficácia na implementação dos projetos de diversas squads e produtos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema Análise de Desempenho</h3>
+                        <div class="project-company">Gestão DHO/RH</div>
+                        <div class="project-description">
+                            <p>Implementação de sistema para análise de desempenho, com regras complexas e restrição de prazo. Implementado em 4 meses. Entregas incrementais com foco no valor, melhoria contínua e adaptação.</p>
+                        </div>
+                        <div class="project-impact">
+                            <p><strong>Impacto:</strong> Permitiu análises de desempenho dentro do cronograma, com feedbacks contínuos, adaptando o desenvolvimento às necessidades identificadas devido ao cenário complexo da organização.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO RECURSOS (GUIAS) -->
+    <section class="resources-container" style="background-color: var(--primary); padding: 4rem 0; color: white;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="color: white;">Guias e Ferramentas Interativas</h2>
+                <p style="color: var(--accent);">Materiais de apoio sobre Gestão, Liderança e Tecnologias.</p>
+            </div>
+            <div class="resources-grid">
+                <a href="https://lideranca-servidora-dupla-lealdade.vercel.app/" target="_blank" class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-hands-helping"></i></div>
+                    <div class="resource-content">
+                        <h3>Liderança Servidora</h3>
+                        <p>Estratégias para mitigar a dualidade cultural em times ágeis terceirizados e promover alta performance.</p>
+                        <span class="resource-link-text">Acessar Material <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="https://gp-gestor-e-projetos-de-ia.vercel.app/" target="_blank" class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-robot"></i></div>
+                    <div class="resource-content">
+                        <h3>Gestor de Projetos & IA</h3>
+                        <p>Habilidades e tecnologias essenciais para o gerente de projetos na era da Inteligência Artificial.</p>
+                        <span class="resource-link-text">Acessar Material <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="https://gp-gestao-da-qualidade.vercel.app/" target="_blank" class="resource-card">
+                    <div class="resource-icon"><i class="fas fa-file-contract"></i></div>
+                    <div class="resource-content">
+                        <h3>Gestão da Qualidade</h3>
+                        <p>Guia interativo sobre documentação de software e processos de garantia da qualidade.</p>
+                        <span class="resource-link-text">Acessar Material <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Pilares da Alta Performance (Substitui Agile Thinking e Gestão Híbrida) -->
+    <section class="metrics-container" style="background-color: white;">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2>Pilares da Alta Performance</h2>
+                <p>Mapeamento de cenários, liderança estratégica e foco absoluto na entrega de valor.</p>
+            </div>
             
-            <!-- CSS para a seção de métricas -->
-            <style>
-            .skills-header {
-              text-align: center;
-              padding: 40px 0;
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-users"></i></div>
+                    <h3>Liderança & Engajamento</h3>
+                    <p>Gestão humana e servidora de equipas distribuídas. Promoção da autogestão através de dinâmicas de Management 3.0 e consolidação de uma forte cultura de feedback contínuo (1:1, 360°, SCI).</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Visão Orientada a Dados</h3>
+                    <p>Aplicação rigorosa do Ciclo PDCA e Filosofia Kaizen. Transformação de métricas ágeis em planos de ação de melhoria contínua, impulsionando a eficiência e o ROI dos projetos.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Gestão de Cenários Complexos</h3>
+                    <p>Diagnóstico de riscos estruturais (Cynefin) e aplicação da abordagem <em>Fit-for-Purpose</em>, orquestrando frameworks Ágeis e Preditivos para garantir entregas consistentes perante a incerteza.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Governança & Entrega de Valor</h3>
+                    <p>Reestruturação de processos complexos em fluxos de valor altamente simplificados. Criação de painéis e métricas de desempenho que se tornam referências de transparência corporativa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FORMAÇÃO ACADÊMICA -->
+    <section class="education-container">
+        <div class="container">
+            <div class="section-header">
+                <h2>Formação Acadêmica e Certificações</h2>
+                <p>Minha trajetória Educacional e Especializações.</p>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-graduation-cap fa-3x"></i></div>
+                    <div class="education-info">
+                        <h3>MBA em Gestão de Projetos e Metodologias Ágeis</h3>
+                        <div class="education-meta">
+                            <span><i class="fas fa-university"></i> PUC RS</span>
+                            <span><i class="fas fa-calendar-alt"></i> Abr/2026</span>
+                        </div>
+                        <p>Especialização em gestão de projetos tradicionais e ágeis com foco em Comunicação, Scrum, Lean e IA aplicada em Gestão de Projetos.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-laptop-code fa-3x"></i></div>
+                    <div class="education-info">
+                        <h3>Pós-Graduação em Engenharia de Software</h3>
+                        <div class="education-meta">
+                            <span><i class="fas fa-university"></i> PUC MG</span>
+                            <span><i class="fas fa-calendar-alt"></i> Mai/2022</span>
+                        </div>
+                        <p>Especialização em Arquitetura de Software, Qualidade de Código, DevOps e Gestão de Desenvolvimento de Software.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-user-graduate fa-3x"></i></div>
+                    <div class="education-info">
+                        <h3>Graduação em Gestão da TI</h3>
+                        <div class="education-meta">
+                            <span><i class="fas fa-university"></i> SENAC</span>
+                            <span><i class="fas fa-calendar-alt"></i> Ago/2017</span>
+                        </div>
+                        <p>Formação em Gestão de Tecnologia da Informação com ênfase em Governança de TI, COBIT, CMMI e ITIL.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-certificate fa-3x"></i></div>
+                    <div class="education-info">
+                        <h3>PSM I - Professional Scrum Master</h3>
+                        <div class="education-meta">
+                            <span><i class="fas fa-award"></i> Scrum.org</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-laptop-code fa-3x"></i></div>
+                    <div class="education-info">
+                        <h3>Fundamentos Python e IA</h3>
+                        <div class="education-meta">
+                            <span><i class="fas fa-award"></i> Data Science Academy</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon"><i class="fas fa-certificate fa-3x"></i></div>
+                    <div class="education-info">
+                        <h3>CTFL-ISTQB - Qualidade de Software</h3>
+                        <div class="education-meta">
+                            <span><i class="fas fa-award"></i> BSTQB</span>
+                            <span><i class="fas fa-calendar-alt"></i> 2013</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Menu de Jornada Profissional -->
+    <section class="journey-container" style="background-color: white;">
+        <div class="container">
+            <div class="timeline-header" style="text-align: center; margin-bottom: 3rem;">
+                <h2>Jornada Profissional</h2>
+                <p>Selecione o período para explorar as minhas entregas de valor e evolução contínua.</p>
+            </div>
+            
+            <div class="journey-layout" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                
+                <!-- Menu Lateral (Anos e Empresas) -->
+                <div class="journey-menu" style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <button class="tab-link active" onclick="openJourney(event, 'job-db')" style="padding: 1rem; text-align: left; background: var(--secondary); border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: white; transition: 0.3s;">
+                        Mai/2025 - Atual <br><span style="font-size: 0.85em; opacity: 0.9;">DB - Randoncorp</span>
+                    </button>
+                    <button class="tab-link" onclick="openJourney(event, 'job-voke')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                        Mai/2023 - Abr/2025 <br><span style="font-size: 0.85em; color: var(--text-light);">Voke</span>
+                    </button>
+                    <button class="tab-link" onclick="openJourney(event, 'job-tegra')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                        Mai/2021 - Mai/2023 <br><span style="font-size: 0.85em; color: var(--text-light);">Tegra Soluções Digitais</span>
+                    </button>
+                    <button class="tab-link" onclick="openJourney(event, 'job-pan')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                        Mai/2019 - Mai/2021 <br><span style="font-size: 0.85em; color: var(--text-light);">Banco Pan</span>
+                    </button>
+                    <button class="tab-link" onclick="openJourney(event, 'job-cea')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                        Ago/2018 - Mai/2019 <br><span style="font-size: 0.85em; color: var(--text-light);">C&A Modas e Movida</span>
+                    </button>
+                    <button class="tab-link" onclick="openJourney(event, 'job-lg')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                        Jul/2011 - Jul/2018 <br><span style="font-size: 0.85em; color: var(--text-light);">LG Electronics</span>
+                    </button>
+                    <button class="tab-link" onclick="openJourney(event, 'job-finance')" style="padding: 1rem; text-align: left; background: white; border: 2px solid var(--secondary); border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--primary); transition: 0.3s;">
+                        1992 - 2007 <br><span style="font-size: 0.85em; color: var(--text-light);">Carreira Financeira</span>
+                    </button>
+                </div>
+                
+                <!-- Painel de Conteúdo -->
+                <div class="journey-content" style="flex: 2; min-width: 300px; background: var(--light); padding: 2.5rem; border-radius: 8px; box-shadow: 0 3px 15px rgba(0,0,0,0.05);">
+                    
+                    <!-- DB -->
+                    <div id="job-db" class="tab-content" style="display: block; animation: fadeIn 0.5s;">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Gerente de Projetos de TI</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#Governança</span>
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#LeanThinking</span>
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#EstratégiaDados</span>
+                        </div>
+                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                            <li><strong>O Desafio:</strong> Gerir a otimização de dados e a arquitetura de integrações de mais de 700 serviços distribuídos, num ambiente de alta complexidade e impacto estrutural.</li>
+                            <li><strong>A Ação:</strong> Aplicação de Lean Thinking para substituir desperdícios e documentações manuais por fluxos de valor centralizados no Azure DevOps, aliados a uma liderança participativa e métricas ágeis.</li>
+                            <li><strong>O Impacto:</strong> Criação de painéis de indicadores que se tornaram referência de governança e transparência corporativa, garantindo a entrega de valor e o engajamento das partes interessadas.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Voke -->
+                    <div id="job-voke" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Gerente de Projetos de TI / Scrum Master e PO</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#LiderançaServidora</span>
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#Discovery</span>
+                        </div>
+                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                            <li><strong>O Desafio:</strong> Conduzir a implantação e evolução do ServiceNow e gerir orçamentos (CAPEX/OPEX) e conflitos de diversas áreas de negócio.</li>
+                            <li><strong>A Ação:</strong> Fomento à autogestão dos times e implementação de processos de discovery (Lean Inception/Design Thinking), aliada à comunicação estratégica e priorização de backlog.</li>
+                            <li><strong>O Impacto:</strong> Alinhamento estratégico transparente e consolidação de uma cultura de feedback (1:1, SCI, 360°), garantindo entregas ágeis e orientadas a dados.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tegra -->
+                    <div id="job-tegra" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Project Delivery Manager / Scrum Master e PO</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#Agilidade</span>
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#GestãoOperacional</span>
+                        </div>
+                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                            <li><strong>O Desafio:</strong> Gerir múltiplos projetos em simultâneo e a alocação de profissionais, com a necessidade de escalar práticas ágeis.</li>
+                            <li><strong>A Ação:</strong> Facilitação de cerimónias Scrum, remoção de impedimentos, processos de discovery e gestão operacional dos profissionais alocados.</li>
+                            <li><strong>O Impacto:</strong> Elevação da maturidade ágil das equipas, garantindo previsibilidade, cultura de feedback e qualidade nas entregas sistémicas.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Banco Pan -->
+                    <div id="job-pan" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de QA e Apoio a PO</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#Qualidade</span>
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#Homologação</span>
+                        </div>
+                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                            <li><strong>O Desafio:</strong> Garantir a qualidade de software e auxiliar na transição e priorização de fluxos financeiros críticos (comissionamento).</li>
+                            <li><strong>A Ação:</strong> Mapeamento de processos, definição de estratégias de teste, apoio na definição de DoD/DoR e facilitação de cerimónias ágeis.</li>
+                            <li><strong>O Impacto:</strong> Homologações bem-sucedidas junto aos stakeholders, garantindo a integridade dos dados e o alinhamento das entregas com os requisitos de negócio.</li>
+                        </ul>
+                    </div>
+
+                    <!-- C&A e Movida -->
+                    <div id="job-cea" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de Garantia de Qualidade</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#QA</span>
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#Mapeamento</span>
+                        </div>
+                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                            <li><strong>O Desafio:</strong> Assegurar a estabilidade e qualidade das entregas de software para operações de grande escala.</li>
+                            <li><strong>A Ação:</strong> Execução de estratégias de teste, mapeamento de processos e suporte direto na gestão e priorização do backlog.</li>
+                            <li><strong>O Impacto:</strong> Validação de requisitos eficientes, garantindo a redução de bugs em produção e o alinhamento das funcionalidades com o utilizador final.</li>
+                        </ul>
+                    </div>
+
+                    <!-- LG Electronics -->
+                    <div id="job-lg" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Engenheira de Qualidade de Software</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#Telecom</span>
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#TestesEmCampo</span>
+                        </div>
+                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                            <li><strong>O Desafio:</strong> Gerir testes complexos de interação entre dispositivos móveis e redes de telefonia (2G a 4G, VoLTE).</li>
+                            <li><strong>A Ação:</strong> Condução de homologações em campo no Brasil e no exterior, analisando usabilidade e gerando reportes para o Brasil e Coreia do Sul.</li>
+                            <li><strong>O Impacto:</strong> Certificação de excelência para os serviços das operadoras, garantindo que os critérios de aceite internacionais eram cumpridos com rigor.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Finanças -->
+                    <div id="job-finance" class="tab-content" style="display: none; animation: fadeIn 0.5s;">
+                        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Carreira em Controladoria e Finanças</h3>
+                        <div style="display: flex; gap: 10px; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#GestãoFinanceira</span>
+                            <span style="background: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; color: var(--secondary); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">#ReduçãoDeCustos</span>
+                        </div>
+                        <ul style="padding-left: 20px; color: var(--text); line-height: 1.8;">
+                            <li><strong>O Desafio:</strong> Otimizar o fluxo de caixa, conciliação contábil e reduzir falhas em faturamentos numa rede hoteleira de grande porte.</li>
+                            <li><strong>A Ação:</strong> Criação de acompanhamentos de Budget (Orçado x Realizado), auditorias internas e treino de equipas operacionais (do Estágio à Supervisão).</li>
+                            <li><strong>O Impacto:</strong> Redução drástica da inadimplência em 50% e criação de um reporte gerencial diário que otimizou as decisões de tesouraria.</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function openJourney(evt, jobName) {
+            var i, tabcontent, tablinks;
+            
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
             
-            .skills-header img.badge-img {
-              width: 120px;        /* controla o tamanho da imagem */
-              height: auto;
-              display: block;
-              margin: 0 auto 20px; /* centraliza e dá espaço abaixo */
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.background = "white";
+                tablinks[i].style.color = "var(--primary)";
+                tablinks[i].querySelector('span').style.color = "var(--text-light)";
             }
             
-                .metrics-container {
-                    padding: 4rem 0;
-                    background-color: white;
-                }
-                
-                .metrics-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                    gap: 2rem;
-                    margin-top: 2rem;
-                }
-                
-                .metric-card {
-                    background: var(--light); /* Cinza muito claro */
-                    padding: 2rem;
-                    border-radius: 8px;
-                    text-align: center;
-                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-                    transition: transform 0.3s ease;
-                }
-                
-                .metric-card:hover {
-                    transform: translateY(-5px);
-                }
-                
-                .metric-icon {
-                    font-size: 2.5rem;
-                    color: var(--secondary); /* Azul suave */
-                    margin-bottom: 1rem;
-                }
-                
-                .metric-value {
-                    font-size: 1rem;
-                    font-weight: 700;
-                    color: var(--primary); /* Charcoal */
-                    margin: 1rem 0;
-                }
-                
-                .metric-card p {
-                    color: var(--text-light); /* Cinza médio-claro */
-                }
-                
-                @media (max-width: 768px) {
-                    .metrics-grid {
-                        grid-template-columns: 1fr;
-                    }
-                }
-            </style>
-            
-            
-            <!-- CSS para a nova seção -->
-            <style>
-                .scrum-container {
-                    padding: 4rem 0;
-                    background-color: #f8f9fa;
-                }
-                
-                .scrum-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                    gap: 2rem;
-                    margin-top: 2rem;
-                }
-                
-                .scrum-card {
-                    background: white;
-                    padding: 2rem;
-                    border-radius: 8px;
-                    text-align: center;
-                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-                    transition: transform 0.3s ease;
-                }
-                
-                .scrum-card:hover {
-                    transform: translateY(-5px);
-                }
-                
-                .scrum-icon {
-                    color: var(--secondary); /* Azul suave */
-                    margin-bottom: 1.5rem;
-                }
-                
-                .scrum-info h3 {
-                    color: var(--primary); /* Charcoal */
-                    margin-bottom: 1rem;
-                }
-                
-                .scrum-info p {
-                    color: var(--text-light); /* Cinza médio-claro */
-                }
-                
-                @media (max-width: 768px) {
-                    .scrum-grid {
-                        grid-template-columns: 1fr;
-                    }
-                }
-            </style>
-            
-            <!-- Seção de Formação Acadêmica -->
-            <section class="education-container">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Formação Acadêmica e Certificações</h2>
-                        <p>Minha trajetória Educacional e Especializações.</p>
-                    </div>
-                    
-                    <div class="education-grid">
-                        <!-- MBA -->
-                        <div class="education-card">
-                            <div class="education-icon">
-                                <i class="fas fa-graduation-cap fa-3x"></i>
-                            </div>
-                            <div class="education-info">
-                                <h3>MBA em Gestão de Projetos e Metodologias Ágeis</h3>
-                                <div class="education-meta">
-                                    <span><i class="fas fa-university"></i> PUC RS</span>
-                                    <span><i class="fas fa-calendar-alt"></i> Abr/2026</span>
-                                </div>
-                                <p>Especialização em gestão de projetos tradicionais e ágeis com foco em Comunicação, Scrum, Lean e IA aplicada em Gestão de Projetos.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Pós-graduação -->
-                        <div class="education-card">
-                            <div class="education-icon">
-                                <i class="fas fa-laptop-code fa-3x"></i>
-                            </div>
-                            <div class="education-info">
-                                <h3>Pós-Graduação em Engenharia de Software</h3>
-                                <div class="education-meta">
-                                    <span><i class="fas fa-university"></i> PUC MG</span>
-                                    <span><i class="fas fa-calendar-alt"></i> Mai/2022</span>
-                                </div>
-                                <p>Especialização em Arquitetura de Software, Qualidade de Código, DevOps e Gestão de Desenvolvimento de Software.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Graduação -->
-                        <div class="education-card">
-                            <div class="education-icon">
-                                <i class="fas fa-user-graduate fa-3x"></i>
-                            </div>
-                            <div class="education-info">
-                                <h3>Graduação em Gestão da Tecnologia da Informação</h3>
-                                <div class="education-meta">
-                                    <span><i class="fas fa-university"></i> Centro Universitário SENAC</span>
-                                    <span><i class="fas fa-calendar-alt"></i> Ago/2017</span>
-                                </div>
-                                <p>Formação em Gestão de Tecnologia da Informação com ênfase em Governança de TI, COBIT, CMMI e ITIL.</p>
-                            </div>
-                        </div>
-                        <div class="education-card">
-                            <div class="education-icon">
-                                <i class="fas fa-certificate fa-3x"></i>
-                            </div>
-                            <div class="education-info">
-                                <h3>PSM I - Professional Scrum Master</h3>
-                                <div class="education-meta">
-                                    <span><i class="fas fa-award"></i> Scrum.org</span>
-                                    <span><i class="fas fa-calendar-alt"></i> 2025</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="education-card">
-                            <div class="education-icon">
-                                <i class="fas fa-laptop-code fa-3x"></i>
-                            </div>
-                            <div class="education-info">
-                                <h3>Fundamentos de Linguagem Python Do Básico a Aplicações de IA</h3>
-                                <div class="education-meta">
-                                    <span><i class="fas fa-award"></i> Data Science Academy</span>
-                                    <span><i class="fas fa-calendar-alt"></i> 2026</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="education-card">
-                            <div class="education-icon">
-                                <i class="fas fa-certificate fa-3x"></i>
-                            </div>
-                            <div class="education-info">
-                                <h3>CTFL-ISTQB - Qualidade de Software  </h3>
-                                <div class="education-meta">
-                                    <span><i class="fas fa-award"></i> BSTQB</span>
-                                    <span><i class="fas fa-calendar-alt"></i> 2013</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            document.getElementById(jobName).style.display = "block";
+            evt.currentTarget.style.background = "var(--secondary)";
+            evt.currentTarget.style.color = "white";
+            evt.currentTarget.querySelector('span').style.color = "white";
+        }
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-contact">
+                <h3>Entre em Contato</h3>
+                <p>Estou aberta a novas oportunidades e parcerias.</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+55 11 99258-7976</span>
                 </div>
-            </section>
-            
-            <!-- CSS para a seção de formação -->
-            <style>
-                .education-container {
-                    padding: 4rem 0;
-                    background-color: var(--light); /* Cinza muito claro */
-                }
-                
-                .education-grid {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                    gap: 2rem;
-                    margin-top: 2rem;
-                }
-                
-                .education-card {
-                    background: white;
-                    padding: 2rem;
-                    border-radius: 8px;
-                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-                    transition: transform 0.3s ease;
-                }
-                
-                .education-card:hover {
-                    transform: translateY(-5px);
-                }
-                
-                .education-icon {
-                    color: var(--secondary); /* Azul suave */
-                    margin-bottom: 1.5rem;
-                }
-                
-                .education-info h3 {
-                    color: var(--primary); /* Charcoal */
-                    margin-bottom: 1rem;
-                }
-                
-                .education-meta {
-                    display: flex;
-                    gap: 1rem;
-                    margin-bottom: 1rem;
-                    flex-wrap: wrap;
-                }
-                
-                .education-meta span {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    color: var(--text-light); /* Cinza médio-claro */
-                    font-size: 0.9rem;
-                }
-                
-                .education-info p {
-                    color: var(--text); /* Cinza escuro */
-                }
-                
-                @media (max-width: 768px) {
-                    .education-grid {
-                        grid-template-columns: 1fr;
-                    }
-                }
-            </style>
-            <section class="timeline-container">
-                <div class="container">
-                    <div class="timeline-header">
-                        <h2>Minha Jornada Profissional.</h2>
-                        <p>De Finanças à Tecnologia.</p>
-                    </div>
-                    <div class="timeline">
-                        <!-- DB Server-->
-                        <div class="timeline-item left">
-                            <div class="timeline-content">
-                                <div class="timeline-date">Mai/2025 - Atual</div>
-                                <h3 class="timeline-role">Gerente de Projetos de TI</h3>
-                                <div class="timeline-company">DB - Randoncorp</div>
-                                <div class="timeline-description">
-                                    <ul>
-                                        <li>Projeto: GurIA - Ferramenta de IA do Governo Estadual do RS.</li>
-										<li> Objetivo: Otimização e reestruturação de dados para expansão dos serviços oferecidos na Assistente Virtual, aprendizado da máquina e reestruturação da arquitetura;</li>
-                                        <li>Aplico Lean Thinking para substituir processos manuais e desperdícios (Documentação) por fluxos de valor no Azure DevOps, com a centralização de informações na ferramenta;</li>
-										<li>Através da filosofia Kaizen, estabeleci ciclos de melhoria contínua que transformaram as métricas do projeto em engajamento das partes interessadas e referência de governança para o cliente;</li>
-										<li>Implementação de dashboards e indicadores ágeis no Azure que se tornaram referência interna;</li>
-										<li>Gestão de stakeholders, alinhamento e comunicação estratégica.</li>
-										<li>Gestão do time para integrações de mais de 700 serviços distribuídos em mais de 30 projetos, com fluxos de processos complexos de aprovações e desenvolvimento;</li> 
-										<li>Liderança de times com abordagem servidora e participativa;</li>
-                                        <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto);</li>
-										<li>Apoio ao PO na criação do roadmap, priorização de projetos de acordo com os dados coletados de serviços solicitados;</li>
-                                        <li>Análise e tomada de decisão baseada em dados e métricas ágeis, com foco na melhoria contínua;</li>
-										<li>Gestão de riscos e prazos do projeto.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline">
-                            <!-- Voke -->
-                            <div class="timeline-item right">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">Mai/2023 - Abr/2025</div>
-                                    <h3 class="timeline-role">Gerente de Projetos de TI, Project Delivery Manager, Scrum Master e PO</h3>
-                                    <div class="timeline-company">Voke</div>
-                                    <div class="timeline-description">
-                                        <ul>
-                                            <li>Atuação como Scrum Master, Project Delivery Manager e PO em ambientes ágeis;</li>
-                                            <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de impedimentos e fomento à autogestão dos times;</li>
-                                            <li>Gestão de orçamento CAPEX e OPEX de projetos sob minha responsabilidade;</li>
-                                            <li>Liderança de times com abordagem servidora e participativa;</li>
-                                            <li>Condução de processos de discovery com Lean Inception e Design Thinking;</li>
-                                            <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto);</li>
-                                            <li>Análise e tomada de decisão baseada em dados e métricas ágeis, com foco na melhoria contínua;</li>
-                                            <li>Gestão e priorização de demandas de implantação e evolução do ServiceNow;</li>
-                                            <li>Gestão de conflitos de diversas áreas de negócio com foco no alinhamento estratégico;
-Gestão da 									<li>Gestão da comunicação estratégica.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Tegra -->
-                            <div class="timeline-item left">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">Mai/2021 - Mai/2023</div>
-                                    <h3 class="timeline-role">Project Delivery Manager, Scrum Master e PO</h3>
-                                    <div class="timeline-company">Tegra Soluções Digitais</div>
-                                    <div class="timeline-description">
-                                        <ul>
-                                            <li>Gerenciamento de múltiplos projetos com metodologias ágeis;</li>
-                                            <li>Facilitação das cerimônias Scrum e apoio na construção e refinamento do backlog, remoção de impedimentos e fomento à autogestão dos times;</li>
-                                            <li>Gerenciamento operacional de profissionais alocados;</li>
-                                            <li>Implementação de melhores práticas de gestão;</li>
-                                            <li>Condução de processos de discovery com Lean Inception e Design Thinking;</li>
-                                            <li>Promoção de cultura de feedback contínuo com práticas como 1:1, 360° e SCI (Situação-Comportamento-Impacto).</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Banco Pan -->
-                            <div class="timeline-item right">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">Mai/2019 - Mai/2021</div>
-                                    <h3 class="timeline-role">Engenheira de Garantia de Qualidade e Apoio a PO</h3>
-                                    <div class="timeline-company">Banco Pan</div>
-                                    <div class="timeline-description">
-                                        <ul>
-                                            <li>Liderança na garantia da qualidade de software;</li>
-                                            <li>Definição de estratégias de teste e automação;</li>
-                                            <li>Suporte na Gestão e priorização de backlog de produtos (comissionamento e chargeback);</li>
-                                            <li>Mapeamento de processos, requisitos e homologações;</li>
-                                            <li>Facilitação de cerimônias ágeis;</li>
-                                            <li>Apoio na definição DoD e DoR;</li>
-                                            <li>Homologações junto aos stakeholders.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- C&A e Movida -->
-                            <div class="timeline-item left">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">Ago/2018 - Mai/2019</div>
-                                    <h3 class="timeline-role">Engenheira de Garantia de Qualidade</h3>
-                                    <div class="timeline-company">C&A Modas e Movida</div>
-                                    <div class="timeline-description">
-                                        <ul>
-                                            <li>Garantia da qualidade de software;</li>
-                                            <li>Estratégias de teste e automação;</li>
-                                            <li>Suporte na gestão de backlog;</li>
-                                            <li>Mapeamento de processos e requisitos;</li>
-                                            <li>Suporte na gestão de backlog e priorização de funcionalidades.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- LG Electronics -->
-                            <div class="timeline-item right">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">Jul/2011 - Jul/2018</div>
-                                    <h3 class="timeline-role">Engenheira de Qualidade de Software</h3>
-                                    <div class="timeline-company">LG Electronics (Celulares)</div>
-                                    <div class="timeline-description">
-                                        <ul>
-                                            <li>Gerenciamento de testes de qualidade baseado em requisitos funcionais e não funcionais;</li>
-											<li>Gerenciamento de testes de qualidade de interação com as redes de telefonia;</li>
-                                            <li>Reportes gerenciais para LG Brasil e Coreia do Sul;</li>
-                                            <li>Validações de usabilidade para aplicativos e serviços das operadoras de telefonia e critérios de aceite;</li>
-                                            <li>Condução de homologações em campo com operadoras em redes 2G, 3G, 4G, VoLTE e ViLTE, VoWiFI;</li>
-											<li>Testes em campo com ferramentas específicas TELECOM para validação da comuniação entre rede e aparelhos;</li>
-                                            <li>Viagens nacionais e internacionais para testes em campo.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Carreira Financeira -->
-                            <div class="timeline-item left">
-                                <div class="timeline-content">
-                                    <div class="timeline-date">1992 - 2007</div>
-                                    <h3 class="timeline-role">Carreira em Controladoria e Finanças</h3>
-                                    <div class="timeline-company">Hotéis Sofitel, Mercure, Ibis e Costa do Sauípe Resort</div>
-                                    <div class="timeline-description">
-                                        <ul>
-                                            <li>Do Estágio à Supervisão Financeira;</li>                                
-                                            <li>Criação e acompanhamento de Budget Orçado x Realizado;</li>
-                                            <li>Contas a Pagar, Faturamento e Tesouraria;</li>
-                                            <li>Otimização de processos de conciliação contábil e financeira;</li>
-                                            <li>Redução de inadimplência em 50%;</li>
-                                            <li>Treinamento de equipes operacionais;</li>
-                                            <li>Auditorias internas em setores operacionais;</li>
-                                            <li>Reporte Gerencial dos Relatórios Financeiros;</li>
-                                            <li>Reporte Gerencial do Fluxo de Caixa | Diário e Mensal.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <footer>
-                    <div class="container">
-                        <div class="footer-contact">
-                            <h3>Entre em Contato</h3>
-                            <p>Estou aberta a novas oportunidades e parcerias.</p>
-                        </div>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+55 11 99258-7976</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>claudiarodriguespinto@outlook.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fab fa-linkedin"></i>
-                                <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
-                            </div>
-                        </div>
-                        
-                        <div class="copyright">
-                            &copy; 2025 Claudia Rodrigues Pinto. Todos os direitos reservados.
-                        </div>
-                    </div>
-                </footer>
-            </body>
-            </html>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>claudiarodriguespinto@outlook.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Claudia Rodrigues Pinto. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
