@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claudia Rodrigues Pinto | Portfólio Executivo</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
-            --primary: #0f172a;       /* Slate 900 */
-            --primary-light: #1e293b; /* Slate 800 */
-            --secondary: #2563eb;     /* Blue 600 */
-            --secondary-hover: #1d4ed8;/* Blue 700 */
-            --accent: #0ea5e9;        /* Sky 500 */
-            --accent-green: #10b981;  /* Emerald 500 */
-            --light-bg: #f8fafc;      /* Slate 50 */
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --secondary: #2563eb;
+            --secondary-hover: #1d4ed8;
+            --accent: #0ea5e9;
+            --accent-green: #10b981;
+            --light-bg: #f8fafc;
             --card-bg: #ffffff;
-            --border-color: #e2e8f0;   /* Slate 200 */
+            --border-color: #e2e8f0;
             --text-dark: #0f172a;
-            --text-muted: #475569;     /* Slate 600 */
-            --text-light: #94a3b8;    /* Slate 400 */
+            --text-muted: #475569;
+            --text-light: #94a3b8;
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -750,7 +748,6 @@
             font-size: 0.88rem;
         }
 
-        /* Notification Toast */
         .toast {
             position: fixed;
             bottom: 24px;
@@ -765,7 +762,6 @@
             z-index: 2000;
         }
 
-        /* Responsive Breakpoints */
         @media (max-width: 900px) {
             .hero-grid {
                 grid-template-columns: 1fr;
@@ -788,7 +784,11 @@
 </head>
 <body>
 
-    <!-- Toast Notification -->
+    <!-- Chosen Palette: Navy & Slate Modern Executive Palette -->
+    <!-- Application Structure Plan: Executivo Portfolio single page web application with responsive navigation, interactive journey tabs, portfolio grid cards, technical skill blocks, education grid, interactive resource links, and executive contact capabilities. Designed for fast navigation and dynamic readability. -->
+    <!-- Visualization & Content Choices: Executivo Portfolio -> Goal: Showcase executive achievements and experience -> HTML/CSS Grid & Flexbox, Tab switching via Vanilla JS -> Interaction: Dynamic pane switching, copy email toast notification -> Justification: High readability, crisp design, fast performance without external dynamic heavy dependencies -> Library/Method: HTML5, Custom CSS, Vanilla JavaScript. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
     <div id="toast" class="toast"><i class="fas fa-check-circle"></i> E-mail copiado com sucesso!</div>
 
     <nav class="navbar">
@@ -809,32 +809,32 @@
     </nav>
 
     <header class="hero">
-    <div class="container">
-        <div class="hero-grid">
-            <div class="profile-frame">
-                <img src="imagens/claudia_perfil.jpeg" alt="Claudia Rodrigues Pinto" class="profile-img" onerror="this.src='https://placehold.co/200x200/2C3E50/FFFFFF?text=CRP'">
-            </div>
-            <div class="hero-content">
-                <span class="hero-title-badge">Transformação Ágil | Projetos & Soluções em IA | Liderança Ágil e Servidora</span>
-                <h1>Claudia Rodrigues Pinto</h1>
-                <p class="hero-subtitle">
-                    Praticante da liderança servidora para empoderar times de alta performance. Desenvolvo iniciativas com foco na experiência do usuário, orientadas por dados e comprometidas com a melhoria contínua e a entrega de valor sustentável.
-                </p>
-                <div class="hero-actions">
-                    <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-linkedin"></i> Conectar no LinkedIn
-                    </a>
-                    <button onclick="copyEmail()" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i> Copiar E-mail
-                    </button>
-                    <a href="https://wa.me/5511992587976" target="_blank" class="btn btn-outline">
-                        <i class="fab fa-whatsapp"></i> Conversar via WhatsApp
-                    </a>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="profile-frame">
+                    <img src="imagens/claudia_perfil.jpeg" alt="Claudia Rodrigues Pinto" class="profile-img" onerror="this.src='https://placehold.co/200x200/2C3E50/FFFFFF?text=CRP'">
+                </div>
+                <div class="hero-content">
+                    <span class="hero-title-badge">Transformação Ágil | Projetos & Soluções em IA | Liderança Ágil e Servidora</span>
+                    <h1>Claudia Rodrigues Pinto</h1>
+                    <p class="hero-subtitle">
+                        Praticante da liderança servidora para empoderar times de alta performance. Desenvolvo iniciativas com foco na experiência do usuário, orientadas por dados e comprometidas com a melhoria contínua e a entrega de valor sustentável.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-linkedin"></i> Conectar no LinkedIn
+                        </a>
+                        <button onclick="copyEmail()" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i> Copiar E-mail
+                        </button>
+                        <a href="https://wa.me/5511992587976" target="_blank" class="btn btn-outline">
+                            <i class="fab fa-whatsapp"></i> Conversar via WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <section id="pilares" class="section-padding">
         <div class="container">
@@ -881,10 +881,9 @@
             </div>
 
             <div class="journey-wrapper">
-                <!-- Navigation Menu -->
                 <div class="journey-menu">
                     <button class="journey-btn active" onclick="switchJourney('job-db', this)">
-                        <span class="company">DB - PROCERGS (Gov. RS)</span>
+                        <span class="company">DB / PROCERGS (Gov. RS)</span>
                         <span class="period">Mai/2023 - Atual</span>
                     </button>
 
@@ -893,24 +892,14 @@
                         <span class="period">Mai/2023 - Abr/2025</span>
                     </button>
 
-                    <button class="journey-btn" onclick="switchJourney('job-capgemini', this)">
-                        <span class="company">Capgemini / Banco Bradesco</span>
-                        <span class="period">Out/2022 - Dez/2022</span>
-                    </button>
-
                     <button class="journey-btn" onclick="switchJourney('job-tegra', this)">
                         <span class="company">Tegra Soluções Digitais</span>
                         <span class="period">Mai/2019 - Out/2023</span>
                     </button>
 
-                    <button class="journey-btn" onclick="switchJourney('job-pan', this)">
-                        <span class="company">Banco Pan</span>
-                        <span class="period">Mai/2019 - Mai/2021</span>
-                    </button>
-
-                    <button class="journey-btn" onclick="switchJourney('job-lg', this)">
-                        <span class="company">LG Electronics</span>
-                        <span class="period">Jul/2011 - Jul/2018</span>
+                    <button class="journey-btn" onclick="switchJourney('job-qa', this)">
+                        <span class="company">Engenharia de QA & UX</span>
+                        <span class="period">Banco PAN · C&A · LG (2011 - 2021)</span>
                     </button>
 
                     <button class="journey-btn" onclick="switchJourney('job-financas', this)">
@@ -919,34 +908,35 @@
                     </button>
                 </div>
 
-                <!-- Content Panes -->
                 <div class="journey-content">
-                    <!-- DB / PROCERGS -->
                     <div id="job-db" class="journey-content-pane active">
                         <div class="role-header">
-                            <h3 class="role-title">Líder de Transformação Ágil & Governança de Portfólio</h3>
+                            <h3 class="role-title">Gestão de Projetos & Transformação Ágil</h3>
                             <div class="role-meta">
                                 <span><i class="fas fa-building"></i> DB (Alocada na PROCERGS - Governo do RS)</span>
-                                <span><i class="fas fa-calendar-alt"></i> Mai/2023 - Atual</span>
+                                <span><i class="fas fa-calendar-alt"></i> Mai/2025 - Atual</span>
                             </div>
                             <div class="tag-cloud">
                                 <span class="tag-item">Azure DevOps</span>
                                 <span class="tag-item">IA Generativa (GurIA)</span>
-                                <span class="tag-item">Matriz RACI</span>
+                                <span class="tag-item">Cynefin</span>
+                                <span class="tag-item">Modelo Híbrido (Cascágil)</span>
+                                <span class="tag-item">Melhoria Contínua</span>
+                                <span class="tag-item">Business Agility</span>
                                 <span class="tag-item">Governança Pública</span>
-                                <span class="tag-item">SSP/RS</span>
+                                <span class="tag-item">Lean & Kaizen</span>
                             </div>
                         </div>
                         <ul class="journey-bullets">
-                            <li><strong>Governança de IA Generativa & Lean (GurIA):</strong> Liderança na reestruturação arquitetural de +700 serviços digitais do Governo do RS, eliminando desperdícios operacionais e centralizando fluxos no Azure DevOps.</li>
+                            <li><strong>Governança de IA Generativa & Lean (GurIA):</strong> Gestão do Projeto de reestruturação arquitetural de +700 serviços digitais do Governo do RS.</li>
                             <li><strong>Decisão Orientada a Dados:</strong> Conversão de métricas de fluxo (Scrum/Kanban) em decisões executivas estratégicas para portfólios vitais: Saúde (SIGAH), Mobilidade (RENACH) e Fomento (SUF).</li>
-                            <li><strong>Gestão de Conflitos via Matriz RACI:</strong> Estruturação de Matriz RACI para pacificidade de papéis em cenários de alta complexidade política, alinhando a gestão com as equipes e acelerando a adoção da cultura ágil.</li>
-                            <li><strong>Expansão na Segurança Pública (SSP/RS):</strong> Articulação transversal entre squads e gestores da SSP/RS (Perícias e Acolhimentos), expandindo a maturidade ágil sem autoridade hierárquica direta.</li>
-                            <li><strong>Comunicação Executiva & Dashboards:</strong> Criação de painéis de Gestão Visual que sintetizam dados para suporte transparente e rápido às decisões do C-Level e Secretários de Estado.</li>
+                            <li><strong>Análise de Cenário & Modelo Híbrido (Cascágil):</strong> Aplicação do framework <em>Cynefin</em> para mapeamento de complexidade. Adoção equilibrada de abordagem híbrida (cascágil), integrando flexibilidade e entregas incrementais ao rigor dos processos e marcos formais exigidos pelo cliente público.</li>
+                            <li><strong>Liderança Ágil & Servidora:</strong> Liderança pelo exemplo focada em destravar gargalos institucionais, blindar o time de atritos externos; mentoria e suporte contínuo aos times multidisciplinares, construindo um ambiente de segurança psicológica, colaboração e melhoria contínua.</li>
+                            <li><strong>Expansão Ágil & Referência Institucional:</strong> Condução do processo de implementação ágil e ciclos de melhoria contínua a partir de projeto piloto, que alcançou maturidade e serviu como benchmark e modelo de replicação para outras frentes e projetos da PROCERGS.</li>
+                            <li><strong>Comunicação Executiva & Dashboards:</strong> Criação de painéis de Gestão Visual que sintetizam dados para suporte transparente e rápido às decisões do C-Level.</li>
                         </ul>
                     </div>
 
-                    <!-- VOKE -->
                     <div id="job-voke" class="journey-content-pane">
                         <div class="role-header">
                             <h3 class="role-title">Project Delivery Manager | GP & Product Owner</h3>
@@ -968,37 +958,13 @@
                             <li><strong>Discovery & Produtos (Design Thinking/PBB):</strong> Condução de processos de Discovery, Product Backlog Building (PBB) e mapeamento de MVPs alinhados aos objetivos de negócio.</li>
                             <li><strong>Comunicação Estratégica Segmentada:</strong> Matriz de comunicação personalizada para cada perfil de stakeholder — sintetizando reportes operacionais para os times e executivos para a diretoria.</li>
                             <li><strong>Gestão à Vista & Melhoria Contínua:</strong> Implementação de dashboards para acompanhamento transparente de entregas e otimização de fluxos de trabalho com base em dados.</li>
-                            <li><strong>Liderança Servidora & Pessoas:</strong> Fomento da autogestão técnica, resolução de conflitos e desenvolvimento continuo através de reuniões 1:1, avaliações 360°, PDIs e metodologia de feedback SCI.</li>
+                            <li><strong>Liderança Servidora & Pessoas:</strong> Fomento da autogestão técnica, resolução de conflitos e desenvolvimento contínuo através de reuniões 1:1, avaliações 360°, PDIs e metodologia de feedback SCI.</li>
                         </ul>
                     </div>
 
-                    <!-- CAPGEMINI -->
-                    <div id="job-capgemini" class="journey-content-pane">
-                        <div class="role-header">
-                            <h3 class="role-title">Agile Consultant / Agile Coach</h3>
-                            <div class="role-meta">
-                                <span><i class="fas fa-building"></i> Capgemini (Cliente: Banco Bradesco)</span>
-                                <span><i class="fas fa-calendar-alt"></i> Out/2022 - Dez/2022</span>
-                            </div>
-                            <div class="tag-cloud">
-                                <span class="tag-item">Agile Coaching</span>
-                                <span class="tag-item">Diagnóstico Executivo</span>
-                                <span class="tag-item">Lead Time & Throughput</span>
-                                <span class="tag-item">Scrum of Scrums</span>
-                            </div>
-                        </div>
-                        <ul class="journey-bullets">
-                            <li><strong>Reconhecimento & Ascensão Rápida:</strong> Contratada inicialmente como Scrum Master, sendo selecionada após o início do projeto para assumir o papel estratégico de Agile Coach.</li>
-                            <li><strong>Diagnóstico Executivo de Maturidade:</strong> Mapeamento estratégico de *gaps* operacionais e oportunidades de melhoria no ecossistema de TI do Banco Bradesco.</li>
-                            <li><strong>Quebra de Silos & Integração:</strong> Alinhamento e aculturação entre equipes multidisciplinares compostas por diferentes consultorias parceiras, eliminando conflitos e silos operacionais.</li>
-                            <li><strong>Métricas de Fluxo & Desempenho:</strong> Implementação de indicadores (Lead Time, Cycle Time, Throughput) no Jira e Azure DevOps, reduzindo impedimentos sistêmicos e acelerando entregas.</li>
-                        </ul>
-                    </div>
-
-                    <!-- TEGRA -->
                     <div id="job-tegra" class="journey-content-pane">
                         <div class="role-header">
-                            <h3 class="role-title">Project Delivery Manager</h3>
+                            <h3 class="role-title">Project Delivery Manager - Consultora</h3>
                             <div class="role-meta">
                                 <span><i class="fas fa-building"></i> Tegra Soluções Digitais</span>
                                 <span><i class="fas fa-calendar-alt"></i> Mai/2019 - Out/2023</span>
@@ -1017,46 +983,30 @@
                         </ul>
                     </div>
 
-                    <!-- BANCO PAN -->
-                    <div id="job-pan" class="journey-content-pane">
+                    <div id="job-qa" class="journey-content-pane">
                         <div class="role-header">
-                            <h3 class="role-title">Engenheira de QA & Apoio ao PO</h3>
+                            <h3 class="role-title">Engenharia de Qualidade de Software, UX & Homologações</h3>
                             <div class="role-meta">
-                                <span><i class="fas fa-building"></i> Banco Pan</span>
-                                <span><i class="fas fa-calendar-alt"></i> Mai/2019 - Mai/2021</span>
+                                <span><i class="fas fa-building"></i> Banco PAN · C&A Brasil · LG Electronics</span>
+                                <span><i class="fas fa-calendar-alt"></i> Jul/2011 - Mai/2021</span>
                             </div>
                             <div class="tag-cloud">
+                                <span class="tag-item">Experiência do Usuário (UX)</span>
+                                <span class="tag-item">Homologações E2E</span>
+                                <span class="tag-item">Critérios de Aceite & DoD/DoR</span>
+                                <span class="tag-item">Automação de Testes</span>
                                 <span class="tag-item">Sistemas Financeiros</span>
-                                <span class="tag-item">Automatização de Comissionamentos</span>
-                                <span class="tag-item">DoD / DoR</span>
+                                <span class="tag-item">Varejo & Supply Chain</span>
+                                <span class="tag-item">Telecomunicações</span>
                             </div>
                         </div>
                         <ul class="journey-bullets">
-                            <li><strong>Automação de Fluxos Financeiros:</strong> Apoio na transição e automatização de comissionamentos e chargebacks, substituindo processos manuais por sistemas integrados.</li>
-                            <li><strong>Qualidade & Requisitos:</strong> Definição de regras de aceite (DoD/DoR) e homologações com stakeholders de negócio para garantir integridade de dados.</li>
+                            <li><strong>Banco PAN (Mai/2019 - Mai/2021):</strong> Liderança na garantia da qualidade e automação de testes em fluxos críticos de comissionamento e chargeback. Suporte à priorização de backlog de produto, mapeamento de processos/requisitos, homologações com áreas de negócio e facilitação de cerimônias ágeis com comunicação estratégica.</li>
+                            <li><strong>C&A Brasil (Ago/2018 - Fev/2019):</strong> Garantia de qualidade e automação em sistemas B2C e processos internos E2E (da entrada de tecidos/acessórios, modelagem e costura até a distribuição em lojas). Escrita de histórias de usuário com critérios de aceite, alinhamento de DoD/DoR e homologação direta junto aos stakeholders.</li>
+                            <li><strong>LG Electronics (Abr/2014 - Jul/2018):</strong> Liderança de equipe em garantia de qualidade de software para dispositivos móveis e telecomunicações (2G/3G/4G/VoLTE/ViLTE/VoWiFi). Mapeamento de processos, homologações técnicas com grandes operadoras (VIVO, CLARO, TIM), viagens internacionais para testes de campo e reporte executivo à Matriz na Coreia do Sul.</li>
                         </ul>
                     </div>
 
-                    <!-- LG ELECTRONICS -->
-                    <div id="job-lg" class="journey-content-pane">
-                        <div class="role-header">
-                            <h3 class="role-title">Engenheira de Qualidade de Software</h3>
-                            <div class="role-meta">
-                                <span><i class="fas fa-building"></i> LG Electronics</span>
-                                <span><i class="fas fa-calendar-alt"></i> Jul/2011 - Jul/2018</span>
-                            </div>
-                            <div class="tag-cloud">
-                                <span class="tag-item">Telecomunicações (2G a 4G/VoLTE/ViLTE/ VoWifi)</span>
-                                <span class="tag-item">Homologações Globais</span>
-                                <span class="tag-item">Gestão de Requisitos</span>
-                            </div>
-                        </div>
-                        <ul class="journey-bullets">
-                            <li><strong>Testes Globais & Certificação:</strong> Condução de testes e homologações de alta complexidade técnica com reporte para a Matriz (Coreia do Sul) e operadoras parceiras no Brasil.</li>
-                        </ul>
-                    </div>
-
-                    <!-- CARREIRA EM FINANÇAS -->
                     <div id="job-financas" class="journey-content-pane">
                         <div class="role-header">
                             <h3 class="role-title">Carreira em Controladoria e Finanças</h3>
@@ -1071,7 +1021,7 @@
                             </div>
                         </div>
                         <ul class="journey-bullets">
-                            <li><strong>Gestão Orçamentária & Resultados:</strong> Controle rigoroso de orçamento (Orçado x Realizado), resultando na redução de 50% na inadimplência e melhoria do fluxo de caixa.</li>
+                            <li><strong>Gestão Orçamentária & Resultados:</strong> Controle rigoroso de orçamento (Orçado x Realizado), resultando na redução de 50% na inadimplência e melhoria substancial do fluxo de caixa.</li>
                         </ul>
                     </div>
                 </div>
@@ -1088,7 +1038,6 @@
             </div>
 
             <div class="projects-grid">
-                <!-- Case 1 -->
                 <div class="project-card">
                     <div class="project-header-bar">
                         <span class="project-client">PROCERGS - APD</span>
@@ -1105,7 +1054,6 @@
                     </div>
                 </div>
 
-                <!-- Case 2 -->
                 <div class="project-card">
                     <div class="project-header-bar">
                         <span class="project-client">PROCERGS - SSP/RS</span>
@@ -1113,7 +1061,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">
-                            Liderança na transformação ágil, com articulação transversal entre squads e gestores. Governança orientada a dados no Azure DevOps, convertendo métricas de fluxo (Scrum/Kanban) em decisões executivas que otimizaram portfólios do estado.Engajamento da equipe. Expansão da maturidade ágil. Comunicação Estratégica. Implementação da Gestão Visual.
+                            Liderança na transformação ágil, com articulação transversal entre squads e gestores. Governança orientada a dados no Azure DevOps, convertendo métricas de fluxo (Scrum/Kanban) em decisões executivas que otimizaram portfólios do estado. Engajamento da equipe, expansão da maturidade ágil, comunicação estratégica e implementação da Gestão Visual.
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
@@ -1122,41 +1070,38 @@
                     </div>
                 </div>
 
-                <!-- Case Voke -->
-<div class="project-card">
-    <div class="project-header-bar">
-        <span class="project-client">Voke</span>
-        <h3 class="project-title">Sistema de Análise de Desempenho (DHO), ServiceNow & RPAs</h3>
-    </div>
-    <div class="project-body">
-        <p class="project-desc">
-            Liderança do roadmap de automações no atendimento de TI (ServiceNow e RPA) e implementação do sistema de análise de desempenho. Projeto executado em tempo recorde por meio de entregas incrementais (MVPs), com cronograma estruturado para disponibilizar as avaliações conforme a necessidade do negócio e gerando alto valor para as áreas de negócio.
-        </p>
-        <div class="project-impact-box">
-            <strong>Impacto Entregue:</strong>
-            Ganho superior a <strong>90% na eficiência de tempo para a realização das avaliações trimestrais e anuais. </strong> Readequação dos prazos de atendimento de TI, em conformidade com índices acordados com os clientes (SLA de 96%).
-        </div>
-    </div>
-</div>
-
-                <!-- Case 4 -->
                 <div class="project-card">
                     <div class="project-header-bar">
-                        <span class="project-client">Capgemini / Banco Bradesco</span>
-                        <h3 class="project-title">Diagnóstico Executivo de Agilidade</h3>
+                        <span class="project-client">Voke</span>
+                        <h3 class="project-title">Sistema de Análise de Desempenho (DHO), ServiceNow & RPAs</h3>
                     </div>
                     <div class="project-body">
                         <p class="project-desc">
-                            Análise de maturidade ágil para a diretoria do banco, eliminando conflitos e silos culturais entre equipes de múltiplas consultorias parceiras.
+                            Liderança do roadmap de automações no atendimento de TI (ServiceNow e RPA) e implementação do sistema de análise de desempenho. Projeto executado em tempo recorde por meio de entregas incrementais (MVPs), com cronograma estruturado para disponibilizar as avaliações conforme a necessidade do negócio e gerando alto valor para as áreas corporativas.
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
-                            Implementação de métricas ágeis (Lead Time, Throughput) no Jira/Azure DevOps e elevação do fluxo de entrega de valor nas squads.
+                            Ganho superior a <strong>90% na eficiência de tempo para a realização das avaliações trimestrais e anuais.</strong> Readequação dos prazos de atendimento de TI, em conformidade com índices acordados com os clientes (SLA de 96%).
                         </div>
                     </div>
                 </div>
 
-                <!-- Case 5 -->
+                <div class="project-card">
+                    <div class="project-header-bar">
+                        <span class="project-client">Banco PAN · C&A Brasil · LG Electronics</span>
+                        <h3 class="project-title">Engenharia de QA & Experiência Centrada no Usuário</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-desc">
+                            Atuação na garantia da qualidade de software e automação de testes com foco prioritário na jornada e experiência do usuário (UX). Condução de homologações de ponta a ponta (E2E), alinhamento direto com stakeholders de negócio, escrita de histórias com critérios de aceite e definição de padrões rigorosos de qualidade.
+                        </p>
+                        <div class="project-impact-box">
+                            <strong>Impacto Entregue:</strong>
+                            Mitigação substancial de defeitos em produção, aumento de aderência à experiência do usuário final e homologação transparente com stakeholders antes do rollout.
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-header-bar">
                         <span class="project-client">Banco Pan</span>
@@ -1164,16 +1109,15 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">
-                            Substituição de planilhas manuais por um sistema integrado de cálculo de comissionamentos e chargeback de parceiros do banco.
+                            Substituição de rotinas de planilhas manuais por um sistema integrado de cálculo e liquidação de comissionamentos e chargeback de parceiros do banco.
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
-                            Mitigação total do risco de perda de dados e erros manuais, aumentando a transparência fiscal e velocidade dos pagamentos.
+                            Mitigação total do risco de perda de dados e inconsistências manuais, aumentando a transparência fiscal e a agilidade nas rotinas de liquidação.
                         </div>
                     </div>
                 </div>
 
-                <!-- Case 6 -->
                 <div class="project-card">
                     <div class="project-header-bar">
                         <span class="project-client">Tegra</span>
@@ -1185,7 +1129,7 @@
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
-                            Entrega bem-sucedida em 5 meses com inspeção e adaptação contínuas, otimizando o faturamento e rotinas de RH.
+                            Entrega bem-sucedida em 5 meses com ciclos curtos de inspeção e adaptação contínuas, otimizando rotinas de faturamento e governança de RH.
                         </div>
                     </div>
                 </div>
@@ -1202,13 +1146,12 @@
             </div>
 
             <div class="skills-grid">
-                <!-- Skill 1 -->
                 <div class="skill-box">
                     <h3><i class="fas fa-sitemap"></i> Agilidade & Delivery Executivo</h3>
                     <ul class="skill-list">
                         <li class="skill-list-item">
                             <strong>Metodologias e Frameworks</strong>
-                            <span>Scrum, Kanban, Fit-for-Purpose, SAFe (Scrum of Scrums), Lean Thinking.</span>
+                            <span>Scrum, Kanban, Cascágil (Híbrido), Cynefin, SAFe, Lean Thinking.</span>
                         </li>
                         <li class="skill-list-item">
                             <strong>Métricas de Fluxo Ágil</strong>
@@ -1221,13 +1164,12 @@
                     </ul>
                 </div>
 
-                <!-- Skill 2 -->
                 <div class="skill-box">
                     <h3><i class="fas fa-bullseye"></i> Estratégia, Produto & Governança</h3>
                     <ul class="skill-list">
                         <li class="skill-list-item">
-                            <strong>Concepção & Discovery</strong>
-                            <span>Design Thinking, Lean Inception, Product Backlog Building (PBB), DoD/DoR.</span>
+                            <strong>Concepção, Qualidade & UX</strong>
+                            <span>Design Thinking, Lean Inception, PBB, Critérios de Aceite, DoD/DoR, Homologações E2E.</span>
                         </li>
                         <li class="skill-list-item">
                             <strong>Governança de Projetos</strong>
@@ -1240,7 +1182,6 @@
                     </ul>
                 </div>
 
-                <!-- Skill 3 -->
                 <div class="skill-box">
                     <h3><i class="fas fa-laptop-code"></i> Ecossistema Tecnológico & Ferramentas</h3>
                     <ul class="skill-list">
@@ -1400,22 +1341,22 @@
     </footer>
 
     <script>
-        // Tab switching logic for Journey section
         function switchJourney(paneId, btnElement) {
-            // Hide all content panes
             const panes = document.querySelectorAll('.journey-content-pane');
             panes.forEach(pane => pane.classList.remove('active'));
 
-            // Deactivate all buttons
             const buttons = document.querySelectorAll('.journey-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
 
-            // Activate selected pane and button
-            document.getElementById(paneId).classList.add('active');
-            btnElement.classList.add('active');
+            const targetPane = document.getElementById(paneId);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
+            if (btnElement) {
+                btnElement.classList.add('active');
+            }
         }
 
-        // Copy email to clipboard utility (using fallback for iframe compatibility)
         function copyEmail() {
             const emailText = "claudiarodriguespinto@outlook.com";
             const tempInput = document.createElement("input");
@@ -1445,3 +1386,6 @@
     </script>
 </body>
 </html>
+```
+
+O card do projeto foi resumido mantendo o texto exato solicitado e a caixa de impacto entregue.
