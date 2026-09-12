@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Chosen Palette: Professional Executive Slate & Sapphire -->
-    <!-- Application Structure Plan: Portfolio SPA organized into executive sections (Hero, Value Pillars, Interactive Journey Tabs, Case Studies Grid, Core Skills & Architecture, Academic & Certifications, Interactive Guides/Apps, and Executive Footer). Designed for maximum readability and business impact clarity. -->
-    <!-- Visualization & Content Choices: Interactive tabbed pane for career history, dynamic impact badges, structured technical grids, and FontAwesome web font icons. NO SVG graphics or Mermaid JS used. -->
+    <!-- Chosen Palette: Tech Deep Petrol & Mint Emerald (Verde Petróleo #062024, Verde Menta #10b981, Cyan Cyber #06b6d4 e Fundo Claro #f4f8f6) -->
+    <!-- Application Structure Plan: Portfólio SPA Executivo Tecnológico e Interativo com seções bem delimitadas (Hero High-Tech, Pilares Estratégicos, Jornada Profissional com Tabs Dinâmicas, Grade de Cases Unificados de TI/IA, Matriz de Habilidades com badges tecnológicas, Formação Acadêmica e Seção de Publicações/Apps de IA). -->
+    <!-- Visualization & Content Choices: Navegação dinâmica via Tabs JS para histórico profissional, alertas Toast para interação com usuário, badges tecnológicos glow, ícones da biblioteca FontAwesome web font. Sem SVG nem Mermaid JS. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claudia Rodrigues Pinto | Portfólio Executivo</title>
+    <title>Claudia Rodrigues Pinto | Portfólio Executivo & Tech</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
-            --primary: #0f172a;
-            --primary-light: #1e293b;
-            --secondary: #2563eb;
-            --secondary-hover: #1d4ed8;
-            --accent: #0ea5e9;
-            --accent-green: #10b981;
-            --light-bg: #f8fafc;
+            --petrol-dark: #04191c;
+            --petrol-main: #093339;
+            --petrol-medium: #0f4c56;
+            --petrol-light: #186a78;
+            --mint-bright: #10b981;
+            --mint-glow: #34d399;
+            --mint-subtle: rgba(16, 185, 129, 0.08);
+            --cyan-tech: #06b6d4;
+            --light-bg: #f3f7f6;
             --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --text-dark: #0f172a;
-            --text-muted: #475569;
-            --text-light: #94a3b8;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --radius-sm: 6px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
+            --border-color: #d8e5e3;
+            --text-dark: #071e22;
+            --text-muted: #41595d;
+            --text-light: #809a9e;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 24px;
+            --shadow-sm: 0 2px 4px 0 rgb(4 25 28 / 0.04);
+            --shadow-md: 0 4px 12px -2px rgb(4 25 28 / 0.08);
+            --shadow-tech: 0 10px 25px -5px rgb(9 51 57 / 0.15);
         }
 
         * {
@@ -54,8 +56,12 @@
 
         h1, h2, h3, h4, .font-heading {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--primary);
-            letter-spacing: -0.02em;
+            color: var(--petrol-dark);
+            letter-spacing: -0.025em;
+        }
+
+        .font-code {
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .container {
@@ -64,13 +70,14 @@
             padding: 0 24px;
         }
 
+        /* Tech Glassmorphism Header */
         .navbar {
             position: sticky;
             top: 0;
-            background-color: rgba(255, 255, 255, 0.92);
+            background-color: rgba(4, 25, 28, 0.94);
             backdrop-filter: blur(12px);
             z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
             padding: 16px 0;
         }
 
@@ -83,7 +90,7 @@
         .nav-logo {
             font-weight: 800;
             font-size: 1.25rem;
-            color: var(--primary);
+            color: #ffffff;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -91,7 +98,11 @@
         }
 
         .nav-logo span {
-            color: var(--secondary);
+            color: var(--mint-bright);
+        }
+
+        .nav-logo i {
+            color: var(--cyan-tech);
         }
 
         .nav-links {
@@ -103,62 +114,68 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-muted);
+            color: #b0c9cc;
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
+            font-size: 0.92rem;
+            transition: all 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: var(--secondary);
+            color: var(--mint-bright);
         }
 
         .btn-contact-header {
-            background-color: var(--primary);
-            color: white !important;
+            background: linear-gradient(135deg, var(--mint-bright), var(--cyan-tech));
+            color: var(--petrol-dark) !important;
+            font-weight: 700 !important;
             padding: 8px 18px;
             border-radius: var(--radius-sm);
-            transition: background-color 0.2s ease !important;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease !important;
         }
 
         .btn-contact-header:hover {
-            background-color: var(--secondary) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
         }
 
+        /* High-Tech Petrol Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: radial-gradient(circle at 80% 20%, #0f4c56 0%, #062024 60%, #031315 100%);
             color: white;
-            padding: 80px 0 100px;
+            padding: 90px 0 110px;
             position: relative;
             overflow: hidden;
+            border-bottom: 3px solid var(--mint-bright);
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: -20%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
-            border-radius: 50%;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px);
+            background-size: 28px 28px;
+            opacity: 0.6;
+            pointer-events: none;
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 180px 1fr;
+            grid-template-columns: 190px 1fr;
             gap: 40px;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .profile-frame {
             position: relative;
-            width: 170px;
-            height: 170px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             padding: 6px;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, var(--mint-bright), var(--cyan-tech));
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
         }
 
         .profile-img {
@@ -166,34 +183,36 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--primary);
+            border: 4px solid var(--petrol-dark);
         }
 
         .hero-content h1 {
-            color: white;
-            font-size: 2.75rem;
+            color: #ffffff;
+            font-size: 2.85rem;
             font-weight: 800;
             margin-bottom: 12px;
             line-height: 1.15;
         }
 
         .hero-title-badge {
-            display: inline-block;
-            background: rgba(37, 99, 235, 0.25);
-            border: 1px solid rgba(14, 165, 233, 0.4);
-            color: #7dd3fc;
-            padding: 6px 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: var(--mint-glow);
+            padding: 6px 16px;
             border-radius: 30px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
             margin-bottom: 20px;
         }
 
         .hero-subtitle {
             font-size: 1.15rem;
-            color: #cbd5e1;
-            max-width: 850px;
-            margin-bottom: 30px;
+            color: #b8d5d8;
+            max-width: 860px;
+            margin-bottom: 32px;
             font-weight: 400;
         }
 
@@ -206,62 +225,69 @@
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             padding: 12px 24px;
             border-radius: var(--radius-sm);
             font-weight: 600;
             font-size: 0.95rem;
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: all 0.25 ease;
             cursor: pointer;
             border: none;
         }
 
         .btn-primary {
-            background-color: var(--secondary);
-            color: white;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            background: linear-gradient(135deg, var(--mint-bright), #059669);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
 
         .btn-primary:hover {
-            background-color: var(--secondary-hover);
+            background: linear-gradient(135deg, #34d399, var(--mint-bright));
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
         }
 
         .btn-outline {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #e2f1f3;
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
         .btn-outline:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #ffffff;
+            border-color: var(--mint-bright);
             transform: translateY(-2px);
         }
 
+        /* General Sections */
         .section-padding {
-            padding: 80px 0;
+            padding: 85px 0;
         }
 
         .section-header {
             text-align: center;
-            max-width: 750px;
-            margin: 0 auto 50px;
+            max-width: 760px;
+            margin: 0 auto 55px;
         }
 
         .section-header .tag {
-            color: var(--secondary);
+            color: var(--petrol-medium);
+            background: rgba(15, 76, 86, 0.08);
+            border: 1px solid rgba(15, 76, 86, 0.2);
+            padding: 4px 14px;
+            border-radius: 20px;
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 1.5px;
-            margin-bottom: 8px;
-            display: block;
+            margin-bottom: 12px;
+            display: inline-block;
         }
 
         .section-header h2 {
-            font-size: 2.25rem;
+            font-size: 2.3rem;
             font-weight: 800;
             margin-bottom: 16px;
         }
@@ -271,6 +297,7 @@
             font-size: 1.05rem;
         }
 
+        /* Pillars Cards */
         .pillars-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -287,18 +314,32 @@
             position: relative;
         }
 
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: transparent;
+            border-radius: var(--radius-md) var(--radius-md) 0 0;
+            transition: background 0.3s ease;
+        }
+
         .pillar-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: rgba(37, 99, 235, 0.3);
+            box-shadow: var(--shadow-tech);
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .pillar-card:hover::before {
+            background: linear-gradient(90deg, var(--mint-bright), var(--cyan-tech));
         }
 
         .pillar-icon {
             width: 56px;
             height: 56px;
             border-radius: var(--radius-md);
-            background: rgba(37, 99, 235, 0.08);
-            color: var(--secondary);
+            background: var(--mint-subtle);
+            color: var(--petrol-medium);
+            border: 1px solid rgba(16, 185, 129, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -307,9 +348,9 @@
         }
 
         .pillar-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin-bottom: 12px;
-            color: var(--primary);
+            color: var(--petrol-dark);
         }
 
         .pillar-card p {
@@ -318,8 +359,9 @@
             line-height: 1.6;
         }
 
+        /* Journey Tabs Section */
         .journey-section {
-            background-color: #f1f5f9;
+            background-color: #ebf2f1;
         }
 
         .journey-wrapper {
@@ -336,8 +378,8 @@
         .journey-menu {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            max-height: 600px;
+            gap: 10px;
+            max-height: 620px;
             overflow-y: auto;
             padding-right: 8px;
         }
@@ -365,15 +407,15 @@
         }
 
         .journey-btn:hover {
-            border-color: var(--secondary);
-            background: rgba(37, 99, 235, 0.04);
+            border-color: var(--mint-bright);
+            background: var(--mint-subtle);
         }
 
         .journey-btn.active {
-            background: var(--primary);
+            background: var(--petrol-dark);
             color: white;
-            border-color: var(--primary);
-            box-shadow: var(--shadow-md);
+            border-color: var(--petrol-dark);
+            box-shadow: 0 4px 12px rgba(4, 25, 28, 0.2);
         }
 
         .journey-btn .company {
@@ -386,8 +428,12 @@
             color: var(--text-muted);
         }
 
+        .journey-btn.active .company {
+            color: var(--mint-glow);
+        }
+
         .journey-btn.active .period {
-            color: #94a3b8;
+            color: #a0c2c7;
         }
 
         .journey-content-pane {
@@ -411,17 +457,17 @@
         }
 
         .role-title {
-            font-size: 1.5rem;
+            font-size: 1.55rem;
             font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 4px;
+            color: var(--petrol-dark);
+            margin-bottom: 6px;
         }
 
         .role-meta {
             display: flex;
             align-items: center;
-            gap: 16px;
-            color: var(--secondary);
+            gap: 18px;
+            color: var(--petrol-medium);
             font-weight: 600;
             font-size: 0.95rem;
             margin-bottom: 16px;
@@ -435,8 +481,9 @@
         }
 
         .tag-item {
-            background-color: rgba(37, 99, 235, 0.08);
-            color: var(--secondary);
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #065f46;
+            border: 1px solid rgba(16, 185, 129, 0.25);
             font-size: 0.8rem;
             font-weight: 600;
             padding: 4px 12px;
@@ -452,7 +499,7 @@
 
         .journey-bullets li {
             position: relative;
-            padding-left: 28px;
+            padding-left: 30px;
             color: var(--text-dark);
             font-size: 0.98rem;
             line-height: 1.6;
@@ -465,10 +512,11 @@
             position: absolute;
             left: 0;
             top: 2px;
-            color: var(--secondary);
-            font-size: 0.85rem;
+            color: var(--mint-bright);
+            font-size: 0.9rem;
         }
 
+        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -487,28 +535,29 @@
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: rgba(37, 99, 235, 0.3);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-tech);
+            border-color: rgba(16, 185, 129, 0.4);
         }
 
         .project-header-bar {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            padding: 20px 24px;
+            background: linear-gradient(135deg, var(--petrol-dark) 0%, var(--petrol-main) 100%);
+            padding: 22px 24px;
             color: white;
+            border-bottom: 2px solid var(--mint-bright);
         }
 
         .project-client {
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--accent);
+            color: var(--mint-glow);
             font-weight: 700;
         }
 
         .project-title {
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin-top: 4px;
             font-weight: 700;
         }
@@ -517,7 +566,7 @@
             padding: 24px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 18px;
             flex-grow: 1;
         }
 
@@ -528,19 +577,20 @@
 
         .project-impact-box {
             background-color: #f0fdf4;
-            border-left: 4px solid var(--accent-green);
-            padding: 12px 16px;
+            border-left: 4px solid var(--mint-bright);
+            padding: 14px 16px;
             border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
             font-size: 0.9rem;
-            color: #166534;
+            color: #065f46;
         }
 
         .project-impact-box strong {
             display: block;
             margin-bottom: 2px;
-            color: #14532d;
+            color: #042f2e;
         }
 
+        /* Skills Matrix */
         .skills-section {
             background-color: var(--light-bg);
         }
@@ -548,7 +598,7 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
+            gap: 26px;
         }
 
         .skill-box {
@@ -556,6 +606,7 @@
             padding: 28px;
             border-radius: var(--radius-md);
             border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
         }
 
         .skill-box h3 {
@@ -564,26 +615,26 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            color: var(--primary);
+            color: var(--petrol-dark);
             border-bottom: 2px solid var(--light-bg);
             padding-bottom: 12px;
         }
 
         .skill-box h3 i {
-            color: var(--secondary);
+            color: var(--petrol-medium);
         }
 
         .skill-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 16px;
         }
 
         .skill-list-item strong {
             display: block;
             font-size: 0.95rem;
-            color: var(--primary);
+            color: var(--petrol-dark);
             margin-bottom: 2px;
         }
 
@@ -592,6 +643,7 @@
             color: var(--text-muted);
         }
 
+        /* Education Section */
         .education-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -606,14 +658,20 @@
             display: flex;
             gap: 16px;
             align-items: flex-start;
+            transition: border-color 0.2s ease;
+        }
+
+        .edu-card:hover {
+            border-color: rgba(16, 185, 129, 0.4);
         }
 
         .edu-icon {
             width: 48px;
             height: 48px;
             border-radius: var(--radius-sm);
-            background: rgba(37, 99, 235, 0.08);
-            color: var(--secondary);
+            background: var(--mint-subtle);
+            color: var(--petrol-medium);
+            border: 1px solid rgba(16, 185, 129, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -628,7 +686,7 @@
 
         .edu-institution {
             font-size: 0.88rem;
-            color: var(--secondary);
+            color: var(--petrol-medium);
             font-weight: 600;
             margin-bottom: 6px;
         }
@@ -638,9 +696,11 @@
             color: var(--text-muted);
         }
 
+        /* Resources / Tech Guides */
         .resources-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, var(--petrol-dark) 0%, var(--petrol-main) 100%);
             color: white;
+            border-top: 3px solid var(--mint-bright);
         }
 
         .resources-section .section-header h2 {
@@ -648,7 +708,7 @@
         }
 
         .resources-section .section-header p {
-            color: #cbd5e1;
+            color: #b0c9cc;
         }
 
         .resources-grid {
@@ -658,8 +718,8 @@
         }
 
         .resource-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(16, 185, 129, 0.25);
             padding: 28px;
             border-radius: var(--radius-md);
             text-decoration: none;
@@ -671,14 +731,15 @@
         }
 
         .resource-card:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateY(-4px);
-            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.08);
+            transform: translateY(-5px);
+            border-color: var(--mint-glow);
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
         }
 
         .resource-card-icon {
-            font-size: 2rem;
-            color: var(--accent);
+            font-size: 2.2rem;
+            color: var(--mint-glow);
             margin-bottom: 16px;
         }
 
@@ -689,25 +750,26 @@
         }
 
         .resource-card p {
-            color: #94a3b8;
+            color: #9ab4b8;
             font-size: 0.9rem;
             margin-bottom: 20px;
         }
 
         .resource-link-label {
-            color: var(--accent);
+            color: var(--mint-glow);
             font-weight: 600;
             font-size: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
+        /* Tech Footer */
         footer {
-            background-color: #020617;
+            background-color: #020c0e;
             color: white;
             padding: 60px 0 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .footer-grid {
@@ -724,7 +786,7 @@
         }
 
         .footer-col p {
-            color: #94a3b8;
+            color: #8da9ad;
             font-size: 0.95rem;
             line-height: 1.6;
         }
@@ -738,34 +800,36 @@
         .footer-contact-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            color: #cbd5e1;
+            gap: 12px;
+            color: #c0d8db;
             text-decoration: none;
             font-size: 0.95rem;
             transition: color 0.2s ease;
         }
 
         .footer-contact-item:hover {
-            color: var(--accent);
+            color: var(--mint-glow);
         }
 
         .copyright-bar {
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: #64748b;
+            color: #557175;
             font-size: 0.88rem;
         }
 
+        /* Toast Alert */
         .toast {
             position: fixed;
             bottom: 24px;
             right: 24px;
-            background: var(--primary);
+            background: var(--petrol-dark);
+            border: 1px solid var(--mint-bright);
             color: white;
-            padding: 12px 20px;
+            padding: 14px 22px;
             border-radius: var(--radius-sm);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
             font-size: 0.9rem;
             display: none;
             z-index: 2000;
@@ -793,12 +857,13 @@
 </head>
 <body>
 
-    <div id="toast" class="toast"><i class="fas fa-check-circle"></i> E-mail copiado com sucesso!</div>
+    <div id="toast" class="toast"><i class="fas fa-check-circle" style="color: var(--mint-bright); margin-right: 6px;"></i> E-mail copiado com sucesso!</div>
 
+    <!-- Top Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="nav-logo">
-                <i class="fas fa-layer-group" style="color: var(--secondary);"></i>
+            <a href="#" class="nav-logo font-heading">
+                <i class="fas fa-microchip"></i>
                 Claudia <span>Rodrigues Pinto</span>
             </a>
             <ul class="nav-links">
@@ -812,14 +877,17 @@
         </div>
     </nav>
 
+    <!-- Tech Hero Header -->
     <header class="hero">
         <div class="container">
             <div class="hero-grid">
                 <div class="profile-frame">
-                    <img src="imagens/claudia_perfil.jpeg" alt="Claudia Rodrigues Pinto" class="profile-img" onerror="this.src='https://placehold.co/200x200/2C3E50/FFFFFF?text=CRP'">
+                    <img src="imagens/claudia_perfil.jpeg" alt="Claudia Rodrigues Pinto" class="profile-img" onerror="this.src='https://placehold.co/200x200/093339/FFFFFF?text=CRP'">
                 </div>
                 <div class="hero-content">
-                    <span class="hero-title-badge">Transformação Ágil | Projetos & Soluções em IA | Liderança Ágil e Servidora</span>
+                    <span class="hero-title-badge font-code">
+                        <i class="fas fa-terminal"></i> Transformação Ágil | Soluções em IA | Liderança Servidora
+                    </span>
                     <h1>Claudia Rodrigues Pinto</h1>
                     <p class="hero-subtitle">
                         Praticante da liderança servidora para empoderar times de alta performance. Desenvolvo iniciativas com foco na experiência do usuário, orientadas por dados e comprometidas com a melhoria contínua e a entrega de valor sustentável.
@@ -1061,6 +1129,24 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Case Voke -->
+                <div class="project-card">
+                    <div class="project-header-bar">
+                        <span class="project-client">Voke</span>
+                        <h3 class="project-title">Sistema de Análise de Desempenho (DHO), ServiceNow & RPAs</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-desc">
+                            Liderança do roadmap de automações no atendimento de TI (ServiceNow e RPA) e implementação do sistema de análise de desempenho corporativo. Projeto executado em tempo recorde por meio de entregas incrementais (MVPs), com cronograma estruturado para disponibilizar as avaliações conforme a necessidade estratégica do negócio.
+                        </p>
+                        <div class="project-impact-box">
+                            <strong>Impacto Entregue:</strong>
+                            Ganho superior a 90% na eficiência de tempo para realização das avaliações corporativas e readequação de prazos de atendimento de TI em conformidade com SLA de 96% acordado com clientes.
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Case LG Electronics -->
                 <div class="project-card">
                     <div class="project-header-bar">
@@ -1125,23 +1211,6 @@
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
                             Entrega bem-sucedida em 5 meses com ciclos curtos de inspeção e adaptação contínuas, otimizando rotinas de faturamento e governança de RH.
-                        </div>
-                    </div>
-                </div>
-				
-                <!-- Case Voke -->
-                <div class="project-card">
-                    <div class="project-header-bar">
-                        <span class="project-client">Voke</span>
-                        <h3 class="project-title">Sistema de Análise de Desempenho (DHO), ServiceNow & RPAs</h3>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-desc">
-                            Liderança do roadmap de automações no atendimento de TI (ServiceNow e RPA). Implementação do sistema de análise de desempenho. Executado em tempo recorde com entregas incrementais. Cronograma estruturado para disponibilizar as funcionalidades conforme a necessidade estratégica do negócio.
-                        </p>
-                        <div class="project-impact-box">
-                            <strong>Impacto Entregue:</strong>
-                            Mitigação do risco de multa contratual com clientes, garantindo a readequação de prazos contratuais e tempo de atendimento de suporte de TI, com SLA de 96%.
                         </div>
                     </div>
                 </div>
@@ -1272,7 +1341,7 @@
                 </div>
 
                 <div class="edu-card">
-                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <div class="edu-icon"><i class="fas fa-globe"></i></div>
                     <div class="edu-info">
                         <h4>Business Agility</h4>
                         <div class="edu-institution">PMI Linkedin - Cursos | 2021-2024</div>
@@ -1296,7 +1365,7 @@
     <section id="guias" class="section-padding resources-section">
         <div class="container">
             <div class="section-header">
-                <span class="tag" style="color: var(--accent);">Publicações e Apps Interativos</span>
+                <span class="tag" style="background: rgba(16, 185, 129, 0.15); color: var(--mint-glow); border-color: rgba(16, 185, 129, 0.3);">Publicações e Apps Interativos</span>
                 <h2>Guias e Ferramentas Interativas</h2>
                 <p>Acesse as aplicações web interativas que criei sobre Liderança, IA e Qualidade.</p>
             </div>
@@ -1337,23 +1406,23 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Claudia Rodrigues Pinto</h3>
+                    <h3 class="font-heading">Claudia Rodrigues Pinto</h3>
                     <p>
                         Project Delivery Manager, Agile Coach e PO dedicada a transformar desafios complexos em entregas organizadas, sustentáveis e orientadas ao valor de negócio.
                     </p>
                 </div>
 
                 <div class="footer-col">
-                    <h3>Canais de Contato</h3>
+                    <h3 class="font-heading">Canais de Contato</h3>
                     <div class="footer-contacts">
                         <a href="https://wa.me/5511992587976" target="_blank" class="footer-contact-item">
                             <i class="fab fa-whatsapp" style="color: #25d366;"></i> +55 11 99258-7976
                         </a>
                         <a href="mailto:claudiafariasrodriguespinto@gmail.com" class="footer-contact-item">
-                            <i class="fas fa-envelope" style="color: var(--accent);"></i> claudiafariasrodriguespinto@gmail.com
+                            <i class="fas fa-envelope" style="color: var(--mint-glow);"></i> claudiafariasrodriguespinto@gmail.com
                         </a>
                         <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" class="footer-contact-item">
-                            <i class="fab fa-linkedin" style="color: #0a66c2;"></i> linkedin.com/in/claudiarodriguespinto
+                            <i class="fab fa-linkedin" style="color: var(--cyan-tech);"></i> linkedin.com/in/claudiarodriguespinto
                         </a>
                     </div>
                 </div>
@@ -1401,7 +1470,7 @@
 
         function showToast(message) {
             const toast = document.getElementById("toast");
-            toast.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            toast.innerHTML = `<i class="fas fa-check-circle" style="color: var(--mint-bright); margin-right: 6px;"></i> ${message}`;
             toast.style.display = "block";
             
             setTimeout(() => {
