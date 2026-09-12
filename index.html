@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Chosen Palette: Professional Executive Slate & Sapphire -->
+    <!-- Application Structure Plan: Portfolio SPA organized into executive sections (Hero, Value Pillars, Interactive Journey Tabs, Case Studies Grid, Core Skills & Architecture, Academic & Certifications, Interactive Guides/Apps, and Executive Footer). Designed for maximum readability and business impact clarity. -->
+    <!-- Visualization & Content Choices: Interactive tabbed pane for career history, dynamic impact badges, structured technical grids, and FontAwesome web font icons. NO SVG graphics or Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claudia Rodrigues Pinto | Portfólio Executivo</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -61,7 +67,7 @@
         .navbar {
             position: sticky;
             top: 0;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(12px);
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
@@ -92,6 +98,7 @@
             display: flex;
             gap: 24px;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -418,6 +425,7 @@
             font-weight: 600;
             font-size: 0.95rem;
             margin-bottom: 16px;
+            flex-wrap: wrap;
         }
 
         .tag-cloud {
@@ -502,6 +510,7 @@
             color: white;
             font-size: 1.2rem;
             margin-top: 4px;
+            font-weight: 700;
         }
 
         .project-body {
@@ -784,11 +793,6 @@
 </head>
 <body>
 
-    <!-- Chosen Palette: Navy & Slate Modern Executive Palette -->
-    <!-- Application Structure Plan: Executivo Portfolio single page web application with responsive navigation, interactive journey tabs, portfolio grid cards, technical skill blocks, education grid, interactive resource links, and executive contact capabilities. Designed for fast navigation and dynamic readability. -->
-    <!-- Visualization & Content Choices: Executivo Portfolio -> Goal: Showcase executive achievements and experience -> HTML/CSS Grid & Flexbox, Tab switching via Vanilla JS -> Interaction: Dynamic pane switching, copy email toast notification -> Justification: High readability, crisp design, fast performance without external dynamic heavy dependencies -> Library/Method: HTML5, Custom CSS, Vanilla JavaScript. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
     <div id="toast" class="toast"><i class="fas fa-check-circle"></i> E-mail copiado com sucesso!</div>
 
     <nav class="navbar">
@@ -836,6 +840,7 @@
         </div>
     </header>
 
+    <!-- Pilares Executivos -->
     <section id="pilares" class="section-padding">
         <div class="container">
             <div class="section-header">
@@ -872,6 +877,7 @@
         </div>
     </section>
 
+    <!-- Histórico Profissional Interativo -->
     <section id="jornada" class="section-padding journey-section">
         <div class="container">
             <div class="section-header">
@@ -1029,79 +1035,84 @@
         </div>
     </section>
 
+    <!-- Cases de Sucesso -->
     <section id="projetos" class="section-padding">
         <div class="container">
             <div class="section-header">
                 <span class="tag">Portfólio de Projetos</span>
                 <h2>Cases de Sucesso</h2>
-                <p>Implementações estratégicas que geraram eficiência operacional, transparência e redução de custos.</p>
+                <p>Implementações estratégicas que geraram eficiência operacional, viabilização de receitas e governança sustentável.</p>
             </div>
 
             <div class="projects-grid">
+                <!-- Case PROCERGS Unificado -->
                 <div class="project-card">
                     <div class="project-header-bar">
-                        <span class="project-client">PROCERGS - APD</span>
-                        <h3 class="project-title">Inovação & IA Generativa (GurIA)</h3>
+                        <span class="project-client">DB · PROCERGS (Governo do RS)</span>
+                        <h3 class="project-title">Inovação em IA Generativa (GurIA) & Governança Ágil de Portfólios</h3>
                     </div>
                     <div class="project-body">
                         <p class="project-desc">
-                            Gestão do projeto de reestruturação arquitetural de mais de 700 serviços digitais estaduais integrados à assistente virtual com IA Generativa, impulsionando a transformação ágil e centralizando fluxos no Azure DevOps. Transformação cultural das equipes focando em segurança psicológica, clareza de papéis complementares e engajamento para entregas sustentáveis de alto valor ao cidadão.
+                            Liderança estratégica na reestruturação arquitetural de mais de 700 serviços digitais integrados à assistente virtual com IA Generativa (GurIA), articulando frentes transversais entre squads e lideranças executivas. Governança ponta a ponta no Azure DevOps com modelo híbrido (Cascágil), convertendo métricas de fluxo em inteligência decisória para portfólios vitais do Estado (Saúde, Mobilidade e Fomento), fortalecendo a segurança psicológica e a cultura de melhoria contínua.
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
-                            Eliminação de desperdícios Lean e implementação de Gestão à Vista com dashboards de métricas para tomada de decisão estratégica e fomento à melhoria contínua na gestão pública executiva.
+                            Eliminação de desperdícios Lean, aceleração nas entregas de valor ao cidadão e consolidação de painéis de Gestão à Vista para suporte ágil ao C-Level, servindo como benchmark e modelo de maturidade replicável em outros órgãos públicos.
+                        </div>
+                    </div>
+                </div>
+                <!-- Case LG Electronics -->
+                <div class="project-card">
+                    <div class="project-header-bar">
+                        <span class="project-client">LG Electronics</span>
+                        <h3 class="project-title">Homologação Técnica & Go-to-Market de Dispositivos Móveis</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-desc">
+                            Gestão técnica e liderança de testes e homologações de dispositivos móveis junto às principais operadoras de telecomunicações do país (Vivo, Claro, TIM). Condução de testes de campo, validação rigorosa de protocolos de rede e interlocução direta com áreas de negócio e engenharia global (Coreia do Sul).
+                        </p>
+                        <div class="project-impact-box">
+                            <strong>Impacto Entregue:</strong>
+                            Taxa de 100% de aceite técnico nos ciclos de homologação com as operadoras, viabilizando o lançamento sem atrasos e assegurando a comercialização em larga escala de lotes de múltiplos modelos para as operadoras de telefonia (Vivo, Claro).
                         </div>
                     </div>
                 </div>
 
+                <!-- Case C&A Brasil -->
                 <div class="project-card">
                     <div class="project-header-bar">
-                        <span class="project-client">PROCERGS - SSP/RS</span>
-                        <h3 class="project-title">Transformação Ágil & Gestão de Governança</h3>
+                        <span class="project-client">C&A Brasil</span>
+                        <h3 class="project-title">Otimização de Fluxo Operacional & Cadeia de Suprimentos E2E</h3>
                     </div>
                     <div class="project-body">
                         <p class="project-desc">
-                            Liderança na transformação ágil, com articulação transversal entre squads e gestores. Governança orientada a dados no Azure DevOps, convertendo métricas de fluxo (Scrum/Kanban) em decisões executivas que otimizaram portfólios do estado. Engajamento da equipe, expansão da maturidade ágil, comunicação estratégica e implementação da Gestão Visual.
+                            Garantia da qualidade e otimização dos fluxos de trabalho nos sistemas da cadeia têxtil e logística — integrando ponta a ponta desde a entrada de matérias-primas e modelagem até o abastecimento das lojas. Escrita ágil de histórias com critérios de aceite bem definidos e validação contínua com stakeholders de negócio.
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
-                            Aumento na adesão cultural à transformação ágil, implementação de Gestão à Vista para tomada de decisão estratégica e evolução contínua da maturidade das equipes.
+                            Expressivo ganho de agilidade e aumento da produtividade no fluxo de trabalho com o sistema, assegurando melhor controle de estoque, eficiência logística e redução de gargalos na distribuição para o varejo.
                         </div>
                     </div>
                 </div>
 
+                <!-- Case Banco PAN -->
                 <div class="project-card">
                     <div class="project-header-bar">
-                        <span class="project-client">Voke</span>
-                        <h3 class="project-title">Sistema de Análise de Desempenho (DHO), ServiceNow & RPAs</h3>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-desc">
-                            Liderança do roadmap de automações no atendimento de TI (ServiceNow e RPA) e implementação do sistema de análise de desempenho. Projeto executado em tempo recorde por meio de entregas incrementais (MVPs), com cronograma estruturado para disponibilizar as avaliações conforme a necessidade do negócio e gerando alto valor para as áreas corporativas.
-                        </p>
-                        <div class="project-impact-box">
-                            <strong>Impacto Entregue:</strong>
-                            Ganho superior a <strong>90% na eficiência de tempo para a realização das avaliações trimestrais e anuais.</strong> Readequação dos prazos de atendimento de TI, em conformidade com índices acordados com os clientes (SLA de 96%).
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header-bar">
-                        <span class="project-client">Banco Pan</span>
+                        <span class="project-client">Banco PAN</span>
                         <h3 class="project-title">Automação de Comissionamentos Financeiros</h3>
                     </div>
                     <div class="project-body">
                         <p class="project-desc">
-                            Substituição de rotinas de planilhas manuais por um sistema integrado de cálculo e liquidação de comissionamentos e chargeback de parceiros do banco.
+                            Substituição de rotinas de planilhas manuais por um sistema integrado de cálculo e liquidação de comissionamentos e chargeback de parceiros do banco, com forte alinhamento entre áreas de negócio e TI.
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
-                            Mitigação total do risco de perda de dados e inconsistências manuais, aumentando a transparência fiscal e a agilidade nas rotinas de liquidação.
+                            Mitigação total do risco de perda de dados e inconsistências manuais, aumentando a transparência fiscal e a agilidade nas rotinas financeiras de liquidação.
                         </div>
                     </div>
                 </div>
 
+                <!-- Case Tegra -->
                 <div class="project-card">
                     <div class="project-header-bar">
                         <span class="project-client">Tegra</span>
@@ -1109,7 +1120,7 @@
                     </div>
                     <div class="project-body">
                         <p class="project-desc">
-                            Implementação do sistema de controle de ponto e gestão administrativa de consultores com facilitação Scrum e Design Thinking.
+                            Implementação do sistema de controle de ponto e gestão administrativa de consultores com facilitação Scrum e aplicação de Design Thinking para alinhamento das necessidades dos usuários.
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
@@ -1117,18 +1128,20 @@
                         </div>
                     </div>
                 </div>
-				<div class="project-card">
+				
+                <!-- Case Voke -->
+                <div class="project-card">
                     <div class="project-header-bar">
-                        <span class="project-client">Banco PAN · C&A Brasil · LG Electronics</span>
-                        <h3 class="project-title">Engenharia de QA & Experiência Centrada no Usuário</h3>
+                        <span class="project-client">Voke</span>
+                        <h3 class="project-title">Sistema de Análise de Desempenho (DHO), ServiceNow & RPAs</h3>
                     </div>
                     <div class="project-body">
                         <p class="project-desc">
-                            Atuação na garantia da qualidade de software e automação de testes com foco prioritário na jornada e experiência do usuário (UX). Condução de homologações de ponta a ponta (E2E), alinhamento direto com stakeholders de negócio, escrita de histórias com critérios de aceite e definição de padrões rigorosos de qualidade.
+                            Liderança do roadmap de automações no atendimento de TI (ServiceNow e RPA). Implementação do sistema de análise de desempenho. Executado em tempo recorde com entregas incrementais. Cronograma estruturado para disponibilizar as funcionalidades conforme a necessidade estratégica do negócio.
                         </p>
                         <div class="project-impact-box">
                             <strong>Impacto Entregue:</strong>
-                            Mitigação substancial de defeitos em produção, aumento de aderência à experiência do usuário final e homologação transparente com stakeholders antes do rollout.
+                            Mitigação do risco de multa contratual com clientes, garantindo a readequação de prazos contratuais e tempo de atendimento de suporte de TI, com SLA de 96%.
                         </div>
                     </div>
                 </div>
@@ -1136,6 +1149,7 @@
         </div>
     </section>
 
+    <!-- Habilidades e Ferramentas -->
     <section id="habilidades" class="section-padding skills-section">
         <div class="container">
             <div class="section-header">
@@ -1202,6 +1216,7 @@
         </div>
     </section>
 
+    <!-- Formação e Certificações -->
     <section class="section-padding">
         <div class="container">
             <div class="section-header">
@@ -1255,7 +1270,8 @@
                         <p class="edu-desc">Comunicação de liderança e metodologias centradas no usuário.</p>
                     </div>
                 </div>
-				<div class="edu-card">
+
+                <div class="edu-card">
                     <div class="edu-icon"><i class="fas fa-university"></i></div>
                     <div class="edu-info">
                         <h4>Business Agility</h4>
@@ -1276,6 +1292,7 @@
         </div>
     </section>
 
+    <!-- Guias Interativos e Publicações -->
     <section id="guias" class="section-padding resources-section">
         <div class="container">
             <div class="section-header">
@@ -1315,6 +1332,7 @@
         </div>
     </section>
 
+    <!-- Rodapé e Contatos -->
     <footer id="contato">
         <div class="container">
             <div class="footer-grid">
@@ -1331,8 +1349,9 @@
                         <a href="https://wa.me/5511992587976" target="_blank" class="footer-contact-item">
                             <i class="fab fa-whatsapp" style="color: #25d366;"></i> +55 11 99258-7976
                         </a>
-                        <a href="mailto:claudiarodriguespinto@outlook.com" class="footer-contact-item">
+                        <a href="mailto:claudiafariasrodriguespinto@gmail.com" class="footer-contact-item">
                             <i class="fas fa-envelope" style="color: var(--accent);"></i> claudiafariasrodriguespinto@gmail.com
+                        </a>
                         <a href="https://www.linkedin.com/in/claudiarodriguespinto/" target="_blank" class="footer-contact-item">
                             <i class="fab fa-linkedin" style="color: #0a66c2;"></i> linkedin.com/in/claudiarodriguespinto
                         </a>
@@ -1374,7 +1393,7 @@
                 document.execCommand('copy');
                 showToast("E-mail copiado com sucesso!");
             } catch (err) {
-                showToast("Erro ao copiar. E-mail: claudiarodriguespinto@outlook.com");
+                showToast("Erro ao copiar. E-mail: claudiafariasrodriguespinto@gmail.com");
             }
             
             document.body.removeChild(tempInput);
@@ -1392,6 +1411,3 @@
     </script>
 </body>
 </html>
-```
-
-O card do projeto foi resumido mantendo o texto exato solicitado e a caixa de impacto entregue.
